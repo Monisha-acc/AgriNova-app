@@ -1,0 +1,1001 @@
+behavior_label,soil_type,irrigation_source,land_area,water_availability,crop_recommendation,crop_type,crop_rotation,seasonal_crop,irrigation_method,irrigation_frequency,water_source,water_storage,access_to_credit,insurance,subsidy_usage,sells_in_uzhavar_santhai,uses_enam,drip_irrigation,sprinkler_irrigation,rainwater_harvesting,soil_moisture_monitoring,attended_training,smartphone_usage,agri_apps_usage
+Progressive,Laterite,Rainfed,18.42275892123204,High,Watermelon,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,8.730769977904172,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,13.179541381207494,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,9.37538355549395,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,5.676499603266409,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Borewell,18.876848013532804,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,13.247189889550016,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,9.783151154761615,High,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,5.851066645201197,Low,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Rainfed,11.377920848760514,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,7.9234858493596,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,7.485765127402614,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,3.5700624964118797,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,13.128780201682522,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,17.075682728047415,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,17.522072617586076,High,Watermelon,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Rainfed,12.012524088504165,High,Watermelon,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,6.350325347521608,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,9.745331197962638,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,1.1099506840046487,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,9.168067248462638,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,19.781986348148784,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,9.376069185292788,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,9.151206122040659,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,11.084574784538622,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,15.456961836968924,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,River,17.243319109964787,High,Turmeric,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,11.953749866560333,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Canal,18.384350331829193,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,4.600370371847547,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,17.78282458141543,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Other,13.431958806198708,High,Maize,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,3.9366096119869383,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,17.78740987619653,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,18.35935589736253,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,15.294185491734838,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,6.76584449687779,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,18.940492555160393,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,14.839888915035354,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,9.106977480000781,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Rainfed,17.487710570073126,High,Coconut,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,15.062820792026931,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,3.9464931253214597,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,13.22608215204775,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,12.545684251841026,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Canal,10.243417847721025,High,Watermelon,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,8.598439234230382,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,19.526931451732572,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,2.908451748881421,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,River,17.704839823462144,High,Coconut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,13.543017956010099,High,Pulses,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,7.6156878042401,Low,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,7.951331354561897,Low,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,7.193501907035619,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,19.76568935589257,Low,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,3.614959925675335,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,5.837179583293515,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,19.696158303535704,Low,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,9.78599391523255,High,Turmeric,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,16.043394550026463,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,4.816688088578223,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,4.90763690438743,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,6.525418377014532,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Borewell,1.4719109578395668,High,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,5.834739597729471,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,7.999816852679114,Low,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,16.94078565294829,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,9.518303352104306,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,17.793169723460412,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,11.829020293622975,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,5.372525070253601,High,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Other,2.137536770948338,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Canal,16.163047905966685,High,Watermelon,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,10.073655581396089,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,10.234646740386964,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,9.526318230174095,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,16.99053446892303,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,6.502350764187991,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,3.7294671195962836,High,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,2.9116615723464694,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,13.445118763158163,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,5.850240956013125,High,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,3.5233670614286527,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,14.098854463287948,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,6.401058258877269,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,9.653136633398223,High,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,8.720569617350868,High,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,14.96317594978658,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Other,14.375186173579971,High,Pulses,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,8.491527352876933,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Rainfed,14.942447736149866,High,Pulses,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Loamy,Farm Pond,1.403031812499569,Low,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,3.4312989828847624,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,13.605817192848473,Low,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,9.04945505048713,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Farm Pond,1.6161944757332845,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,17.663366041391967,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,River,17.909780944606602,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,5.309412406034369,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,4.993412759735318,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,13.875703085768691,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,16.86415651811363,Low,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,18.80469977421721,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Other,19.356189140892205,High,Coconut,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Rainfed,1.7106418215231174,Low,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,8.738901334239094,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,6.757647832247008,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,12.167955480645789,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,5.744402076231999,High,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Farm Pond,11.16065505864527,High,Millets,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,0.5356489414984477,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,4.431193809072468,High,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,3.9153211335379465,High,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,9.743422116677669,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Borewell,2.4500802430632587,High,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,18.859918064761928,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,7.94094559331738,High,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,3.771908372062942,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Canal,17.973084567307996,High,Coconut,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,19.982757272285227,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Farm Pond,2.1089785311837064,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,11.647088770052532,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Borewell,13.597573068510746,High,Banana,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,6.110234431815588,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,17.53672410060326,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,14.92894241510861,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,16.60156872694196,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Farm Pond,1.9745689202433525,High,Groundnut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,1.579168471230059,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,15.269900751765096,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,7.380497836977627,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,5.635803986971731,High,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,5.791366405543081,High,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,12.147992868496734,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,11.523618805551774,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,5.103590534677593,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,19.26247418545107,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Farm Pond,16.4211861215273,High,Tomato,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,18.689862785669277,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,12.54629621947242,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Farm Pond,19.219322778053694,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,3.0137673021508617,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Borewell,11.014693942995953,High,Cotton,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,13.600982567230265,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,3.0023425940691335,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,River,1.5437422866396948,High,Rice,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,3.3087670657666775,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,4.339458499052973,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,7.656370551239535,High,Groundnut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,5.368551173968416,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,0.9915945829462736,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,9.922226818706307,High,Turmeric,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,3.183952888667851,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Farm Pond,12.803646195640068,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,7.8218359361618495,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,River,2.740290340496536,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,13.110116308419887,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,River,2.784381887714105,High,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Other,16.78061986333163,High,Banana,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Rainfed,17.775082183951316,High,Cotton,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,10.333258683683235,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,13.608440943341458,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Rainfed,12.943253781936654,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,3.3615423585016817,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,16.035684810483655,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,River,10.556318416919186,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,14.146770432293687,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,8.684478126235605,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Rainfed,19.76436122467913,High,Coconut,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,4.640090710236802,High,Watermelon,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,18.456207260099895,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,6.825302067008369,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Farm Pond,17.178130857186684,High,Turmeric,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,Canal,1.7303752632422866,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,3.361738858292329,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,3.4576159057788924,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,18.49637366621489,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,5.967456339495861,High,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,17.850318550749503,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,6.0724947936821385,High,Chillies,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,11.019731657293544,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,4.614777601357143,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,7.60016426930711,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,9.600701236032982,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,15.227451994425332,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,River,16.178159828146754,High,Tomato,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,8.318253638474632,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Canal,11.485673792390335,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,9.837662927567585,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,7.08605019458742,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,10.436480220630457,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,13.30179407427593,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,5.668411907058942,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,4.583940141087554,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,6.958989412209614,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,5.749562215745157,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,5.033918799663414,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Farm Pond,10.101485708207559,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,8.699599613807905,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,4.636168102861333,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,9.988969628476463,High,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,8.89931121893789,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,10.815664291695901,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,7.355664289649364,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,3.9068778822834886,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,16.141661511833846,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,0.9433823550858114,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,7.598783502531705,High,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,River,2.280900747373663,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,3.0171591402739644,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,6.584945279297656,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Borewell,13.33350263780707,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Canal,12.613833624338326,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,13.67819762061887,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,River,17.506810100566817,High,Coconut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,17.08785385578547,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,11.757507579232906,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,10.72160743717798,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,19.333583983345115,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,3.878983893723092,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Canal,2.981782668987192,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,Other,0.774728770215905,High,Groundnut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,18.122620485369684,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,6.478878356351447,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,14.83554710356446,Low,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,8.10902805449349,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,19.053475952896214,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,7.794663054220599,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,5.375298303816345,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,7.640014239273575,High,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Other,14.36040653113824,High,Cotton,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,3.282649801637291,High,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Borewell,11.74910629713131,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Borewell,15.762420918825589,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,13.283920666094089,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,16.71700813833881,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,2.2550759068721273,Moderate,Millets,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,5.301703128177021,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,3.940924823559418,High,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,River,11.062819945090034,High,Cotton,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,11.877919968660315,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,11.326772308086563,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,9.140931277655639,Low,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,4.088113279540396,High,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,5.3418313686514605,Moderate,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,13.668017127174597,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,6.911083533623314,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,19.27658791492277,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,6.908266620596383,High,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,1.1350467263447337,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,5.846085128948692,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,3.9343822584084864,High,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Borewell,2.5232498302383966,Low,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,4.793384209380273,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,19.443549506457902,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,3.5861975535927453,High,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,16.217026240829586,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,11.50987066838764,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,17.2009087199079,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Gravelly,Rainfed,1.893216277897985,High,Tomato,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,12.25460456207976,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,16.13274878836168,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Borewell,14.206617765566726,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,9.901653014865584,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,8.014599869608077,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,11.36408984882554,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,3.6492823311931066,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,9.099907538475993,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Borewell,18.801195965288713,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,11.960417706029222,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,9.91466011689992,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,17.773972185203768,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,Farm Pond,1.8875886258210732,High,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,10.97968379858062,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,5.569719376786307,High,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Other,12.477509896995304,High,Pulses,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,6.818727118211452,High,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,12.018712723417533,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,13.62562498177796,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,6.153426200391414,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,11.54909075872851,Low,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,9.14792218605928,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,14.22964148796679,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,3.7963452951204917,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,15.139148508486947,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Rainfed,2.2015070649079407,Low,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,12.475288054770715,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,14.863023676436086,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,11.739385302820507,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Canal,17.470660011821657,High,Banana,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,7.631703480110764,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,9.470370985899939,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Rainfed,14.038551685949654,High,Coconut,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,9.357642288330204,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,11.26641928669467,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,11.305443758439154,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,5.400031132205222,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,1.9004466094866634,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Gravelly,River,2.9843330027095085,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Farm Pond,12.32047270351413,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,12.558496584868985,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,1.694723735156883,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,3.969086472034742,Moderate,Millets,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Borewell,2.2399070587709753,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,7.171007294096903,Moderate,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,10.028609827648193,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,0.6346029060455587,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,8.100729215550622,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Farm Pond,1.467422229902172,High,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,5.277162167429807,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Farm Pond,2.760918526843126,High,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,2.595878992948258,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,12.770267395808867,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Other,16.084854880087175,High,Banana,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,10.472273803515273,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,3.3350753398934474,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,4.137240836892058,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,19.312637412056315,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Farm Pond,18.23252058266587,High,Chillies,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Canal,10.578337966605794,High,Cotton,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,River,0.8838930660462456,High,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,16.07836937264781,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,3.9479801673401362,High,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,2.108142283998107,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,4.357175530582953,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Canal,12.798291932174727,High,Pulses,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,3.758550522758004,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,1.0864141064947628,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,7.376065798576216,Low,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,4.8287432331354845,High,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,18.53509311129613,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,14.902137609729875,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Canal,19.024884844309224,High,Coconut,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,9.831829546198371,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,11.685718554368686,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Farm Pond,13.338709993385697,High,Turmeric,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,13.223068349582576,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,6.2076659233980855,High,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,3.641658019608503,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,6.43052626865744,High,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,6.100451020262153,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,18.281073279438925,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Loamy,Rainfed,2.6367293170524544,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,10.66382129659436,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,17.824858772730913,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,River,16.871583543671566,High,Millets,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,2.0800962626597164,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,16.13364554048686,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,8.069927304588852,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,12.035154426493705,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Canal,11.392699234398796,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,5.244526305816736,High,Rice,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,7.446260452939872,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,6.952210892047117,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,15.234222907012562,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,15.809101097722618,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,6.30875446870448,High,Millets,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,9.777145898353726,High,Chillies,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,3.1028323073020756,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,7.062809601827246,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,15.88750654536152,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Other,11.612168950481587,High,Watermelon,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,9.534839681037772,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,2.0024795962520425,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,6.784366694141196,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,River,2.8977738973991385,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,9.23163083448675,High,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,19.584184911698674,Moderate,Millets,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,17.71144175476013,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,8.37640931404348,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Loamy,Rainfed,2.1240626904305078,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,16.34435190137676,High,Maize,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,River,1.963328924084693,High,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Borewell,15.14967803855416,High,Tomato,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Loamy,Borewell,2.9071158469093428,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Other,2.9688363326058163,Low,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,5.187864907109253,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,7.705369410434331,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Farm Pond,2.5242699936160005,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,10.4025249606306,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Rainfed,14.37576919336036,High,Maize,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,18.382639631245254,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,0.513300951720827,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,8.992148084588683,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,18.972701838308073,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,12.368797459767142,Low,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,9.296868014624167,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Canal,0.9250271103291761,High,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,4.004810978257322,High,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,11.645910971464486,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,River,11.46273548963913,High,Sugarcane,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,6.052736122540854,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,3.826889288002898,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.072912728865303,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,6.8986919697247915,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Mixed,Farm Pond,0.8473071101296643,High,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,18.711539556615453,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,8.470916279393268,High,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,9.923388391760517,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,19.896547546259725,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,6.804724161110443,Low,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,18.069733021633528,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,9.952241599393162,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,1.7494961081948968,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,6.649665026830426,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,6.2824313449857145,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,5.106148229275438,High,Millets,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,3.005199886034254,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,4.018076140834218,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,14.561572790919357,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,6.965048952202115,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,9.83548501040844,Low,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,7.498007786935252,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,7.6310909526158115,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,8.44505575660224,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,19.625033633904472,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,18.507844117942053,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,5.317104273807325,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,11.661986165434492,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,19.95226540795863,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,11.661832071705465,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,6.566692944996587,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,17.99260817968328,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Mixed,Canal,2.8360348833742233,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,10.41013980252428,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,17.946614358679255,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,8.228219372631365,High,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Farm Pond,18.788198105769233,High,Pulses,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,11.927526708944448,Low,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,17.949427326718208,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,11.55761852920937,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Canal,2.91078300832896,Low,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,8.443063497850805,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,4.102714619163968,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,5.053513780743819,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.933800898415141,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,19.718508379651738,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,14.066029074420058,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,14.933295932826594,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,River,12.004005380497926,High,Watermelon,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Rainfed,15.615557677946413,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,18.65444310152774,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,6.688517365440324,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,7.629645421837993,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,4.40103767287696,High,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Other,17.00331821353332,High,Banana,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,3.630443079719653,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,4.309156640586101,High,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Canal,0.8355634461923905,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,8.146823053648674,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,13.32869459049974,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,1.8940560406830764,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,6.480253104990672,High,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,7.125633988509094,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Rainfed,14.506015020851885,High,Cotton,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Other,12.998408598875425,High,Tomato,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,7.355558712774075,High,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,8.026038522832415,High,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,3.0232116184667714,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,8.25826544687843,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Borewell,15.91911029752696,High,Cotton,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Canal,14.37493934515034,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,4.076011278718118,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,12.844073822895014,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,7.546403257778637,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,14.442376738750228,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,5.380098430920337,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,4.839548399818393,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,8.718363380824352,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,3.0018597454588725,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Other,0.9308192021964541,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,9.337497169984978,High,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,River,1.4355009989083984,High,Groundnut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,4.849181115538218,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,3.913253829908121,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Farm Pond,0.8997766318923723,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,14.668587445317447,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,17.78710841903225,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,15.274460005927063,High,Maize,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,4.364162341862602,High,Maize,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,8.954195243931897,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,6.1264133628467015,High,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,9.371669929916491,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,18.667731637409233,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,7.766784133702763,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,18.244445635423045,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,7.9986778526514515,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,19.142056857213273,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,15.082904194214763,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,3.7419457633054134,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,Rainfed,2.278979926945906,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,9.146446998677979,Moderate,Millets,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,8.545230476541287,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,4.48837298132209,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,15.700177132662178,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,5.773168325297794,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,8.337898563971724,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,7.97228140580355,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,7.948995528895681,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,3.1429067915714186,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Canal,12.72703801638825,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,3.252140070010824,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,5.692741038025849,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Other,13.227620614991658,High,Coconut,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Rainfed,12.49217368439882,High,Groundnut,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,4.915317671573064,High,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,5.838391782026495,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Rainfed,1.2406002779615208,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,3.4808230474109836,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,11.855488271298261,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Loamy,Borewell,1.6167375551321452,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,4.970497290579912,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,8.277055045179189,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,7.220816559316039,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,14.219882037007796,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Gravelly,Borewell,1.0524177651854785,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,12.147254897394236,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Rainfed,2.0958978272981996,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,River,16.33035200390948,High,Coconut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,7.965415709194298,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,9.927026432347832,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Rainfed,16.746998993183258,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,3.2129235831930805,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,17.779629957472807,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,5.462293451676952,High,Turmeric,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,8.669865267238771,High,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,1.3826270167379486,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,14.034545031319096,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,7.1625214770844545,High,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Canal,12.248623525440086,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,8.347953556066695,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Farm Pond,14.565119266004652,High,Chillies,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,1.546889038795655,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,13.57224880497839,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,6.563593616264896,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,7.234238128953189,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,6.745175798584042,High,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,17.974361807784874,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Farm Pond,19.365479254030458,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,16.0738253076926,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Canal,14.345294867168027,High,Tomato,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,River,16.26687496641906,High,Groundnut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Borewell,17.625907421177505,High,Groundnut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,4.860548542802317,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,7.097167912949154,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Farm Pond,17.27483986757721,High,Groundnut,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,5.075200870908759,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,2.2060683700157053,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.395795484928477,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,12.373028827989215,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,5.660050509442927,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,11.761370635144019,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Other,18.288519794419294,High,Banana,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,15.476226062581688,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,19.98046785836457,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,16.08284562703558,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,6.76863302854668,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,0.776806715568234,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,15.904724670072126,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,3.5062834194121084,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,River,0.9480743504505496,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,8.409482258592915,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,15.968266849990636,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,2.2563638600445124,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,16.718176506894725,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,River,19.75645337833577,High,Cotton,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Rainfed,0.7341423091859447,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,3.0802346032893153,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,16.957294556049014,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,2.6527007334380506,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,7.827861356056632,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,15.084074165019315,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,11.711873757477028,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,4.882278312991315,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,2.0482524542578773,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,5.421598202870898,High,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,12.579680962390443,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,3.6849611992600657,High,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Other,1.8212647888744842,High,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,6.274046867214208,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,11.448908504581727,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,2.6287622162718063,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,7.635530043222748,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Rainfed,1.9247219949937278,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,3.5101408786857333,High,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,18.399093748627113,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,3.692815977681364,High,Sugarcane,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Gravelly,Canal,1.1967217573013533,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,15.984309644327713,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,7.025479403399995,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,6.770143405068792,High,Millets,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,19.146209888641277,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,8.557545255665511,High,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,3.6321892794433364,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,5.16179448416159,High,Watermelon,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,16.43571135508784,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,16.74639929934298,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,11.838662182766607,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,3.0382718772679915,Low,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Canal,10.524285515289215,High,Groundnut,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,4.349437890751429,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,17.062146113135373,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,12.022569446389822,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,3.084696221668886,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,8.290377638422896,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,6.625190601409779,Moderate,Rice,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,15.36124163520833,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,11.186317156254065,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,10.89452921336785,Low,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,4.984631010688053,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,12.808687183091873,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,6.806482204306343,High,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,9.961996584444591,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,5.814939334588025,Moderate,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,9.17757768608328,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,3.011793461262837,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,14.322546093141806,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,River,19.496144281083104,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,7.065777254464115,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,1.5946117105780808,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,10.207038209918784,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,7.340111284018599,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,18.709864770490547,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Canal,18.342755539284976,High,Millets,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,11.935649235226716,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,9.689128621495522,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,3.2819945531746004,High,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,9.81403441592055,High,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,11.402762685398672,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,8.299850466481512,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,8.65366989825057,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Mixed,Borewell,1.9720362353086494,High,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,15.361163337804335,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,17.082796994396062,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Other,18.47521486722369,High,Pulses,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,12.326153215836747,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Farm Pond,17.899342244446046,High,Banana,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Rainfed,1.7735665641034406,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,7.955953680422518,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Canal,17.797908067265084,High,Watermelon,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,River,14.523694479250898,High,Coconut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Farm Pond,18.375805941380136,High,Banana,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,15.645959395040329,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,15.530573022113376,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,14.98881259723672,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,2.4344834462152516,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,0.5160765933529663,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,19.30414672448329,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,River,14.672947563232682,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Borewell,17.797201346140586,High,Pulses,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,17.36197685660086,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,River,11.829367122721994,High,Maize,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,5.517725382329649,Low,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,8.807641897926095,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,8.974816399158634,Low,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,14.46186715873494,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,15.20184936395753,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,11.134615196628044,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,12.6352856090108,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,4.147870581281323,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,8.202681009340981,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,5.223314925658254,High,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Rainfed,1.275843610295809,High,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Farm Pond,10.594519892145058,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,11.970847888045293,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,7.860808496651118,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Farm Pond,11.039413403530759,High,Banana,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,River,14.828210447441268,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,14.878358177996668,Moderate,Millets,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,11.767701537733718,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,River,15.201159086649996,High,Maize,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,8.022897488786139,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,16.22350665686399,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,5.547300725325757,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,8.153637059160022,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,6.226304706765675,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,6.544812131145203,High,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,10.103601045257927,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,6.652999607822413,High,Turmeric,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,6.800515478759039,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,9.237001792139008,High,Maize,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,9.684335653380726,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Canal,13.96327748678722,High,Tomato,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,17.3517550491199,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,3.7321354995668434,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Other,18.274212710825424,High,Pulses,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,7.016562340713351,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,16.00026246573692,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Canal,2.6139226358078047,Low,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Borewell,12.025614702663802,High,Coconut,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,11.392545863220334,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,10.430579056739248,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,1.5487704781692122,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,18.683503103262236,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,6.201208128903241,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,8.84656577207656,High,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,7.412965484204774,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,12.249079449803421,Low,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Farm Pond,17.217038705997346,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,17.019788415239557,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,13.15751946420881,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,8.158048000131256,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,10.038399315749194,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,5.30420030469278,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,18.995397279028044,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,15.352409258727228,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,11.469522163144209,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,River,1.3964399912904546,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,6.892730772577071,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,4.781215898628329,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,6.588189025887355,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,7.8051632575711745,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,11.030061756482892,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,13.274908966107262,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,19.220300158902813,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,2.9812837268876864,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,10.760101600804063,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,14.954905743119506,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,12.328320697212751,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,19.697505931550445,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Borewell,2.9725038443065412,High,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,11.329117846376711,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,6.648846334180583,High,Tomato,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,7.3150379724243715,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,5.158828809704781,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,14.567304576668322,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Borewell,16.266246336729193,High,Banana,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Rainfed,1.780130081568319,Low,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,16.156400793822044,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Mixed,River,1.4685470523302078,High,Rice,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,17.461398428296185,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,7.3104469634163545,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,18.468402281133876,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Rainfed,14.416794986412379,High,Cotton,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,3.0306257624132478,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,4.758525101159153,High,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,12.46242139669835,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,18.504354014739345,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Canal,16.702596331772583,High,Coconut,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,6.987062445253798,High,Tomato,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.589859968537201,High,Watermelon,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,18.81628035354276,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Canal,12.352361800066088,High,Groundnut,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,12.049088106433109,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,3.1270630992159516,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,16.785971567342678,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,13.330603601543984,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,18.553229382909077,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,11.148790800768689,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Farm Pond,17.901305713756756,Low,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,8.194518612660298,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,14.752321905148108,Low,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,8.054373369546376,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,18.611207658997063,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,9.65525635734081,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,15.061318182760857,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,6.691298686732915,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,16.900166280941637,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,7.64328215499037,High,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,8.724115722432446,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,13.494567966739673,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Other,15.95936966510797,High,Groundnut,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Borewell,1.9573050485893408,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Other,1.782562864550659,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,6.095778521810712,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Other,2.392890181069744,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,3.960711545264918,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,19.398653837035923,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,19.115412668653406,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,River,17.621156685173453,High,Coconut,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,10.304928692168168,Low,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Farm Pond,16.062373296216283,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Other,12.870426744390727,Low,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Sandy,Farm Pond,1.5607944800550058,High,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Farm Pond,14.715527566898215,High,Coconut,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,1.8786018190109492,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,River,10.223573185779935,High,Maize,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,10.42409640665165,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,3.6261014758943126,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,4.090721062425838,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,18.10929346644313,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,2.517185351556072,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,1.5552476781134477,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,9.1642605649508,High,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,10.25441627939237,Low,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Borewell,19.856849729996917,High,Rice,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Canal,10.446913532169917,High,Maize,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,3.2108044189672227,High,Chillies,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,13.665938956637309,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,9.675095812587646,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,River,2.427741572627227,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,12.556595461882553,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,14.030856897909059,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Other,17.292021394127644,High,Cotton,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,4.3713318845054365,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Farm Pond,16.451668432966272,High,Banana,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Borewell,2.9956185965192126,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,16.09861077187015,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,3.676447411342135,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,1.6623394899371693,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,11.133688745105545,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,15.126254578591059,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,15.608268446145436,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,4.2534919508349045,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,10.271861442722422,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,6.767070127793144,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,7.577431914469547,Low,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,14.027135887033795,High,Tomato,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,6.2890509951870035,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,River,12.141916815125718,High,Turmeric,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,1.747813489869826,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,15.73764412882216,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Rainfed,6.063369116263811,High,Watermelon,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,19.586197759649785,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Farm Pond,13.71974180369503,Low,Banana,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,14.00795703206378,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,8.538905990496723,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,2.458168950603965,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Rainfed,2.090202438080275,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,3.442877649579314,High,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,7.641820112608167,High,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,12.408858395307881,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Canal,17.484393921303635,High,Banana,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,12.295162249015318,Low,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,2.333759430212793,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Other,14.890607754294344,High,Banana,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,9.088378063544535,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,17.83351867868726,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Canal,17.48630404902086,High,Turmeric,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Farm Pond,15.382590232134174,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,5.92005614894371,High,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Borewell,3.189102086065267,High,Rice,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,9.669265459438911,High,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,18.26653248798545,Moderate,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Rainfed,1.7756949400411794,High,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,9.765478954035633,Low,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,9.47277896840788,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,18.78073136998117,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,6.361535796625527,High,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,11.007211843995007,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,15.230774273371617,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Canal,12.595273062402702,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,2.1559554843407045,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Canal,4.533280781194669,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,9.41700909212128,High,Tomato,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,11.77652239300709,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,0.7705472072660828,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Borewell,18.99962277642493,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,14.436862197780565,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,4.4444527311814275,Moderate,Maize,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,3.9765764627329805,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,15.78619366190381,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,11.216809207187852,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,4.71071886653503,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,17.963555804457734,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,9.558369278689387,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Farm Pond,2.4337608531898836,High,Watermelon,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,9.145596255924517,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Red,Rainfed,13.224777466418141,High,Tomato,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,7.186898491830879,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,6.07816780638908,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,13.233892581109217,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,4.321181444975611,High,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,16.786931684076094,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,2.3452538576683395,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,13.979021446826575,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Canal,14.58319929349757,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,19.947218388282202,High,Pulses,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,19.548669035813724,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,7.088097422388694,High,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Black,Borewell,2.135125669259491,Low,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,11.933794406900276,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,5.687925234763729,High,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,0.830000737669309,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,4.9716416263841055,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,9.440813475989854,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,11.841317390811676,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,19.3209771401293,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Farm Pond,15.162636891038465,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,8.524148772549296,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,6.00545853357959,High,Millets,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,4.192318734011446,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Canal,17.175845237363372,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,11.028215505328712,Low,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Mixed,Rainfed,2.149465759182135,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,9.458057954300253,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Rainfed,12.067036394432074,High,Banana,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,19.851216742488763,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,15.417256818177007,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Other,2.6240611903650364,High,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,5.486577318409753,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,8.113523843820897,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Canal,18.489042128554104,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Rainfed,1.8780916968650594,High,Chillies,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,10.655292744392913,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Rainfed,4.352677200893228,Low,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,17.801135161537808,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,4.225154687399337,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,4.443289204247299,High,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,7.11271374121648,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,9.290168374256593,High,Chillies,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,15.17762831768848,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Borewell,19.400551960439202,High,Maize,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Borewell,3.593693968669783,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Laterite,Canal,2.1923394163987204,Low,Pulses,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,16.840466550729587,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,9.552154368153897,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Borewell,18.625408794731523,Low,Cotton,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,4.276272237251969,High,Tomato,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Other,8.514179382156724,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,6.238232691691186,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.267931878551584,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,7.150498858439725,High,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,18.201611377472705,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,8.189883466631226,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,5.265269972636814,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,7.786030878500568,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Rainfed,5.583071938358681,High,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,11.29124123214263,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Farm Pond,10.848670935510894,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Alluvial,Farm Pond,17.732297523317214,High,Cotton,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,River,7.837907071549779,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,15.115328662938035,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,14.877871632817829,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Farm Pond,0.6808899177719641,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Other,10.085236821895446,High,Pulses,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,13.070041752876167,Low,Pulses,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,18.504807309214883,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,5.42632599380819,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,17.49824004624466,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Canal,4.272457502493396,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Other,11.105115121656684,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Other,8.919709849350337,Low,Banana,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,River,11.821274831118668,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,River,14.958753549332469,High,Pulses,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,2.2553010169384695,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Gravelly,Rainfed,11.219906360165073,High,Cotton,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Clay,Borewell,2.354661928236138,High,Chillies,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,River,13.705063469180727,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Other,14.983510549929179,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Rainfed,19.90056804916832,Low,Coconut,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,18.390294355555234,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Gravelly,Borewell,1.2109750645587094,High,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Canal,12.734968612934967,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,1.7641451990467019,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,10.706436853496509,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,River,6.874423510037602,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Canal,16.16072022818512,Low,Coconut,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,18.952447643577983,Low,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Farm Pond,12.90134101395121,High,Chillies,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,12.468202263191257,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,8.376805317043997,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,18.047136660530718,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Canal,4.714660567140417,High,Rice,Single,Yes,Yes,Flood,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Sandy,Other,19.29898857309447,High,Coconut,Single,Yes,Yes,Drip,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Farm Pond,17.783976674119295,Low,Coconut,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Farm Pond,18.039721038767947,Moderate,Maize,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Borewell,18.412338209239653,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,10.99249219092991,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,9.959831286137828,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,11.466378124092442,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Borewell,3.295094135767684,High,Groundnut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Farm Pond,18.09419630052213,High,Groundnut,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,Other,0.8328414798721984,High,Rice,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,17.28988841868165,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,River,5.548871432876662,Low,Cotton,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Borewell,11.118008069281046,High,Cotton,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Laterite,Borewell,14.744897129822657,High,Sugarcane,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Red,Other,13.984746727849766,Moderate,Turmeric,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Borewell,17.64695017343974,Moderate,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Rainfed,13.484460087284464,Low,Pulses,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Rainfed,5.219559309099238,Moderate,Millets,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,River,18.718188175497517,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Alluvial,Borewell,2.5132385360014076,Low,Pulses,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,11.865434780488995,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Traditional,Red,River,2.6351875831409237,Low,Pulses,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Alluvial,Other,17.46968569099496,Moderate,Chillies,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,15.969100219078111,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,18.56877504912897,Moderate,Sugarcane,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,Canal,16.856981666669114,High,Rice,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Rainfed,15.313092727295933,High,Cotton,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Rainfed,11.305349086576852,High,Groundnut,Single,Yes,Yes,Drip,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Gravelly,Farm Pond,8.3910512185757,Moderate,Tomato,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Other,16.94464702586949,Low,Cotton,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Farm Pond,8.296596922911181,Low,Pulses,Single,Yes,Yes,Flood,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Mixed,Rainfed,4.054760711695698,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Clay,Rainfed,3.7019180380548544,Moderate,Watermelon,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,Borewell,8.20968719798605,Moderate,Banana,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Mixed,Borewell,19.169429454821405,High,Maize,Single,Yes,Yes,Drip,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Clay,River,16.731851252654437,High,Banana,Single,Yes,Yes,Drip,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Black,Canal,18.108243593299868,High,Cotton,Single,Yes,Yes,Drip,Daily,Canal,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,6.294298702330946,Low,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,3.3590550539551782,High,Watermelon,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,River,9.793055070929961,Moderate,Rice,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,Borewell,5.233053269035508,Moderate,Coconut,Single,Yes,Yes,Flood,Daily,Borewell,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Sandy,River,12.886767110570405,Low,Coconut,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Black,Rainfed,8.611254624676262,Moderate,Cotton,Single,Yes,Yes,Flood,Daily,Rainfed,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Progressive,Loamy,Farm Pond,16.471709426870042,High,Banana,Single,Yes,Yes,Drip,Daily,Farm Pond,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Laterite,Other,11.755207876842562,Moderate,Groundnut,Single,Yes,Yes,Flood,Daily,Other,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
+Transitional,Loamy,River,13.977366300524304,Moderate,Banana,Single,Yes,Yes,Flood,Daily,River,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,High,Yes
