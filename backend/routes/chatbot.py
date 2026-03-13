@@ -1,5 +1,17 @@
 from flask import Blueprint, jsonify, request, session
 from models import FarmerData
+import os
+from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Configure Groq
+groq_api_key = os.getenv("GROQ_API_KEY")
+if groq_api_key:
+    groq_client = Groq(api_key=groq_api_key)
+else:
+    groq_client = None
 
 chatbot_bp = Blueprint('chatbot', __name__)
 
@@ -686,6 +698,43 @@ RESPONSES = {
             "• சில முன்னணி நிறுவனங்கள் (Mahindra, TAFE) திறன் மேம்பாட்டு முகாம்களை நடத்துகின்றன."
         ),
     },
+    # --- AgriNova & Simulation ---
+    'agrinova_working': {
+        'en': (
+            "📱 **How AgriNova Works:**\n"
+            "AgriNova is designed to support Tamil Nadu farmers. Here's what we do:\n"
+            "• **Profile Simulation:** You enter your farm data (land, water, crops, tech attitude).\n"
+            "• **Machine Learning Model:** Our system (using Random Forest & K-Means) analyzes this data to predict your *Technology Adoption Score*.\n"
+            "• **Targeted Recommendations:** Based on your score and farm profile, we suggest the most profitable crops, relevant modern technologies, and specific Government Schemes you are eligible for.\n"
+            "• **Bilingual Support:** Everything is tailored for Tamil & English."
+        ),
+        'ta': (
+            "📱 **AgriNova எவ்வாறு இயங்குகிறது:**\n"
+            "AgriNova தமிழ்நாடு விவசாயிகளை ஆதரிக்க வடிவமைக்கப்பட்டுள்ளது:\n"
+            "• **சுயவிவர உருவகப்படுத்துதல் (Simulation):** உங்கள் பண்ணை தரவுகளை நீங்கள் பதிவு செய்கிறீர்கள் (நிலம், நீர், பயிர்கள், மனப்பான்மை).\n"
+            "• **மெஷின் லேர்னிங் (ML):** இந்த தரவுகளை பகுப்பாய்வு செய்து, உங்கள் *தொழில்நுட்ப தத்தெடுப்பு மதிப்பெண்ணை* எங்கள் அமைப்பு கணிக்கிறது.\n"
+            "• **பரிந்துரைகள்:** உங்கள் மதிப்பெண் மற்றும் நில அமைப்பின் அடிப்படையில், லாபகரமான பயிர்கள், நவீன தொழில்நுட்பங்கள் மற்றும் உங்களுக்கு தகுதியான அரசு திட்டங்களை நாங்கள் பரிந்துரைக்கிறோம்.\n"
+            "• **தமிழ் & ஆங்கிலம்:** அனைத்தும் இரு மொழிகளிலும் கிடைக்கும்."
+        ),
+    },
+    'simulation_prediction': {
+        'en': (
+            "🤖 **About Your Farm Simulation & Score:**\n"
+            "Our simulation engine takes 19 features of your farming behavior (like age, land, water, openness to risk) to place you into a specific *Adoption Category* (High, Moderate, or Low).\n\n"
+            "Based on this clustering:\n"
+            "1. We map you to Government Schemes that fit your category.\n"
+            "2. We suggest specific technologies (like Drip Irrigation or App Usage) that you are most likely to adopt successfully.\n"
+            "The goal is to provide realistic, risk-managed advice tailored solely to you!"
+        ),
+        'ta': (
+            "🤖 **உங்கள் பண்ணை உருவகப்படுத்துதல் & மதிப்பெண் பற்றி:**\n"
+            "எங்கள் சிமுலேஷன் இயந்திரம் உங்கள் விவசாய நடத்தையின் 19 அம்சங்களை (வயது, நிலம், நீர், ஆபத்தை ஏற்கும் திறன் போன்றவை) எடுத்து உங்களை ஒரு குறிப்பிட்ட *தத்தெடுப்பு பிரிவில்* (உயர், நடுத்தர, குறைந்த) வைக்கிறது.\n\n"
+            "இதன் அடிப்படையில்:\n"
+            "1. உங்கள் பிரிவுக்கு ஏற்ற அரசு திட்டங்களை வரிசைப்படுத்துகிறோம்.\n"
+            "2. நீங்கள் எளிதாக பயன்படுத்தக்கூடிய குறிப்பிட்ட தொழில்நுட்பங்களை (சொட்டு நீர்ப்பாசனம் போன்றவை) பரிந்துரைக்கிறோம்.\n"
+            "உங்களுக்கு மட்டுமே ஏற்ற, நடைமுறைக்கு சாத்தியமான ஆலோசனைகளை வழங்குவதே இதன் நோக்கம்!"
+        ),
+    },
     # --- greet ---
     'hello': {
         'en': (
@@ -775,6 +824,9 @@ KEYWORD_MAP = [
     (['fpo', 'producer organization', 'cooperative', 'உற்பத்தி நிறுவனம்', 'கூட்டுறவு'], 'fpo_cooperative'),
     (['tractor', 'driving', 'machinery training', 'டிராக்டர்', 'ஓட்டுநர்'], 'tractor_training'),
 
+    (['agrinova', 'how it works', 'app', 'application', 'features', 'எப்படி இயங்குகிறது', 'செயலி'], 'agrinova_working'),
+    (['simulation', 'predict', 'score', 'model', 'ml', 'machine learning', 'உருவகப்படுத்துதல்', 'கணிப்பு', 'மதிப்பெண்'], 'simulation_prediction'),
+
     (['crop', 'crops', 'grow', 'plant', 'paddy', 'rice', 'millet', 'vegetable', 'pulse',
       'பயிர்', 'நெல்', 'தினை', 'காய்கறி'], 'crop'),
     (['water', 'rain', 'rainfall', 'moisture', 'நீர்', 'மழை'], 'water'),
@@ -830,13 +882,93 @@ def chat():
         intent = match_intent(user_message)
         response_obj = RESPONSES.get(intent, RESPONSES['default'])
 
-        # response_obj may be a dict {'en': ..., 'ta': ...} or a plain string
+        # Attempt to use Groq LLM explicitly if we have the key
+        if groq_client:
+            farmer_data = FarmerData.get_by_user_id(session['user_id']) if 'user_id' in session else None
+            
+            context = "You are an AI assistant for Tamil Nadu farmers called 'AgriNova Chatbot'. "
+            if farmer_data:
+                context += (
+                    f"Here is the farmer's specific profile data:\n"
+                    f"- District: {farmer_data.get('Location_District')}\n"
+                    f"- Crop: {farmer_data.get('Crop_Type')}\n"
+                    f"- Land Size: {farmer_data.get('Land_Size_acres')} acres\n"
+                    f"- Irrigation: {farmer_data.get('Irrigation_Method')}\n"
+                    f"- Tech Adoption Score (ML Prediction): {farmer_data.get('adoption_score'):.1f}%\n"
+                    f"- Adoption Category: {farmer_data.get('adoption_category')}\n\n"
+                    f"Use this profile data to personalize your answers if relevant. "
+                )
+
+            prompt_text = (
+                context
+                + f"\nThe user is asking: \"{user_message}\""
+                + "\nRespond concisely (under 100 words) and directly address the question."
+            )
+
+            try:
+                # English response
+                chat_en = groq_client.chat.completions.create(
+                    messages=[
+                        {"role": "system", "content": prompt_text},
+                        {"role": "user", "content": user_message + " (answer in English)"},
+                    ],
+                    model="llama-3.1-8b-instant",
+                    max_tokens=200,
+                )
+                reply_en = chat_en.choices[0].message.content.strip()
+
+                # Tamil response
+                chat_ta = groq_client.chat.completions.create(
+                    messages=[
+                        {"role": "system", "content": prompt_text},
+                        {"role": "user", "content": user_message + " (answer strictly in Tamil language)"},
+                    ],
+                    model="llama-3.1-8b-instant",
+                    max_tokens=200,
+                )
+                reply_ta = chat_ta.choices[0].message.content.strip()
+
+                return jsonify({
+                    'reply_en': reply_en,
+                    'reply_ta': reply_ta,
+                    'intent': intent or 'llm_generated',
+                }), 200
+
+            except Exception as e:
+                print(f"Groq API Error: {e}")
+                # Fallthrough to static responses if API fails
+
+        # Standard static logic fallback
         if isinstance(response_obj, dict):
             reply_en = response_obj.get('en', '')
             reply_ta = response_obj.get('ta', '')
         else:
             reply_en = response_obj
             reply_ta = response_obj
+            
+        if intent == 'simulation_prediction' and 'user_id' in session:
+            farmer_data = FarmerData.get_by_user_id(session['user_id'])
+            if farmer_data:
+                score = farmer_data.get('adoption_score')
+                category = farmer_data.get('adoption_category')
+                
+                if score is not None and category:
+                    en_addon = (
+                        f"\n\n📊 **Your Personalized Result:**\n"
+                        f"Based on the data you entered in the form, our ML model scored your technology adoption at **{score:.1f}%**. "
+                        f"This places you in the **{category} Adoption Category**."
+                    )
+                    
+                    category_ta_map = {'High': 'உயர்', 'Moderate': 'நடுத்தர', 'Low': 'குறைந்த'}
+                    cat_ta = category_ta_map.get(category, category)
+                    ta_addon = (
+                        f"\n\n📊 **உங்கள் தனிப்பட்ட முடிவு:**\n"
+                        f"நீங்கள் படிவத்தில் உள்ளிட்ட தரவுகளின் அடிப்படையில், மிஷின் லேர்னிங் மாடல் உங்கள் தொழில்நுட்ப தத்தெடுப்பை **{score:.1f}%** என மதிப்பிட்டுள்ளது. "
+                        f"இது உங்களை **{cat_ta} தத்தெடுப்பு பிரிவில்** வைக்கிறது."
+                    )
+                    
+                    reply_en += en_addon
+                    reply_ta += ta_addon
 
         return jsonify({
             'reply_en': reply_en,

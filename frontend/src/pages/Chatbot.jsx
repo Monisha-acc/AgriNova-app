@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { chatbotAPI } from '../utils/api';
 import { useLanguage } from '../context/LanguageContext';
-import { FaComments, FaTimes, FaPaperPlane, FaRobot, FaMicrophone, FaMicrophoneSlash, FaVolumeUp } from 'react-icons/fa';
+import { FaComments, FaTimes, FaPaperPlane, FaRobot, FaMicrophone, FaMicrophoneSlash, FaVolumeUp, FaStop } from 'react-icons/fa';
 
 const Chatbot = ({ user }) => {
     const { language } = useLanguage();
@@ -13,6 +13,7 @@ const Chatbot = ({ user }) => {
     const [isTyping, setIsTyping] = useState(false);
     const [isInitialized, setIsInitialized] = useState(false);
     const [isListening, setIsListening] = useState(false);
+    const [playingMsgIndex, setPlayingMsgIndex] = useState(null);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
 
@@ -113,6 +114,10 @@ const Chatbot = ({ user }) => {
     };
 
     const handleClose = () => {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            setPlayingMsgIndex(null);
+        }
         setIsOpen(false);
     };
 
@@ -286,12 +291,23 @@ const Chatbot = ({ user }) => {
                                         <button
                                             onClick={() => {
                                                 if ('speechSynthesis' in window) {
+                                                    if (playingMsgIndex === i) {
+                                                        window.speechSynthesis.cancel();
+                                                        setPlayingMsgIndex(null);
+                                                        return;
+                                                    }
+                                                    
                                                     window.speechSynthesis.cancel();
+                                                    setPlayingMsgIndex(i);
+                                                    
                                                     const rawText = language === 'en' ? msg.reply_en : msg.reply_ta;
                                                     // Remove markdown symbols before reading
                                                     const cleanText = rawText.replace(/[*#/_`~]/g, '');
                                                     const utterance = new SpeechSynthesisUtterance(cleanText);
                                                     utterance.lang = language === 'en' ? 'en-IN' : 'ta-IN';
+
+                                                    utterance.onend = () => setPlayingMsgIndex(null);
+                                                    utterance.onerror = () => setPlayingMsgIndex(null);
 
                                                     const voices = window.speechSynthesis.getVoices();
                                                     const targetLang = language === 'en' ? 'en-IN' : 'ta-IN';
@@ -304,8 +320,6 @@ const Chatbot = ({ user }) => {
 
                                                     if (voice) {
                                                         utterance.voice = voice;
-                                                    } else if (language === 'ta') {
-                                                        console.warn("No Tamil TTS voice found on this device/browser.");
                                                     }
 
                                                     window.speechSynthesis.speak(utterance);
@@ -313,13 +327,16 @@ const Chatbot = ({ user }) => {
                                             }}
                                             style={{
                                                 position: 'absolute', bottom: '-22px', left: '0',
-                                                background: 'none', border: 'none', color: '#6b7280',
+                                                background: 'none', border: 'none', 
+                                                color: playingMsgIndex === i ? '#ef4444' : '#6b7280',
                                                 cursor: 'pointer', fontSize: '12px', padding: '2px 4px',
                                                 display: 'flex', alignItems: 'center', gap: '4px'
                                             }}
-                                            title={language === 'en' ? "Read aloud" : "சத்தமாக படியுங்கள்"}
+                                            title={playingMsgIndex === i 
+                                                    ? (language === 'en' ? "Stop reading" : "படிப்பதை நிறுத்து") 
+                                                    : (language === 'en' ? "Read aloud" : "சத்தமாக படியுங்கள்")}
                                         >
-                                            <FaVolumeUp />
+                                            {playingMsgIndex === i ? <FaStop /> : <FaVolumeUp />}
                                         </button>
                                     )}
                                 </div>
