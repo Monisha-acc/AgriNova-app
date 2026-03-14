@@ -19,16 +19,29 @@ def init_db():
     # Users table for authentication
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            email TEXT UNIQUE,
-            phone TEXT,
+            phone_number TEXT UNIQUE NOT NULL,
             password_hash TEXT NOT NULL,
             district TEXT NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
     
+    # OTP table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS otp (
+            otp_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            phone_number TEXT NOT NULL,
+            otp_code TEXT NOT NULL,
+            name TEXT,
+            district TEXT,
+            attempts INTEGER DEFAULT 0,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            expires_at TIMESTAMP NOT NULL
+        )
+    ''')
+
     # Farmer data table
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS farmer_data (
@@ -152,6 +165,13 @@ def init_db():
             risk_follow_neighbors INTEGER,
             enrolled_pmfby INTEGER,
             
+            -- Insurance Details
+            insuranceEnrolled TEXT,
+            insuranceScheme TEXT,
+            insuranceClaim TEXT,
+            insuredLandPercent TEXT,
+            farmingRisk TEXT,
+            
             -- Water Irrigation Module
             irrig_method TEXT,
             irrig_source TEXT,
@@ -182,7 +202,7 @@ def init_db():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             
-            FOREIGN KEY (user_id) REFERENCES users (id)
+            FOREIGN KEY (user_id) REFERENCES users (user_id)
         )
     ''')
     
@@ -192,7 +212,7 @@ def init_db():
 
 class User:
     @staticmethod
-    def create(name, email, phone, password, district):
+    def create(name, phone_number, password, district):
         """Create new user"""
         conn = get_db()
         cursor = conn.cursor()
@@ -200,9 +220,9 @@ class User:
         
         try:
             cursor.execute('''
-                INSERT INTO users (name, email, phone, password_hash, district)
-                VALUES (?, ?, ?, ?, ?)
-            ''', (name, email, phone, password_hash, district))
+                INSERT INTO users (name, phone_number, password_hash, district)
+                VALUES (?, ?, ?, ?)
+            ''', (name, phone_number, password_hash, district))
             conn.commit()
             user_id = cursor.lastrowid
             conn.close()
@@ -212,11 +232,11 @@ class User:
             return None
     
     @staticmethod
-    def authenticate(email, password):
+    def authenticate(phone_number, password):
         """Authenticate user"""
         conn = get_db()
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM users WHERE email = ?', (email,))
+        cursor.execute('SELECT * FROM users WHERE phone_number = ?', (phone_number,))
         user = cursor.fetchone()
         conn.close()
         
@@ -229,10 +249,70 @@ class User:
         """Get user by ID"""
         conn = get_db()
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM users WHERE id = ?', (user_id,))
+        cursor.execute('SELECT * FROM users WHERE user_id = ?', (user_id,))
         user = cursor.fetchone()
         conn.close()
         return dict(user) if user else None
+
+class OTPModel:
+    @staticmethod
+    def create(phone_number, otp_code, name=None, district=None, ttl_minutes=5):
+        """Create a new OTP entry in the database"""
+        conn = get_db()
+        cursor = conn.cursor()
+        
+        # Calculate expiration
+        import datetime
+        now = datetime.datetime.now()
+        expires_at = now + datetime.timedelta(minutes=ttl_minutes)
+        
+        cursor.execute('''
+            INSERT INTO otp (phone_number, otp_code, name, district, attempts, created_at, expires_at)
+            VALUES (?, ?, ?, ?, 0, ?, ?)
+        ''', (phone_number, str(otp_code), name, district, now.strftime('%Y-%m-%d %H:%M:%S'), expires_at.strftime('%Y-%m-%d %H:%M:%S')))
+        
+        conn.commit()
+        conn.close()
+        print(f"OTP stored in DB for {phone_number}", flush=True)
+        
+    @staticmethod
+    def verify(phone_number, otp_code):
+        """Verify an OTP and check if expired"""
+        conn = get_db()
+        cursor = conn.cursor()
+        
+        import datetime
+        now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Find latest unexpired matching OTP with attempts < 3
+        cursor.execute('''
+            SELECT * FROM otp 
+            WHERE phone_number = ? AND expires_at > ?
+            ORDER BY created_at DESC LIMIT 1
+        ''', (phone_number, now))
+        
+        result = cursor.fetchone()
+        
+        if result:
+            if result['attempts'] >= 3:
+                conn.close()
+                return False # Too many attempts
+                
+            if result['otp_code'] == str(otp_code):
+                # Delete it after successful verification
+                cursor.execute('DELETE FROM otp WHERE otp_id = ?', (result['otp_id'],))
+                conn.commit()
+                conn.close()
+                return True
+            else:
+                # Increment attempts
+                cursor.execute('UPDATE otp SET attempts = attempts + 1 WHERE otp_id = ?', (result['otp_id'],))
+                conn.commit()
+                conn.close()
+                return False
+            
+        conn.close()
+        return False
 
 class FarmerData:
     @staticmethod
@@ -273,8 +353,9 @@ class FarmerData:
                 other_irrig_method, other_irrig_source, other_irrig_availability,
                 other_irrig_frequency, other_irrig_drainage, other_irrig_land_level,
                 other_irrig_moisture, other_irrig_system_cond, other_irrig_storage,
-                other_irrig_timing, other_irrig_rainfall_dep
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                other_irrig_timing, other_irrig_rainfall_dep,
+                insuranceEnrolled, insuranceScheme, insuranceClaim, insuredLandPercent, farmingRisk
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             user_id,
             data.get('age'),
@@ -388,7 +469,12 @@ class FarmerData:
             data.get('other_irrig_system_cond'),
             data.get('other_irrig_storage'),
             data.get('other_irrig_timing'),
-            data.get('other_irrig_rainfall_dep')
+            data.get('other_irrig_rainfall_dep'),
+            data.get('insuranceEnrolled'),
+            data.get('insuranceScheme'),
+            data.get('insuranceClaim'),
+            data.get('insuredLandPercent'),
+            data.get('farmingRisk')
         ))
         
         conn.commit()
@@ -406,11 +492,17 @@ class FarmerData:
         conn.close()
         
         if data:
-            result = dict(data)
-            # Parse JSON fields
-            result['technologies_used'] = json.loads(result['technologies_used']) if result['technologies_used'] else []
-            result['schemes_aware'] = json.loads(result['schemes_aware']) if result['schemes_aware'] else []
-            result['crops'] = json.loads(result['crops']) if (result.get('crops') and result['crops'].startswith('[')) else [result['crops']] if result.get('crops') else []
+            # Convert to a standard dictionary to resolve Pyre2 type assignment errors
+            result = {k: v for k, v in dict(data).items()}
+            # Parse JSON fields safely parsing as string first
+            tech = result.get('technologies_used')
+            result['technologies_used'] = json.loads(str(tech)) if tech else []
+            
+            schemes = result.get('schemes_aware')
+            result['schemes_aware'] = json.loads(str(schemes)) if schemes else []
+            
+            crops_val = str(result.get('crops', ''))
+            result['crops'] = json.loads(crops_val) if crops_val.startswith('[') else [crops_val] if crops_val else []
             return result
         return None
     

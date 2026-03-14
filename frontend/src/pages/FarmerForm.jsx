@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { farmerAPI } from '../utils/api';
 import {
     FaUser, FaLandmark, FaMicrochip, FaUniversity, FaMoneyBill, FaHeart,
-    FaArrowRight, FaArrowLeft, FaCheck
+    FaArrowRight, FaArrowLeft, FaCheck, FaLightbulb, FaShieldAlt, FaExclamationTriangle
 } from 'react-icons/fa';
 
 const FarmerForm = ({ user }) => {
@@ -41,10 +41,10 @@ const FarmerForm = ({ user }) => {
         // Step 4: Scheme Awareness
         schemes_aware: [],
         other_scheme: '',
-        amma_two_wheeler_aware: false,
+        amma_two_wheeler_aware: false, // Legacy field
         tn_micro_irrigation_aware: false,
         tn_free_electricity_aware: false,
-        kalaignar_scheme_aware: false,
+        kalaignar_scheme_aware: false, // Reused for Integrated Farming
         tn_soil_health_aware: false,
         tn_farm_mechanization_aware: false,
 
@@ -118,9 +118,38 @@ const FarmerForm = ({ user }) => {
         risk_try_new_methods: 3,
         risk_afraid_loss: 3,
         risk_follow_neighbors: 3,
+        openness: 3,
+        trust: 3,
+
+        // Insurance Details
+        insuranceEnrolled: '',
+        insuranceScheme: '',
+        insuranceClaim: '',
+        insuredLandPercent: '',
+        farmingRisk: ''
     });
 
-    const totalSteps = 7;
+    useEffect(() => {
+        const willingness = parseInt(formData.risk_try_new_methods) || 3;
+        const fear = parseInt(formData.risk_afraid_loss) || 3;
+        const neighbors = parseInt(formData.risk_follow_neighbors) || 3;
+
+        // Openness to New Technology = Average of: Willingness and Following neighbors
+        const calculatedOpenness = ((willingness + neighbors) / 2).toFixed(1);
+        
+        // Trust in Technology = Average of: Willingness and (6 - Fear)
+        const calculatedTrust = ((willingness + (6 - fear)) / 2).toFixed(1);
+
+        if (formData.openness !== calculatedOpenness || formData.trust !== calculatedTrust) {
+            setFormData(prev => ({
+                ...prev,
+                openness: calculatedOpenness,
+                trust: calculatedTrust
+            }));
+        }
+    }, [formData.risk_try_new_methods, formData.risk_afraid_loss, formData.risk_follow_neighbors]);
+
+    const totalSteps = 8;
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -262,7 +291,7 @@ const FarmerForm = ({ user }) => {
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">{t('experience')}</label>
                     <input type="number" name="experience" value={formData.experience} onChange={handleChange}
-                        className="input-field" required placeholder="Years" />
+                        className="input-field" required placeholder={t('years')} />
                 </div>
 
                 <div>
@@ -526,12 +555,12 @@ const FarmerForm = ({ user }) => {
         ];
 
         const tnSchemes = [
-            { id: 'amma_two_wheeler_aware', label: 'ammaTwoWheeler' },
+            { id: 'selling_uzhavar_sandhai', label: 'uzhavarSandhai' },
             { id: 'tn_micro_irrigation_aware', label: 'microIrrigation' },
             { id: 'tn_free_electricity_aware', label: 'freeElectricity' },
-            { id: 'kalaignar_scheme_aware', label: 'kalaignarScheme' },
+            { id: 'tn_farm_mechanization_aware', label: 'farmMech' },
             { id: 'tn_soil_health_aware', label: 'soilHealth' },
-            { id: 'tn_farm_mechanization_aware', label: 'farmMech' }
+            { id: 'kalaignar_scheme_aware', label: 'integratedFarming' }
         ];
 
         return (
@@ -750,93 +779,199 @@ const FarmerForm = ({ user }) => {
         </div>
     );
 
-    const renderStep6 = () => (
-        <div className="space-y-6 animate-fade-in">
-            <div className="text-center mb-6">
-                <div className="icon-container bg-farm-sky-100 text-farm-sky-600 mx-auto mb-3">
-                    <FaHeart />
-                </div>
-                <h2 className="text-2xl font-bold text-farm-green-800">{t('step5')}</h2>
-                <div className="flex justify-between text-xs text-gray-500 max-w-md mx-auto mt-2">
-                    <span>{t('scaleStronglyDisagree')}</span>
-                    <span>{t('scaleStronglyAgree')}</span>
-                </div>
-            </div>
+    const renderStep6 = () => {
+        const getMetricColor = (val) => {
+            if (val >= 4) return 'bg-green-500';
+            if (val >= 2.5) return 'bg-yellow-500';
+            return 'bg-red-500';
+        };
 
-            <div className="space-y-8">
-                <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-3">
-                        {t('riskTryNewMethods')}
-                    </label>
-                    <div className="flex items-center space-x-4">
-                        <span>1</span>
-                        <input
-                            type="range"
-                            min="1"
-                            max="5"
-                            value={formData.risk_try_new_methods}
-                            onChange={(e) => handleSlider('risk_try_new_methods', e.target.value)}
-                            className="flex-1"
-                        />
-                        <span>5</span>
-                        <span className="text-2xl font-bold text-farm-green-600 ml-4">{formData.risk_try_new_methods}</span>
+        const getMetricLabel = (val) => {
+            if (val >= 4) return 'High';
+            if (val >= 2.5) return 'Medium';
+            return 'Low';
+        };
+
+        return (
+            <div className="space-y-8 animate-fade-in">
+                <div className="text-center mb-8">
+                    <div className="icon-container bg-farm-sky-100 text-farm-sky-600 mx-auto mb-3">
+                        <FaHeart />
                     </div>
+                    <h2 className="text-2xl font-bold text-farm-green-800">{t('attitudeRisk')}</h2>
+                    <p className="text-gray-500 mt-2">{t('scaleStronglyDisagree')} (1) to {t('scaleStronglyAgree')} (5)</p>
                 </div>
 
-                <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-3">
-                        {t('riskAfraidLoss')}
-                    </label>
-                    <div className="flex items-center space-x-4">
-                        <span>1</span>
-                        <input
-                            type="range"
-                            min="1"
-                            max="5"
-                            value={formData.risk_afraid_loss}
-                            onChange={(e) => handleSlider('risk_afraid_loss', e.target.value)}
-                            className="flex-1"
-                        />
-                        <span>5</span>
-                        <span className="text-2xl font-bold text-farm-green-600 ml-4">{formData.risk_afraid_loss}</span>
-                    </div>
-                </div>
-
-                <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-3">
-                        {t('riskFollowNeighbors')}
-                    </label>
-                    <div className="flex items-center space-x-4">
-                        <span>1</span>
-                        <input
-                            type="range"
-                            min="1"
-                            max="5"
-                            value={formData.risk_follow_neighbors}
-                            onChange={(e) => handleSlider('risk_follow_neighbors', e.target.value)}
-                            className="flex-1"
-                        />
-                        <span>5</span>
-                        <span className="text-2xl font-bold text-farm-green-600 ml-4">{formData.risk_follow_neighbors}</span>
-                    </div>
-                </div>
-
-                <div className="pt-6 border-t border-gray-100">
-                    <p className="text-center font-bold text-gray-400 mb-4 uppercase tracking-widest text-sm">Legacy Metrics</p>
-                    <div className="space-y-6 opacity-60">
-                        <div>
-                            <label className="block text-base font-medium text-gray-600 mb-2">Openness to New Tech</label>
-                            <input type="range" min="1" max="5" value={formData.openness} onChange={(e) => handleSlider('openness', e.target.value)} className="w-full" />
+                <div className="grid gap-6">
+                    {/* Question 1 */}
+                    <div className="bg-white p-6 rounded-xl border-2 border-gray-100 shadow-sm hover:border-farm-green-200 transition-all">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center space-x-3">
+                                <FaLightbulb className="text-farm-green-600" />
+                                <label className="text-lg font-semibold text-gray-700">{t('riskTryNewMethods')}</label>
+                            </div>
+                            <div className="group relative">
+                                <span className="bg-gray-100 text-gray-400 w-5 h-5 flex items-center justify-center rounded-full text-xs cursor-help font-bold">?</span>
+                                <div className="hidden group-hover:block absolute bottom-full right-0 w-48 p-2 bg-gray-800 text-white text-xs rounded mb-2 z-10 shadow-lg">
+                                    {t('tooltipWillingness')}
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label className="block text-base font-medium text-gray-600 mb-2">Trust in Technology</label>
-                            <input type="range" min="1" max="5" value={formData.trust} onChange={(e) => handleSlider('trust', e.target.value)} className="w-full" />
+                        <div className="flex items-center space-x-6">
+                            <div className="flex-1">
+                                <input
+                                    type="range"
+                                    min="1"
+                                    max="5"
+                                    step="1"
+                                    value={formData.risk_try_new_methods}
+                                    onChange={(e) => handleSlider('risk_try_new_methods', e.target.value)}
+                                    className="slider-input w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-green-600"
+                                />
+                                <div className="flex justify-between mt-2 text-xs text-gray-400 uppercase font-bold tracking-tighter">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div className={`w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold border-2 ${formData.risk_try_new_methods >= 4 ? 'bg-farm-green-50 border-farm-green-200 text-farm-green-600' : 'bg-gray-50 border-gray-100 text-gray-700'}`}>
+                                {formData.risk_try_new_methods}
+                            </div>
                         </div>
                     </div>
+
+                    {/* Question 2 */}
+                    <div className="bg-white p-6 rounded-xl border-2 border-gray-100 shadow-sm hover:border-farm-green-200 transition-all">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center space-x-3">
+                                <FaExclamationTriangle className="text-farm-brown-600" />
+                                <label className="text-lg font-semibold text-gray-700">{t('riskAfraidLoss')}</label>
+                            </div>
+                            <div className="group relative">
+                                <span className="bg-gray-100 text-gray-400 w-5 h-5 flex items-center justify-center rounded-full text-xs cursor-help font-bold">?</span>
+                                <div className="hidden group-hover:block absolute bottom-full right-0 w-48 p-2 bg-gray-800 text-white text-xs rounded mb-2 z-10 shadow-lg">
+                                    {t('tooltipFear')}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-6">
+                            <div className="flex-1">
+                                <input
+                                    type="range"
+                                    min="1"
+                                    max="5"
+                                    step="1"
+                                    value={formData.risk_afraid_loss}
+                                    onChange={(e) => handleSlider('risk_afraid_loss', e.target.value)}
+                                    className="slider-input w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-brown-600"
+                                />
+                                <div className="flex justify-between mt-2 text-xs text-gray-400 uppercase font-bold tracking-tighter">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div className={`w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold border-2 ${formData.risk_afraid_loss >= 4 ? 'bg-farm-brown-50 border-farm-brown-200 text-farm-brown-600' : 'bg-gray-50 border-gray-100 text-gray-700'}`}>
+                                {formData.risk_afraid_loss}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Question 3 */}
+                    <div className="bg-white p-6 rounded-xl border-2 border-gray-100 shadow-sm hover:border-farm-green-200 transition-all">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center space-x-3">
+                                <FaUser className="text-farm-sky-600" />
+                                <label className="text-lg font-semibold text-gray-700">{t('riskFollowNeighbors')}</label>
+                            </div>
+                            <div className="group relative">
+                                <span className="bg-gray-100 text-gray-400 w-5 h-5 flex items-center justify-center rounded-full text-xs cursor-help font-bold">?</span>
+                                <div className="hidden group-hover:block absolute bottom-full right-0 w-48 p-2 bg-gray-800 text-white text-xs rounded mb-2 z-10 shadow-lg">
+                                    {t('tooltipNeighbors')}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-6">
+                            <div className="flex-1">
+                                <input
+                                    type="range"
+                                    min="1"
+                                    max="5"
+                                    step="1"
+                                    value={formData.risk_follow_neighbors}
+                                    onChange={(e) => handleSlider('risk_follow_neighbors', e.target.value)}
+                                    className="slider-input w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-sky-600"
+                                />
+                                <div className="flex justify-between mt-2 text-xs text-gray-400 uppercase font-bold tracking-tighter">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div className={`w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold border-2 ${formData.risk_follow_neighbors >= 4 ? 'bg-farm-sky-50 border-farm-sky-200 text-farm-sky-600' : 'bg-gray-50 border-gray-100 text-gray-700'}`}>
+                                {formData.risk_follow_neighbors}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Legacy Calculated Metrics */}
+                <div className="bg-farm-green-50 p-6 rounded-2xl border-2 border-farm-green-100 shadow-inner mt-10">
+                    <div className="text-center mb-6">
+                        <span className="text-xs font-bold text-farm-green-600 uppercase tracking-widest bg-farm-green-100 px-3 py-1 rounded-full">Inferred Behaviour Metrics</span>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Openness to Tech */}
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                                <span className="text-gray-700 font-bold flex items-center space-x-2">
+                                    <FaLightbulb className="text-yellow-500" />
+                                    <span>{t('opennessToNewTech')}</span>
+                                </span>
+                                <span className="text-farm-green-800 font-bold">{formData.openness} / 5.0</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-4 relative overflow-hidden">
+                                <div 
+                                    className={`absolute left-0 top-0 h-full transition-all duration-500 rounded-full ${getMetricColor(formData.openness)}`}
+                                    style={{ width: `${(formData.openness / 5) * 100}%` }}
+                                ></div>
+                            </div>
+                            <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
+                                <span>{getMetricLabel(formData.openness)} Readiness</span>
+                            </div>
+                        </div>
+
+                        {/* Trust in Tech */}
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                                <span className="text-gray-700 font-bold flex items-center space-x-2">
+                                    <FaShieldAlt className="text-farm-sky-600" />
+                                    <span>{t('trustInTech')}</span>
+                                </span>
+                                <span className="text-farm-green-800 font-bold">{formData.trust} / 5.0</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-4 relative overflow-hidden">
+                                <div 
+                                    className={`absolute left-0 top-0 h-full transition-all duration-500 rounded-full ${getMetricColor(formData.trust)}`}
+                                    style={{ width: `${(formData.trust / 5) * 100}%` }}
+                                ></div>
+                            </div>
+                            <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
+                                <span>{getMetricLabel(formData.trust)} Confidence</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    };
 
     const renderStep7 = () => (
         <div className="space-y-6 animate-fade-in">
@@ -893,6 +1028,84 @@ const FarmerForm = ({ user }) => {
                 <div className="flex items-center space-x-4 p-4 bg-white border-2 border-gray-200 rounded-lg">
                     <input type="checkbox" name="farmer_smart_card" checked={formData.farmer_smart_card} onChange={handleChange} />
                     <label className="text-lg font-semibold">{t('smartCard')}</label>
+                </div>
+            </div>
+        </div>
+    );
+
+    const renderInsuranceStep = () => (
+        <div className="space-y-6 animate-fade-in">
+            <div className="text-center mb-6">
+                <div className="icon-container bg-blue-100 text-blue-600 mx-auto mb-3">
+                    <FaShieldAlt />
+                </div>
+                <h2 className="text-2xl font-bold text-farm-green-800">
+                    {language === 'ta' ? 'காப்பீட்டு விவரங்கள்' : 'Insurance Details'}
+                </h2>
+            </div>
+
+            <div className="space-y-6">
+                <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {language === 'ta' ? 'நீங்கள் எந்த பயிர் காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்களா?' : 'Are you enrolled in any crop insurance scheme?'}
+                    </label>
+                    <select name="insuranceEnrolled" value={formData.insuranceEnrolled} onChange={handleChange} className="input-field" required>
+                        <option value="">{t('selectOption')}</option>
+                        <option value="Yes - ஆம்">{language === 'ta' ? 'ஆம்' : 'Yes'}</option>
+                        <option value="No - இல்லை">{language === 'ta' ? 'இல்லை' : 'No'}</option>
+                        <option value="Not Sure - தெரியவில்லை">{language === 'ta' ? 'தெரியவில்லை' : 'Not Sure'}</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {language === 'ta' ? 'நீங்கள் எந்த காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்கள்?' : 'Which insurance scheme are you enrolled in?'}
+                    </label>
+                    <select name="insuranceScheme" value={formData.insuranceScheme} onChange={handleChange} className="input-field" required>
+                        <option value="">{t('selectOption')}</option>
+                        <option value="Pradhan Mantri Fasal Bima Yojana (PMFBY) - பிரதான் மந்திரி பாசல் பீமா யோஜனா">{language === 'ta' ? 'பிரதான் மந்திரி பாசல் பீமா யோஜனா (PMFBY)' : 'Pradhan Mantri Fasal Bima Yojana (PMFBY)'}</option>
+                        <option value="Tamil Nadu State Crop Insurance Scheme - தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்">{language === 'ta' ? 'தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்' : 'Tamil Nadu State Crop Insurance Scheme'}</option>
+                        <option value="Private Insurance - தனியார் காப்பீடு">{language === 'ta' ? 'தனியார் காப்பீடு' : 'Private Insurance'}</option>
+                        <option value="None - எதுவும் இல்லை">{language === 'ta' ? 'எதுவும் இல்லை' : 'None'}</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {language === 'ta' ? 'நீங்கள் முன்பு பயிர் காப்பீட்டு தொகை கோரியுள்ளீர்களா?' : 'Have you ever claimed crop insurance?'}
+                    </label>
+                    <select name="insuranceClaim" value={formData.insuranceClaim} onChange={handleChange} className="input-field" required>
+                        <option value="">{t('selectOption')}</option>
+                        <option value="Claim Received - ஆம், தொகை கிடைத்தது">{language === 'ta' ? 'ஆம், தொகை கிடைத்தது' : 'Claim Received'}</option>
+                        <option value="Claim Rejected - ஆம், மறுக்கப்பட்டது">{language === 'ta' ? 'ஆம், மறுக்கப்பட்டது' : 'Claim Rejected'}</option>
+                        <option value="No Claim - இல்லை">{language === 'ta' ? 'இல்லை' : 'No Claim'}</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {language === 'ta' ? 'உங்கள் நிலத்தின் எத்தனை பகுதி காப்பீட்டில் உள்ளது?' : 'How much of your farmland is insured?'}
+                    </label>
+                    <select name="insuredLandPercent" value={formData.insuredLandPercent} onChange={handleChange} className="input-field" required>
+                        <option value="">{t('selectOption')}</option>
+                        <option value="0–25%">0–25%</option>
+                        <option value="25–50%">25–50%</option>
+                        <option value="50–75%">50–75%</option>
+                        <option value="75–100%">75–100%</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {language === 'ta' ? 'விவசாயத்தில் உங்களுக்கு அதிகமாக கவலை தரும் ஆபத்து எது?' : 'What is your biggest farming risk?'}
+                    </label>
+                    <select name="farmingRisk" value={formData.farmingRisk} onChange={handleChange} className="input-field" required>
+                        <option value="">{t('selectOption')}</option>
+                        <option value="Drought - வறட்சி">{language === 'ta' ? 'வறட்சி' : 'Drought'}</option>
+                        <option value="Flood - வெள்ளம்">{language === 'ta' ? 'வெள்ளம்' : 'Flood'}</option>
+                        <option value="Pest & Disease - பூச்சி மற்றும் நோய்">{language === 'ta' ? 'பூச்சி மற்றும் நோய்' : 'Pest & Disease'}</option>
+                        <option value="Market Price Drop - சந்தை விலை குறைவு">{language === 'ta' ? 'சந்தை விலை குறைவு' : 'Market Price Drop'}</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -1051,8 +1264,9 @@ const FarmerForm = ({ user }) => {
                     {currentStep === 3 && renderStep3()}
                     {currentStep === 4 && renderStep4()}
                     {currentStep === 5 && renderStep6()}
-                    {currentStep === 6 && renderStep8()}
-                    {currentStep === 7 && renderStep9()}
+                    {currentStep === 6 && renderInsuranceStep()}
+                    {currentStep === 7 && renderStep8()}
+                    {currentStep === 8 && renderStep9()}
 
                     {/* Navigation Buttons */}
                     <div className="flex justify-between mt-8 pt-6 border-t-2 border-gray-200">

@@ -62,7 +62,10 @@ if __name__ == '__main__':
     os.makedirs('models', exist_ok=True)
     
     import logging
-    logging.basicConfig(filename='flask.log', level=logging.DEBUG)
+    # Set up logging to show in console as well
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger('werkzeug')
+    logger.setLevel(logging.INFO)
     
     # Run app
     app.run(debug=True, host='0.0.0.0', port=5000)

@@ -12,6 +12,8 @@ const api = axios.create({
 
 // Auth APIs
 export const authAPI = {
+    sendOtp: (data) => api.post('/send-otp', data),
+    verifyOtp: (data) => api.post('/verify-otp', data),
     register: (data) => api.post('/register', data),
     login: (data) => api.post('/login', data),
     logout: () => api.post('/logout'),

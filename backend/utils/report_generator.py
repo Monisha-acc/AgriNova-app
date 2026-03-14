@@ -7,8 +7,15 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab import rl_config
 from datetime import datetime
 import os
+import logging
+
+# Enable complex script shaping (requires uharfbuzz)
+rl_config.allow_shaping = True
+
+logger = logging.getLogger(__name__)
 
 REPORT_TRANSLATIONS = {
     # 1. Header
@@ -110,20 +117,32 @@ VALUE_TRANSLATIONS = {
 
 class PDFReportGenerator:
     def __init__(self):
-        self.font_path = "NotoSansTamil-Regular.ttf"
+        # Resolve font path relative to the script location
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # The font NotoSansTamil-Regular.ttf is in the backend/ root directory
+        self.font_path = os.path.join(current_dir, "..", "NotoSansTamil-Regular.ttf")
         self.tamil_font_registered = False
+
         if os.path.exists(self.font_path):
             try:
-                pdfmetrics.registerFont(TTFont("TamilFont", self.font_path))
+                # Register the font with a name we can use in styles
+                pdfmetrics.registerFont(TTFont("NotoSansTamil", self.font_path))
+                # Register bold/italic fallbacks to the same font file if bold file is missing
+                pdfmetrics.registerFont(TTFont("NotoSansTamil-Bold", self.font_path))
+                pdfmetrics.registerFontFamily("NotoSansTamil", normal="NotoSansTamil", bold="NotoSansTamil-Bold")
+                
                 self.tamil_font_registered = True
+                logger.info(f"Successfully registered Tamil font: {self.font_path}")
             except Exception as e:
-                print(f"Error registering font: {e}")
+                logger.error(f"Error registering font {self.font_path}: {e}")
+        else:
+            logger.warning(f"Tamil font not found at {self.font_path}")
         
         self.styles = getSampleStyleSheet()
 
     def get_dynamic_style(self, style_name, lang):
         use_tamil = (lang == 'ta' and self.tamil_font_registered)
-        base_font = "TamilFont" if use_tamil else "Helvetica"
+        base_font = "NotoSansTamil" if use_tamil else "Helvetica"
         
         style_key = f"{style_name}_{lang}"
         if style_key in self.styles:
@@ -133,7 +152,7 @@ class PDFReportGenerator:
             style = ParagraphStyle(
                 name=style_key,
                 parent=self.styles['Heading1'],
-                fontName=base_font + "-Bold" if not use_tamil else base_font,
+                fontName=base_font + "-Bold" if not use_tamil else "NotoSansTamil-Bold",
                 fontSize=18,
                 textColor=colors.HexColor('#2d5016'),
                 spaceAfter=15,
@@ -143,7 +162,7 @@ class PDFReportGenerator:
             style = ParagraphStyle(
                 name=style_key,
                 parent=self.styles['Heading2'],
-                fontName=base_font + "-Bold" if not use_tamil else base_font,
+                fontName=base_font + "-Bold" if not use_tamil else "NotoSansTamil-Bold",
                 fontSize=14,
                 textColor=colors.HexColor('#4a7c2c'),
                 spaceAfter=10,
@@ -215,9 +234,9 @@ class PDFReportGenerator:
         lang = language if language in ['en', 'ta'] else 'en'
         
         if lang == 'ta':
-            filename = f"AgriNova_உழவர்_அறிக்கை_{user_data['id']}.pdf"
+            filename = f"AgriNova_உழவர்_அறிக்கை_{user_data['user_id']}.pdf"
         else:
-            filename = f"AgriNova_Farmer_Report_{user_data['id']}.pdf"
+            filename = f"AgriNova_Farmer_Report_{user_data['user_id']}.pdf"
             
         filepath = os.path.join('reports', filename)
         
@@ -257,13 +276,7 @@ class PDFReportGenerator:
             time_str = now.strftime('%I:%M %p')
 
         # 1. Header
-        # For Tamil: split title so 'AgriNova' renders first with safe font, then Tamil part
-        if lang == 'ta':
-            # Render AgriNova in a mixed-content paragraph
-            story.append(Paragraph("AgriNova", title_style))
-            story.append(Paragraph("விவசாய தொழில்நுட்ப ஏற்றுக்கொள்ளல் அறிக்கை", title_style))
-        else:
-            story.append(Paragraph(self.t("title", lang), title_style))
+        story.append(Paragraph(self.t("title", lang), title_style))
         story.append(Spacer(1, 0.1*inch))
         
         if lang == 'en':

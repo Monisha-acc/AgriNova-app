@@ -2,26 +2,29 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { authAPI } from '../utils/api';
-import { FaUser, FaEnvelope, FaPhone, FaLock, FaMapMarkerAlt, FaTractor } from 'react-icons/fa';
-
-
+import { FaUser, FaPhone, FaLock, FaMapMarkerAlt, FaTractor, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = ({ setUser }) => {
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
     const navigate = useNavigate();
 
-    // Get districts based on current language
     const districtList = t('districts');
 
+    const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
-        phone: '',
-        password: '',
+        phone_number: '',
         district: '',
+        otp: '',
+        password: '',
+        confirmPassword: ''
     });
+
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -30,13 +33,60 @@ const Register = ({ setUser }) => {
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSendOtp = async (e) => {
         e.preventDefault();
         setError('');
         setLoading(true);
-
         try {
-            const response = await authAPI.register(formData);
+            await authAPI.sendOtp({
+                name: formData.name,
+                phone_number: formData.phone_number,
+                district: formData.district
+            });
+            setSuccess(t('otpSentSuccessfully'));
+            setStep(2);
+        } catch (err) {
+            setError(err.response?.data?.error || 'Failed to send OTP');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleVerifyOtp = async (e) => {
+        e.preventDefault();
+        setError('');
+        setSuccess('');
+        setLoading(true);
+        try {
+            await authAPI.verifyOtp({
+                phone_number: formData.phone_number,
+                otp: formData.otp
+            });
+            setStep(3);
+        } catch (err) {
+            setError(err.response?.data?.error || 'Invalid or expired OTP');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleCompleteRegistration = async (e) => {
+        e.preventDefault();
+        setError('');
+        
+        if (formData.password !== formData.confirmPassword) {
+            setError('Passwords do not match');
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const response = await authAPI.register({
+                name: formData.name,
+                phone_number: formData.phone_number,
+                district: formData.district,
+                password: formData.password
+            });
             setUser(response.data);
             navigate('/form');
         } catch (err) {
@@ -48,7 +98,6 @@ const Register = ({ setUser }) => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4 py-12">
-            {/* Project Branding */}
             <div className="text-center mb-8 animate-fade-in">
                 <h1 className="text-4xl font-bold text-farm-green-700 flex items-center justify-center gap-2 mb-2">
                     {t('appName')}
@@ -58,14 +107,13 @@ const Register = ({ setUser }) => {
                 </p>
             </div>
 
-            <div className="card max-w-2xl w-full animate-fade-in">
-                {/* Logo/Icon */}
+            <div className="card max-w-2xl w-full animate-fade-in p-8">
                 <div className="text-center mb-8">
                     <div className="icon-container bg-farm-green-100 text-farm-green-600 mx-auto mb-4">
                         <FaTractor />
                     </div>
                     <h2 className="text-2xl font-bold text-farm-green-800">
-                        {t('register')}
+                        {t('register')} - Step {step} of 3
                     </h2>
                 </div>
 
@@ -75,105 +123,180 @@ const Register = ({ setUser }) => {
                     </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Name */}
-                    <div>
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">
-                            <FaUser className="inline mr-2" />
-                            {t('name')} *
-                        </label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="input-field"
-                            required
-                            placeholder={t('name')}
-                        />
+                {success && (
+                    <div className="bg-green-100 border-2 border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">
+                        {success}
                     </div>
+                )}
 
-                    {/* Email */}
-                    <div>
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">
-                            <FaEnvelope className="inline mr-2" />
-                            {t('email')}
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="input-field"
-                            placeholder="farmer@example.com"
-                        />
-                    </div>
+                {step === 1 && (
+                    <form onSubmit={handleSendOtp} className="space-y-6">
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                <FaUser className="inline mr-2" />
+                                {t('name')} *
+                            </label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="input-field"
+                                required
+                                placeholder={t('name')}
+                            />
+                        </div>
 
-                    {/* Phone */}
-                    <div>
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">
-                            <FaPhone className="inline mr-2" />
-                            {t('phone')}
-                        </label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className="input-field"
-                            placeholder="9876543210"
-                        />
-                    </div>
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                <FaPhone className="inline mr-2" />
+                                {t('mobileNumber')} *
+                            </label>
+                            <input
+                                type="tel"
+                                name="phone_number"
+                                value={formData.phone_number}
+                                onChange={handleChange}
+                                className="input-field"
+                                required
+                                placeholder="9876543210"
+                            />
+                        </div>
 
-                    {/* District */}
-                    <div>
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">
-                            <FaMapMarkerAlt className="inline mr-2" />
-                            {t('district')} *
-                        </label>
-                        <select
-                            name="district"
-                            value={formData.district}
-                            onChange={handleChange}
-                            className="input-field"
-                            required
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                <FaMapMarkerAlt className="inline mr-2" />
+                                {t('district')} *
+                            </label>
+                            <select
+                                name="district"
+                                value={formData.district}
+                                onChange={handleChange}
+                                className="input-field"
+                                required
+                            >
+                                <option value="">{t('selectDistrict')}</option>
+                                {Array.isArray(districtList) && districtList.map(district => (
+                                    <option key={district} value={district}>{district}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="btn-primary w-full py-3 text-lg"
                         >
-                            <option value="">{t('selectDistrict')}</option>
-                            {Array.isArray(districtList) && districtList.map(district => (
-                                <option key={district} value={district}>{district}</option>
-                            ))}
-                        </select>
-                    </div>
+                            {loading ? '...' : t('sendOtp')}
+                        </button>
+                    </form>
+                )}
 
-                    {/* Password */}
-                    <div>
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">
-                            <FaLock className="inline mr-2" />
-                            {t('password')} *
-                        </label>
-                        <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="input-field"
-                            required
-                            placeholder="••••••••"
-                            minLength="6"
-                        />
-                    </div>
+                {step === 2 && (
+                    <form onSubmit={handleVerifyOtp} className="space-y-6">
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {t('enterOtp')} *
+                            </label>
+                            <input
+                                type="text"
+                                name="otp"
+                                value={formData.otp}
+                                onChange={handleChange}
+                                className="input-field"
+                                required
+                                placeholder="123456"
+                                maxLength="6"
+                            />
+                        </div>
 
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="btn-primary w-full"
-                    >
-                        {loading ? '...' : t('register')}
-                    </button>
-                </form>
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="btn-primary w-full py-3 text-lg"
+                        >
+                            {loading ? '...' : t('verifyOtp')}
+                        </button>
+                        
+                        <div className="text-center mt-4">
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setStep(1);
+                                    setSuccess('');
+                                }}
+                                className="text-farm-green-600 font-semibold hover:underline"
+                            >
+                                Back
+                            </button>
+                        </div>
+                    </form>
+                )}
 
-                {/* Login Link */}
+                {step === 3 && (
+                    <form onSubmit={handleCompleteRegistration} className="space-y-6">
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                <FaLock className="inline mr-2" />
+                                {t('setPassword')} *
+                            </label>
+                            <div className="relative">
+                                <input
+                                    type={showPassword ? 'text' : 'password'}
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    className="input-field pr-10"
+                                    required
+                                    placeholder="••••••••"
+                                    minLength="6"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500"
+                                >
+                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                <FaLock className="inline mr-2" />
+                                {t('confirmPassword')} *
+                            </label>
+                            <div className="relative">
+                                <input
+                                    type={showConfirmPassword ? 'text' : 'password'}
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    className="input-field pr-10"
+                                    required
+                                    placeholder="••••••••"
+                                    minLength="6"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500"
+                                >
+                                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                                </button>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="btn-primary w-full py-3 text-lg"
+                        >
+                            {loading ? '...' : t('register')}
+                        </button>
+                    </form>
+                )}
+
                 <div className="mt-6 text-center">
                     <p className="text-gray-600">
                         {t('alreadyHaveAccount')}{' '}

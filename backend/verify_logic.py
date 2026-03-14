@@ -54,15 +54,15 @@ def test_pipeline():
     farmer_a.update(res_a)
     recs_a = recommendation_engine.get_all_recommendations(farmer_a)
     print("Farmer A Recs (Should be Basic + Drought Crops):")
-    print(f"  Tech: {[t['name'] for t in recs_a['technologies']]}")
-    print(f"  Crops: {[c['crop'] for c in recs_a['crops']]}")
+    print(f"  Tech: {[t.get('tech_en') for t in recs_a['technologies']]}")
+    print(f"  Crops: {[c.get('crop_en') for c in recs_a['crops']]}")
     
     # Farmer B (High + Clay + Abundant Water)
     farmer_b.update(res_b)
     recs_b = recommendation_engine.get_all_recommendations(farmer_b)
     print("Farmer B Recs (Should be Advanced + Water Intensive Crops):")
-    print(f"  Tech: {[t['name'] for t in recs_b['technologies']]}")
-    print(f"  Crops: {[c['crop'] for c in recs_b['crops']]}")
+    print(f"  Tech: {[t.get('tech_en') for t in recs_b['technologies']]}")
+    print(f"  Crops: {[c.get('crop_en') for c in recs_b['crops']]}")
     
     # 3. Scheme Filtering Test
     print("\n[Test 3] Scheme Filtering")

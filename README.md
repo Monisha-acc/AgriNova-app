@@ -121,6 +121,8 @@ pip install -r requirements.txt
 
 # Initialize database
 python models.py
+#run train_model
+python ml/train_model.py
 
 # Run Flask server
 python app.py

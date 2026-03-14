@@ -64,6 +64,23 @@ const TAMIL_SIM_STRINGS = {
     'Days to Harvest': 'அறுவடைக்கு இன்னும்',
     'Days': 'நாட்கள்',
     'Total Duration': 'மொத்த காலம்',
+    'Virtual Farm Simulation': 'மெய்நிகர் பண்ணை உருவகம்',
+    'Planting Date / Days After Planting': 'விதைத்த தேதி / கடந்த நாட்கள்',
+    'Date': 'தேதி',
+    'Seed Variety': 'விதை வகை',
+    'Plant Spacing': 'செடிகளுக்கிடை இடைவெளி',
+    'Weed Level': 'களைகள் அளவு',
+    'Interactive 3D Simulation': 'மெய்நிகர் முப்பரிமாண உருவகம்',
+    'Ground View': 'தரைவழி பார்வை',
+    'Fly View': 'வான்வழி பார்வை',
+    'Fullscreen': 'முழுத்திரை',
+    'Click anywhere to lock • Use WASD / Arrows': 'கிளிக் செய்யவும் • WASD / அம்புக்குறிகளைப் பயன்படுத்தவும்',
+    '3D Plant Analytics': 'பயிர் முப்பரிமாண பகுப்பாய்வு',
+    'Health': 'ஆரோக்கியம்',
+    'Moisture': 'ஈரப்பதம்',
+    'Grid Position': 'கட்ட நிலை',
+    'Close Details': 'விவரங்களை மூடு',
+    'Optimal': 'சிறந்தது',
 
     // Option values
     'High': 'அதிகம்',
@@ -73,18 +90,92 @@ const TAMIL_SIM_STRINGS = {
     'Rabi': 'ரபி',
     'Summer': 'கோடை',
     'Paddy': 'நெல்',
-    'Sugarcane': 'கரும்பு',
-    'Banana': 'வாழை',
-    'Maize': 'சோளம்',
-    'Cotton': 'பருத்தி',
-    'Groundnut': 'நிலக்கடலை',
-    'Millets': 'சிறுதானியம்',
-    'Vegetables': 'காய்கறிகள்',
+    'Wheat': 'கோதுமை',
+    'Maize': 'மக்காச்சோளம்',
+    'Barley': 'பார்லி',
+    'Sorghum': 'சோளம்',
+    'Pearl Millet': 'கம்பு',
+    'Finger Millet': 'கேழ்வரகு',
+    'Foxtail Millet': 'தினை',
+    'Little Millet': 'சாமை',
+    'Kodo Millet': 'வரகு',
+    'Barnyard Millet': 'குதிரைவாலி',
+    'Red Gram': 'துவரை',
+    'Green Gram': 'பாசிப்பயறு',
+    'Black Gram': 'உளுந்து',
+    'Bengal Gram': 'கொண்டைக்கடலை',
+    'Horse Gram': 'கொள்ளு',
+    'Cowpea': 'காராமணி',
+    'Field Pea': 'பட்டாணி',
+    'Lentil': 'பருப்பு',
+    'Sesame': 'எள்',
+    'Sunflower': 'சூரியகாந்தி',
+    'Mustard': 'கடுகு',
+    'Soybean': 'சோயாபீன்',
+    'Castor': 'ஆமணக்கு',
+    'Linseed': 'ஆளிவிதை',
+    'Safflower': 'குசும்பா',
     'Tomato': 'தக்காளி',
     'Onion': 'வெங்காயம்',
     'Potato': 'உருளைக்கிழங்கு',
-    'Chili': 'மிளகாய்',
     'Brinjal': 'கத்தரிக்காய்',
+    'Chilli': 'மிளகாய்',
+    'Chili': 'மிளகாய்',
+    'Capsicum': 'குடைமிளகாய்',
+    'Okra': 'வெண்டைக்காய்',
+    'Cabbage': 'முட்டைக்கோஸ்',
+    'Cauliflower': 'காலிஃபிளவர்',
+    'Carrot': 'கேரட்',
+    'Beetroot': 'பீட்ரூட்',
+    'Radish': 'முள்ளங்கி',
+    'Pumpkin': 'பூசணிக்காய்',
+    'Bitter Gourd': 'பாகற்காய்',
+    'Bottle Gourd': 'சுரைக்காய்',
+    'Ridge Gourd': 'பீர்க்கங்காய்',
+    'Snake Gourd': 'புடலங்காய்',
+    'Cucumber': 'வெள்ளரிக்காய்',
+    'Beans': 'பீன்ஸ்',
+    'Peas': 'பட்டாணி',
+    'Banana': 'வாழை',
+    'Mango': 'மாம்பழம்',
+    'Papaya': 'பப்பாளி',
+    'Guava': 'கொய்யா',
+    'Pomegranate': 'மாதுளை',
+    'Sapota': 'சப்போட்டா',
+    'Pineapple': 'அன்னாசி',
+    'Jackfruit': 'பலாப்பழம்',
+    'Watermelon': 'தர்பூசணி',
+    'Muskmelon': 'முலாம் பழம்',
+    'Coconut': 'தென்னை',
+    'Custard Apple': 'சீத்தாப்பழம்',
+    'Amla': 'நெல்லிக்காய்',
+    'Sugarcane': 'கரும்பு',
+    'Cotton': 'பருத்தி',
+    'Tobacco': 'புகையிலை',
+    'Jute': 'சணல்',
+    'Coffee': 'காபி',
+    'Tea': 'தேநீர்',
+    'Rubber': 'ரப்பர்',
+    'Arecanut': 'பாக்கு',
+    'Cocoa': 'கோகோ',
+    'Turmeric': 'மஞ்சள்',
+    'Ginger': 'இஞ்சி',
+    'Coriander': 'கொத்தமல்லி',
+    'Cumin': 'சீரகம்',
+    'Fenugreek': 'வெந்தயம்',
+    'Cardamom': 'ஏலக்காய்',
+    'Black Pepper': 'மிளகு',
+    'Clove': 'கிராம்பு',
+    'Nutmeg': 'ஜாதிக்காய்',
+    'Garlic': 'பூண்டு',
+    'Napier Grass': 'நேப்பியர் புல்',
+    'Sorghum Fodder': 'சோளத் தீவனம்',
+    'Maize Fodder': 'மக்காச்சோளத் தீவனம்',
+    'Cowpea Fodder': 'காராமணி தீவனம்',
+    'Lucerne': 'குதிரை மசால்',
+    'Groundnut': 'நிலக்கடலை',
+    'Millets': 'சிறுதானியம்',
+    'Vegetables': 'காய்கறிகள்',
     'Flowers': 'மலர்கள்',
     'Flood Irrigation': 'வெள்ளப் பாசனம்',
     'Manual Irrigation': 'கைமுறை பாசனம்',
@@ -105,6 +196,149 @@ const TAMIL_SIM_STRINGS = {
     'Time of Irrigation': 'பாசனம் செய்யும் நேரம்',
     'Rainfall Dependency': 'மழை சார்ந்திருத்தல்',
     'Days After Planting': 'பயிரிட்ட பின் நாட்கள்',
+    'Planting Date': 'விதைத்த தேதி',
+    'Local Variety': 'உள்ளூர் விதை',
+    'Hybrid Variety': 'ஹைப்ரிட் விதை',
+    'Plant Spacing': 'செடிகளுக்கிடை இடைவெளி',
+    'Close': 'மிக அருகில்',
+    'Normal': 'சரியான இடைவெளி',
+    'Wide': 'அதிக இடைவெளி',
+    'Weed Level': 'களைகள் அளவு',
+    'Pest Presence': 'பூச்சி தாக்கம்',
+    'Crop Health Observation': 'பயிர் ஆரோக்கியம்',
+    'Good': 'நல்லது',
+    'Average': 'சராசரி',
+    'Poor': 'மோசம்',
+    'Yes': 'உள்ளது',
+    'No': 'இல்லை',
+    'Not sure': 'தெரியவில்லை',
+    'Fertilizer Usage': 'உரம் பயன்பாடு',
+    'Organic Fertilizers': 'இயற்கை உரங்கள்',
+    'Chemical Fertilizers': 'இரசாயன உரங்கள்',
+    'None': 'இல்லை',
+    'others': 'பிற',
+    'other_fertilizer_placeholder': 'பிற உரங்கள் இருப்பின் இங்கே எழுதவும்',
+    'other_crop_placeholder': 'பயிர் பெயரை உள்ளிடவும்',
+    'other_seed_placeholder': 'விதை வகையை உள்ளிடவும்',
+    'other_spacing_placeholder': 'இடைவெளி விவரத்தை உள்ளிடவும்',
+    'other_weed_placeholder': 'களைகள் அளவை விவரிக்கவும்',
+    'other_pest_placeholder': 'பூச்சி தாக்கத்தை விவரிக்கவும்',
+    'other_health_placeholder': 'பயிர் நிலையை விவரிக்கவும்',
+    'Plant Height': 'செடி உயரம்',
+    'Leaf Color': 'இலை நிறம்',
+    'Healthy, well-nourished crop': 'சத்து சரியாக கிடைக்கும் ஆரோக்கியமான பயிர்',
+    'Possible nutrient deficiency or stress': 'சத்து குறைவு அல்லது அழுத்தம் இருப்பதற்கான சாத்தியம்',
+    'Severe stress / dryness or damage': 'கடுமையான உலர்ச்சி / சேதம் கொண்ட நிலை',
+    'Growth Stage Module': 'பயிர் வளர்ச்சி நிலை',
+    'Very High': 'மிக அதிகம்',
+    'Very Low': 'மிகக் குறைவு',
+    'Seasonal': 'பருவகாலமானது',
+    'Daily': 'தினமும்',
+    'Every 2 days': '2 நாட்களுக்கு ஒருமுறை',
+    'Every 3 days': '3 நாட்களுக்கு ஒருமுறை',
+    'Every 4-5 days': '4-5 நாட்களுக்கு ஒருமுறை',
+    'Weekly': 'வாரம் ஒருமுறை',
+    'Once in 10 days': '10 நாட்களுக்கு ஒருமுறை',
+    'Rainfall': 'மழை காலத்தில் மட்டும்',
+    'Very Good': 'மிகச் சிறப்பு',
+    'Waterlogging': 'நீர் தேக்கம்',
+    'Level': 'சமமானது',
+    'Slightly Uneven': 'சிறிது சமமற்றது',
+    'Uneven': 'சமமற்றது',
+    'Terraced': 'படிமான அமைப்பு',
+    'Sloped': 'சரிவானது',
+    'Very Wet': 'மிகவும் ஈரமானது',
+    'Moist': 'ஈரமானது',
+    'Dry': 'வறண்டது',
+    'Very Dry': 'மிகவும் வறண்டது',
+    'New': 'புதியது',
+    'Working': 'நல்ல நிலையில் உள்ளது',
+    'Minor Leak': 'சிறிய கசிவு',
+    'Major Leak': 'பெரிய கசிவு',
+    'Damaged': 'சேதமடைந்தது',
+    'Not Sure': 'தெரியவில்லை',
+    'Farm Pond': 'பண்ணைக் குட்டை',
+    'Tank': 'தொட்டி/குளம்',
+    'Reservoir': 'தேக்ககம்',
+    'Check Dam': 'தடுப்பணை',
+    'Fully': 'முழுவதும்',
+    'Mostly': 'பெரும்பாலும்',
+    'Partially': 'ஓரளவு',
+    'Not': 'இல்லை',
+    'Borewell': 'ஆழ்துளை கிணறு',
+    'Open Well': 'திறந்த வெளி கிணறு',
+    'River': 'ஆறு',
+    'Lake': 'ஏரி',
+    'Government Irrigation Supply': 'அரசு பாசன விநியோகம்',
+    'go_to_login': 'உள்நுழைய',
+    'Hello': 'வணக்கம்',
+    'Cereals (Food Grains)': 'தானியங்கள் (உணவு தானியங்கள்)',
+    'Pulses': 'பருப்பு வகைகள்',
+    'Oilseeds': 'எண்ணெய் வித்துக்கள்',
+    'Fruits': 'பழங்கள்',
+    'Cash Crops': 'பணப்பயிர்கள்',
+    'Plantation Crops': 'தோட்டக்கலைப் பயிர்கள்',
+    'Spices & Condiments': 'நறுமணப் பொருட்கள்',
+    'Fodder Crops': 'தீவனப் பயிர்கள்',
+    'Land Size (Acres)': 'நில அளவு (ஏக்கர்)',
+    'season': 'பருவம்',
+    'kharif': 'காரிஃப் (சம்பா)',
+    'rabi': 'ரபி (குறுவை)',
+    'summerOption': 'கோடை',
+    'selectOption': 'தேர்வு செய்யவும்',
+    'sim_why_adopt_text': 'இந்த உருவகம், நீங்கள் அளித்த தகவல்களின் அடிப்படையில், தற்போதைய வயலில் இருக்கும் களைகள், பூச்சி தாக்கம், உரம் குறைவு போன்ற காரணங்கள் எப்படி மகசூலைக் குறைக்கின்றன என்று காட்டுகிறது. பரிந்துரைக்கப்பட்ட மேம்பாடுகள் (சமநிலை உரம், களைகள் அகற்றல், பூச்சி கட்டுப்பாடு, சரியான இடைவெளி) பயன்படுத்தப்படும் போது செடி வளர்ச்சி மற்றும் மண் ஆரோக்கியம் மேம்படுகிறது. கீழே உள்ள விரிவான கணக்கீடு மற்றும் கால அட்டவணை மூலம் உங்கள் மகசூல் எவ்வாறு அதிகரிக்கிறது என்பதை தெளிவாகக் காணலாம்.',
+    'Plant Density': 'செடி அடர்த்தி',
+    'Field Problems': 'புல பிரச்சினைகள்',
+    'Expected Yield': 'எதிர்பார்க்கப்படும் மகசூல்',
+    'Expected Yield (tons)': 'எதிர்பார்க்கப்படும் மகசூல் (டன்களில்)',
+    'Yield in tons': 'மகசூல் (டன்களில்)',
+    'ton/acre': 'டன்/ஏக்கர்',
+    'tons (total)': 'டன்கள் (மொத்தம்)',
+    'Growth stage': 'வளர்ச்சி நிலை',
+    'Early growth': 'ஆரம்ப வளர்ச்சி நிலை',
+    'Mid growth': 'நடுத்தர வளர்ச்சி நிலை',
+    'Late / Maturity stage': 'இறுதி / முதிர்ச்சி நிலை',
+    'analyzing_regional': 'பிராந்திய முறைகளை ஆய்வு செய்கிறது...',
+    'PEST ATTACK DETECTED': 'பூச்சி தாக்கம் கண்டறியப்பட்டது!',
+    'worms_visible': 'புழுக்கள் மற்றும் கம்பளிப்புழுக்கள் இலைகளில் காட்டப்படுகின்றன',
+    'WEEDS': 'களைகள்',
+    'dense_weeds': 'அடர்த்தியான களை படர்ச்சி காட்டப்படுகிறது',
+    'moderate_weeds': 'மிதமான களை வளர்ச்சி காட்டப்படுகிறது',
+    'scattered_weeds': 'சிறிய களை பரவல் காட்டப்படுகிறது',
+    'FARM IMPROVED!': 'பண்ணை மேம்படுத்தப்பட்டது!',
+    'pests_eliminated': 'பூச்சிகள் மற்றும் களைகள் அகற்றப்பட்டன',
+    'Improvements Applied': 'செய்யப்பட்ட மேம்பாடுகள்',
+    'Water usage reduced by 35%': 'நீர் பயன்பாடு 35% குறைக்கப்பட்டுள்ளது',
+    'Crop health index increased': 'பயிர் ஆரோக்கிய குறியீடு அதிகரிக்கப்பட்டது',
+    'Soil Moisture': 'மண் ஈரப்பதம்',
+    'Frequency': 'இடைவெளி',
+    'Temperature': 'வெப்பநிலை',
+    'Rainfall': 'மழைப்பொழிவு',
+    'Before Farm': 'தற்போதைய நிலை',
+    'After Farm': 'மேம்படுத்தப்பட்ட நிலை',
+    'Water Usage': 'நீர் பயன்பாடு',
+    'Water Savings': 'நீர் சேமிப்பு',
+    'Climate Risk': 'தட்பவெப்ப அபாயம்',
+    'From': 'இருந்து',
+    'To': 'இற்கு',
+    'Recommended': 'பரிந்துரைக்கப்படுபவை',
+    'Fertilizer Management': 'உரம் மேலாண்மை',
+    'Basal Dose': 'அடி உரம்',
+    'Top Dressing': 'மேலுரம்',
+    'Precise Pest Control': 'துல்லியமான பூச்சி கட்டுப்பாடு',
+    'Climate & Weed Control': 'தட்பவெப்பநிலை & களை கட்டுப்பாடு',
+    'Irrigation Upgrade': 'பாசன மேம்பாடு',
+    'Application & Care Schedule': 'செயல்பாட்டு கால அட்டவணை',
+    'Improvements Applied to Increase Yield': 'மகசூலை அதிகரிக்க செய்யப்பட்ட மேம்பாடுகள்',
+    'Recommended Management Practices': 'பரிந்துரைக்கப்பட்ட மேலாண்மை முறைகள்',
+    'Input Summary': 'பகிர்ந்த விவரங்கள்',
+    'Farm Input Details': 'பண்ணை குறித்த விவரங்கள்',
+    'Land Size': 'நில அளவு',
+    'Fertilizers Used': 'பயன்படுத்தப்பட்ட உரங்கள்',
+    'No fertilizer information': 'உரம் குறித்த தகவல் இல்லை',
+    'Harvest Summary': 'அறுவடைச் சுருக்கம்',
+    'Growth Days': 'வளர்ச்சி நாட்கள்',
+    'not_set': 'குறிப்பிடப்படவில்லை',
 
     // Irrigation Options
     'methodFlood': 'வெள்ளப் பாசனம்',
@@ -112,7 +346,6 @@ const TAMIL_SIM_STRINGS = {
     'methodSprinkler': 'தெளிப்பு நீர் பாசனம்',
     'methodCanal': 'கால்வாய் பாசனம்',
     'methodFurrow': 'பார் பாசனம் (Furrow)',
-    'Furrow': 'பார் பாசனம் (Furrow)',
     'methodRainfed': 'மழை சார்ந்த விவசாயம்',
     'methodSubsurface': 'தரைவழி பாசனம்',
     'methodMicro': 'மைக்ரோ பாசனம்',
@@ -216,6 +449,7 @@ const TAMIL_SIM_STRINGS = {
     'Water explanation bullet': 'நீர் சேமிப்பு (Water Savings) கணக்கில், முதலில் அந்த பயிருக்கு ஒரு பருவத்திற்கு தேவைப்படும் சராசரி நீர் (litres/acre) எடுக்கப்படுகிறது. அதன் மீது நீங்கள் தேர்ந்தெடுத்த பாசன முறை (Flood, Manual, Sprinkler, Drip...) அடிப்படையில் நீர் பல்தொகை (penalty / bonus) சேர்க்கப்படுகிறது. பிறகு, நீர் சேமிக்கும் தொழில்நுட்பங்கள் (டிரிப், மொய்ஸ்சர் சென்சார், вэதர் ஆப்) எவ்வளவு சதவீதம் நீர் குறைக்க முடியும் என்று மாதிரி கணக்கிடுகிறது. “முன்” நீர் பயன்படுத்தல் மற்றும் “பின்” நீர் பயன்படுத்தல் இரண்டையும் ஒப்பிட்டு, எவ்வளவு % நீர் சேமிப்பு என்று காட்டப்படுகிறது.',
     'Climate explanation bullet': 'Climate Risk மற்றும் Crop Health Index 0–100 மதிப்பெண்களில் அமைக்கப்பட்டுள்ளது. மண் தரம் அதிகமாக இருக்கும்போது, சிறந்த பாசன முறையை (Drip/Sprinkler) பயன்படுத்தும்போது, மேலும் அதிக அரசு திட்டங்களை பற்றி அறிந்திருக்கும்போது அடிப்படை ஆரோக்கிய மதிப்பெண் (base CHI) உயர்கிறது. பின்னர், நீங்கள் சேர்த்திருக்கும் தொழில்நுட்பங்கள் (soil test, moisture sensor, crop insurance போன்றவை) இந்த மதிப்பெண்ணை மேலும் உயர்த்துகின்றன. இந்த CHI அடிப்படையில் அபாய நிலை (High / Low) நிர்ணயிக்கப்படுகிறது மற்றும் “Before / After” climate risk கார்டுகளில் காட்டப்படுகிறது.'
 };
+
 
 // --- 3D Components ---
 
@@ -843,25 +1077,25 @@ function Farm3D({ data, improved, landArea, sandbox, onFullscreen }) {
 
             {viewMode === 'Walk' && (
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest animate-pulse pointer-events-none">
-                    Click anywhere to lock • Use WASD / Arrows
+                    {ls('Click anywhere to lock • Use WASD / Arrows')}
                 </div>
             )}
 
             {inspectedPos && (
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900/90 backdrop-blur-xl border border-blue-500/30 text-white p-4 rounded-3xl shadow-2xl z-50 animate-in fade-in zoom-in-95 pointer-events-none">
                     <div className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-2 flex items-center gap-2">
-                        <FaCube /> 3D Plant Analytics
+                        <FaCube /> {ls('3D Plant Analytics')}
                     </div>
                     <div className="space-y-1 text-xs">
-                        <div className="flex justify-between gap-8"><span className="text-slate-400">Health</span><span className="text-emerald-400 font-bold">{chi}%</span></div>
-                        <div className="flex justify-between gap-8"><span className="text-slate-400">Moisture</span><span className="text-blue-400 font-bold">{improved ? 'Optimal' : 'Low'}</span></div>
-                        <div className="flex justify-between gap-8"><span className="text-slate-400">Grid Position</span><span className="text-slate-300 font-mono">[{inspectedPos[0].toFixed(1)}, {inspectedPos[2].toFixed(1)}]</span></div>
+                        <div className="flex justify-between gap-8"><span className="text-slate-400">{ls('Health')}</span><span className="text-emerald-400 font-bold">{chi}%</span></div>
+                        <div className="flex justify-between gap-8"><span className="text-slate-400">{ls('Moisture')}</span><span className="text-blue-400 font-bold">{ls(improved ? 'Optimal' : 'Low')}</span></div>
+                        <div className="flex justify-between gap-8"><span className="text-slate-400">{ls('Grid Position')}</span><span className="text-slate-300 font-mono">[{inspectedPos[0].toFixed(1)}, {inspectedPos[2].toFixed(1)}]</span></div>
                     </div>
                     <button
                         onClick={() => setInspectedPos(null)}
                         className="mt-3 w-full py-2 bg-blue-600 rounded-xl text-[10px] font-black uppercase pointer-events-auto"
                     >
-                        Close Details
+                        {ls('Close Details')}
                     </button>
                 </div>
             )}
@@ -1169,39 +1403,39 @@ const FarmSimulation = ({ user }) => {
     if (step === 1) {
         const cropGroups = [
             {
-                labelEn: 'Cereals (Food Grains)',
+                label: 'Cereals (Food Grains)',
                 items: ['Paddy', 'Wheat', 'Maize', 'Barley', 'Sorghum', 'Pearl Millet', 'Finger Millet', 'Foxtail Millet', 'Little Millet', 'Kodo Millet', 'Barnyard Millet'],
             },
             {
-                labelEn: 'Pulses',
+                label: 'Pulses',
                 items: ['Red Gram', 'Green Gram', 'Black Gram', 'Bengal Gram', 'Horse Gram', 'Cowpea', 'Field Pea', 'Lentil'],
             },
             {
-                labelEn: 'Oilseeds',
+                label: 'Oilseeds',
                 items: ['Groundnut', 'Sesame', 'Sunflower', 'Mustard', 'Soybean', 'Castor', 'Linseed', 'Safflower'],
             },
             {
-                labelEn: 'Vegetables',
+                label: 'Vegetables',
                 items: ['Tomato', 'Onion', 'Potato', 'Brinjal', 'Chilli', 'Capsicum', 'Okra', 'Cabbage', 'Cauliflower', 'Carrot', 'Beetroot', 'Radish', 'Pumpkin', 'Bitter Gourd', 'Bottle Gourd', 'Ridge Gourd', 'Snake Gourd', 'Cucumber', 'Beans', 'Peas'],
             },
             {
-                labelEn: 'Fruits',
+                label: 'Fruits',
                 items: ['Banana', 'Mango', 'Papaya', 'Guava', 'Pomegranate', 'Sapota', 'Pineapple', 'Jackfruit', 'Watermelon', 'Muskmelon', 'Coconut', 'Custard Apple', 'Amla'],
             },
             {
-                labelEn: 'Cash Crops',
+                label: 'Cash Crops',
                 items: ['Sugarcane', 'Cotton', 'Tobacco', 'Jute', 'Coffee', 'Tea', 'Rubber'],
             },
             {
-                labelEn: 'Plantation Crops',
+                label: 'Plantation Crops',
                 items: ['Coconut', 'Arecanut', 'Coffee', 'Tea', 'Rubber', 'Cocoa'],
             },
             {
-                labelEn: 'Spices & Condiments',
+                label: 'Spices & Condiments',
                 items: ['Turmeric', 'Ginger', 'Coriander', 'Cumin', 'Fenugreek', 'Cardamom', 'Black Pepper', 'Clove', 'Nutmeg', 'Garlic'],
             },
             {
-                labelEn: 'Fodder Crops',
+                label: 'Fodder Crops',
                 items: ['Napier Grass', 'Sorghum Fodder', 'Maize Fodder', 'Cowpea Fodder', 'Lucerne'],
             },
         ];
@@ -1211,11 +1445,11 @@ const FarmSimulation = ({ user }) => {
             <div className="min-h-screen bg-slate-50 py-12 px-4 relative flex items-center justify-center">
                 <TopNav />
                 <div className="max-w-4xl w-full bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100 animate-in fade-in zoom-in-95 duration-500">
-                    <div className="bg-emerald-600 p-10 text-white text-center relative overflow-hidden">
+                    <div className="bg-farm-green-600 p-10 text-white text-center relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                         <FaSeedling className="text-6xl mx-auto mb-4 animate-bounce" />
-                        <h1 className="text-4xl font-black uppercase tracking-tighter">{ls('Virtual Farm Simulation')}</h1>
-                        <p className="text-emerald-100 font-bold mt-2 text-lg">
+                        <h1 className="text-4xl font-bold uppercase tracking-tight">{ls('Virtual Farm Simulation')}</h1>
+                        <p className="text-farm-green-50 font-medium mt-2 text-lg">
                             {ls('Enter your farm details to see your virtual field')}
                         </p>
                     </div>
@@ -1230,7 +1464,7 @@ const FarmSimulation = ({ user }) => {
                                             onClick={() => navigate('/login')}
                                             className="px-6 py-3 rounded-2xl bg-red-600 text-white font-black uppercase tracking-widest text-xs hover:bg-red-700 transition-all"
                                         >
-                                            {language === 'ta' ? 'உள்நுழைய' : 'Go to Login'}
+                                            {ls('go_to_login')}
                                         </button>
                                     </div>
                                 )}
@@ -1241,8 +1475,8 @@ const FarmSimulation = ({ user }) => {
                     <div className="p-10 grid md:grid-cols-2 gap-8">
                         {/* District Selection */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">{ls('District')}</label>
-                            <select name="district" value={inputForm.district} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">{ls('District')}</label>
+                            <select name="district" value={inputForm.district} onChange={handleInputChange} className="input-field">
                                 {translations.districts.en.map((d, i) => (
                                     <option key={d} value={d}>{tDistrict(d)}</option>
                                 ))}
@@ -1251,8 +1485,8 @@ const FarmSimulation = ({ user }) => {
 
                         {/* Season Selection */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">{ls('season')}</label>
-                            <select name="season" value={inputForm.season} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">{ls('season')}</label>
+                            <select name="season" value={inputForm.season} onChange={handleInputChange} className="input-field">
                                 <option value="kharif">{ls('kharif')}</option>
                                 <option value="rabi">{ls('rabi')}</option>
                                 <option value="summer">{ls('summerOption')}</option>
@@ -1261,17 +1495,17 @@ const FarmSimulation = ({ user }) => {
 
                         {/* Crop Selection */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">{ls('Crop Type')}</label>
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">{ls('Crop Type')}</label>
                             <div className="space-y-2">
-                                <select name="crop_type" value={inputForm.crop_type} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
+                                <select name="crop_type" value={inputForm.crop_type} onChange={handleInputChange} className="input-field">
                                     {cropGroups.map(group => (
-                                        <optgroup key={group.labelEn} label={group.labelEn}>
+                                        <optgroup key={group.label} label={ls(group.label)}>
                                             {group.items.map(c => (
-                                                <option key={c} value={c}>{CROP_MODELS[c]?.icon || '🌱'} {c}</option>
+                                                <option key={c} value={c}>{ls(c)}</option>
                                             ))}
                                         </optgroup>
                                     ))}
-                                    <option value="Other">{language === 'ta' ? 'பிற பயிர்' : 'Other crop'}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.crop_type === 'Other' && (
                                     <input
@@ -1279,37 +1513,37 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.crop_type_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'பயிர் பெயரை உள்ளிடவும்' : 'Enter crop name'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_crop_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">{ls('Land Size (Acres)')}</label>
-                            <input name="land_size" type="number" step="0.5" value={inputForm.land_size} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none" />
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">{ls('Land Size (Acres)')}</label>
+                            <input name="land_size" type="number" step="0.5" value={inputForm.land_size} onChange={handleInputChange} className="input-field" />
                         </div>
 
                         {/* Planting Date / Days After Planting */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'விதைத்த தேதி / விதைத்ததிலிருந்து கடந்த நாட்கள்' : 'Planting Date / Days After Planting'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Planting Date / Days After Planting')}
                             </label>
                             <div className="flex gap-2">
                                 <button
                                     type="button"
                                     onClick={() => setInputForm(p => ({ ...p, planting_mode: 'date' }))}
-                                    className={`flex-1 py-3 rounded-2xl font-black text-xs uppercase tracking-widest border-2 ${inputForm.planting_mode === 'date' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-100'}`}
+                                    className={`flex-1 py-3 rounded-xl font-bold transition-all ${inputForm.planting_mode === 'date' ? 'bg-farm-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
                                 >
-                                    {language === 'ta' ? 'தேதி' : 'Date'}
+                                    {ls('Date')}
                                 </button>
                                 <button
                                     type="button"
                                     onClick={() => setInputForm(p => ({ ...p, planting_mode: 'days' }))}
-                                    className={`flex-1 py-3 rounded-2xl font-black text-xs uppercase tracking-widest border-2 ${inputForm.planting_mode === 'days' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-100'}`}
+                                    className={`flex-1 py-3 rounded-xl font-bold transition-all ${inputForm.planting_mode === 'days' ? 'bg-farm-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
                                 >
-                                    {language === 'ta' ? 'நாட்கள்' : 'Days'}
+                                    {ls('Days')}
                                 </button>
                             </div>
                             {inputForm.planting_mode === 'date' ? (
@@ -1318,7 +1552,7 @@ const FarmSimulation = ({ user }) => {
                                     type="date"
                                     value={inputForm.planting_date}
                                     onChange={handleInputChange}
-                                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none"
+                                    className="input-field"
                                 />
                             ) : (
                                 <input
@@ -1328,21 +1562,21 @@ const FarmSimulation = ({ user }) => {
                                     step="1"
                                     value={inputForm.days_after_planting}
                                     onChange={handleInputChange}
-                                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none"
+                                    className="input-field"
                                 />
                             )}
                         </div>
 
                         {/* Seed variety */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'விதை வகை' : 'Seed Variety'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Seed Variety')}
                             </label>
                             <div className="space-y-2">
-                                <select name="seed_variety" value={inputForm.seed_variety} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
-                                    <option value="Local Variety">{language === 'ta' ? 'உள்ளூர் விதை' : 'Local Variety'}</option>
-                                    <option value="Hybrid Variety">{language === 'ta' ? 'ஹைப்ரிட் விதை' : 'Hybrid Variety'}</option>
-                                    <option value="Other">{language === 'ta' ? 'பிற விதை' : 'Other variety'}</option>
+                                <select name="seed_variety" value={inputForm.seed_variety} onChange={handleInputChange} className="input-field">
+                                    <option value="Local Variety">{ls('Local Variety')}</option>
+                                    <option value="Hybrid Variety">{ls('Hybrid Variety')}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.seed_variety === 'Other' && (
                                     <input
@@ -1350,8 +1584,8 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.seed_variety_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'விதை வகையை உள்ளிடவும்' : 'Enter seed variety'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_seed_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
@@ -1359,15 +1593,15 @@ const FarmSimulation = ({ user }) => {
 
                         {/* Plant spacing */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'செடிகளுக்கிடை இடைவெளி' : 'Plant Spacing'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Plant Spacing')}
                             </label>
                             <div className="space-y-2">
-                                <select name="plant_spacing" value={inputForm.plant_spacing} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
-                                    <option value="Close">{language === 'ta' ? 'மிக அருகில்' : 'Close'}</option>
-                                    <option value="Normal">{language === 'ta' ? 'சரியான இடைவெளி' : 'Normal'}</option>
-                                    <option value="Wide">{language === 'ta' ? 'அதிக இடைவெளி' : 'Wide'}</option>
-                                    <option value="Other">{language === 'ta' ? 'பிற இடைவெளி' : 'Other spacing'}</option>
+                                <select name="plant_spacing" value={inputForm.plant_spacing} onChange={handleInputChange} className="input-field">
+                                    <option value="Close">{ls('Close')}</option>
+                                    <option value="Normal">{ls('Normal')}</option>
+                                    <option value="Wide">{ls('Wide')}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.plant_spacing === 'Other' && (
                                     <input
@@ -1375,8 +1609,8 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.plant_spacing_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'இடைவெளி விவரத்தை உள்ளிடவும்' : 'Enter spacing description'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_spacing_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
@@ -1384,15 +1618,15 @@ const FarmSimulation = ({ user }) => {
 
                         {/* Weed level */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'களைகள் அளவு' : 'Weed Level'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Weed Level')}
                             </label>
                             <div className="space-y-2">
-                                <select name="weed_level" value={inputForm.weed_level} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
+                                <select name="weed_level" value={inputForm.weed_level} onChange={handleInputChange} className="input-field">
                                     <option value="Low">{ls('Low')}</option>
                                     <option value="Medium">{ls('Medium')}</option>
                                     <option value="High">{ls('High')}</option>
-                                    <option value="Other">{language === 'ta' ? 'பிற' : 'Other'}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.weed_level === 'Other' && (
                                     <input
@@ -1400,24 +1634,23 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.weed_level_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'களைகள் அளவை விவரிக்கவும்' : 'Describe weed level'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_weed_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
                         </div>
 
-                        {/* Pest presence */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'பூச்சி தாக்கம்' : 'Pest Presence'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Pest Presence')}
                             </label>
                             <div className="space-y-2">
-                                <select name="pest_presence" value={inputForm.pest_presence} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
-                                    <option value="Yes">{language === 'ta' ? 'உள்ளது' : 'Yes'}</option>
-                                    <option value="No">{language === 'ta' ? 'இல்லை' : 'No'}</option>
-                                    <option value="Not sure">{language === 'ta' ? 'தெரியவில்லை' : 'Not sure'}</option>
-                                    <option value="Other">{language === 'ta' ? 'பிற' : 'Other'}</option>
+                                <select name="pest_presence" value={inputForm.pest_presence} onChange={handleInputChange} className="input-field">
+                                    <option value="Yes">{ls('Yes')}</option>
+                                    <option value="No">{ls('No')}</option>
+                                    <option value="Not sure">{ls('Not sure')}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.pest_presence === 'Other' && (
                                     <input
@@ -1425,24 +1658,23 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.pest_presence_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'பூச்சி தாக்கத்தை விவரிக்கவும்' : 'Describe pest situation'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_pest_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
                         </div>
 
-                        {/* Crop health observation */}
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'பயிர் ஆரோக்கியம்' : 'Crop Health Observation'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Crop Health Observation')}
                             </label>
                             <div className="space-y-2">
-                                <select name="crop_health_observation" value={inputForm.crop_health_observation} onChange={handleInputChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-emerald-500 transition-all outline-none appearance-none cursor-pointer">
-                                    <option value="Good">{language === 'ta' ? 'நல்லது' : 'Good'}</option>
-                                    <option value="Average">{language === 'ta' ? 'சராசரி' : 'Average'}</option>
-                                    <option value="Poor">{language === 'ta' ? 'மோசம்' : 'Poor'}</option>
-                                    <option value="Other">{language === 'ta' ? 'பிற' : 'Other'}</option>
+                                <select name="crop_health_observation" value={inputForm.crop_health_observation} onChange={handleInputChange} className="input-field">
+                                    <option value="Good">{ls('Good')}</option>
+                                    <option value="Average">{ls('Average')}</option>
+                                    <option value="Poor">{ls('Poor')}</option>
+                                    <option value="Other">{ls('others')}</option>
                                 </select>
                                 {inputForm.crop_health_observation === 'Other' && (
                                     <input
@@ -1450,31 +1682,30 @@ const FarmSimulation = ({ user }) => {
                                         type="text"
                                         value={inputForm.crop_health_other}
                                         onChange={handleInputChange}
-                                        placeholder={language === 'ta' ? 'பயிர் நிலையை விவரிக்கவும்' : 'Describe crop health'}
-                                        className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                        placeholder={ls('other_health_placeholder')}
+                                        className="input-field border-dashed border-farm-green-300"
                                     />
                                 )}
                             </div>
                         </div>
 
-                        {/* Fertilizer usage (full list) */}
                         <div className="md:col-span-2 space-y-3">
-                            <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
-                                {language === 'ta' ? 'உரம் பயன்பாடு' : 'Fertilizer Usage'}
+                            <label className="block text-lg font-semibold text-gray-700 mb-2">
+                                {ls('Fertilizer Usage')}
                             </label>
                             <div className="grid md:grid-cols-3 gap-3">
                                 <button
                                     type="button"
                                     onClick={() => toggleFertilizer('None')}
-                                    className={`px-4 py-3 rounded-2xl border-2 font-black text-xs uppercase tracking-widest text-left ${inputForm.fertilizer_usage.includes('None') ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-100'}`}
+                                    className={`px-4 py-3 rounded-xl border-2 font-bold text-sm transition-all ${inputForm.fertilizer_usage.includes('None') ? 'bg-farm-green-600 text-white border-farm-green-600 shadow-md' : 'bg-gray-50 text-gray-700 border-gray-100 hover:bg-gray-100'}`}
                                 >
-                                    {language === 'ta' ? 'உரம் பயன்படுத்தவில்லை' : 'None'}
+                                    {ls('None')}
                                 </button>
                             </div>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <div className="text-xs font-black uppercase tracking-widest text-slate-600">
-                                        {language === 'ta' ? 'இயற்கை உரங்கள்' : 'Organic Fertilizers'}
+                                    <div className="text-sm font-bold text-gray-600 uppercase tracking-wide">
+                                        {ls('Organic Fertilizers')}
                                     </div>
                                     <div className="grid grid-cols-1 gap-2">
                                         {organicFerts.map(f => (
@@ -1482,7 +1713,7 @@ const FarmSimulation = ({ user }) => {
                                                 key={f}
                                                 type="button"
                                                 onClick={() => toggleFertilizer(f)}
-                                                className={`px-4 py-3 rounded-2xl border-2 font-bold text-sm text-left ${inputForm.fertilizer_usage.includes(f) ? 'bg-emerald-50 border-emerald-300 text-emerald-900' : 'bg-slate-50 border-slate-100 text-slate-700'}`}
+                                                className={`px-4 py-3 rounded-xl border-2 font-semibold text-sm text-left transition-all ${inputForm.fertilizer_usage.includes(f) ? 'bg-farm-green-50 border-farm-green-300 text-farm-green-900 shadow-sm' : 'bg-gray-50 border-gray-100 text-gray-700 hover:bg-gray-100'}`}
                                             >
                                                 {fertilizerLabel(f)}
                                             </button>
@@ -1490,8 +1721,8 @@ const FarmSimulation = ({ user }) => {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <div className="text-xs font-black uppercase tracking-widest text-slate-600">
-                                        {language === 'ta' ? 'இரசாயன உரங்கள்' : 'Chemical Fertilizers'}
+                                    <div className="text-sm font-bold text-gray-600 uppercase tracking-wide">
+                                        {ls('Chemical Fertilizers')}
                                     </div>
                                     <div className="grid grid-cols-1 gap-2">
                                         {chemicalFerts.map(f => (
@@ -1499,7 +1730,7 @@ const FarmSimulation = ({ user }) => {
                                                 key={f}
                                                 type="button"
                                                 onClick={() => toggleFertilizer(f)}
-                                                className={`px-4 py-3 rounded-2xl border-2 font-bold text-sm text-left ${inputForm.fertilizer_usage.includes(f) ? 'bg-emerald-50 border-emerald-300 text-emerald-900' : 'bg-slate-50 border-slate-100 text-slate-700'}`}
+                                                className={`px-4 py-3 rounded-xl border-2 font-semibold text-sm text-left transition-all ${inputForm.fertilizer_usage.includes(f) ? 'bg-farm-green-50 border-farm-green-300 text-farm-green-900 shadow-sm' : 'bg-gray-50 border-gray-100 text-gray-700 hover:bg-gray-100'}`}
                                             >
                                                 {fertilizerLabel(f)}
                                             </button>
@@ -1513,8 +1744,8 @@ const FarmSimulation = ({ user }) => {
                                     type="text"
                                     value={inputForm.fertilizer_other}
                                     onChange={handleInputChange}
-                                    placeholder={language === 'ta' ? 'பிற உரங்கள் இருப்பின் இங்கே எழுதவும்' : 'Any other fertilizers? Type here'}
-                                    className="w-full bg-slate-50 border-2 border-dashed border-emerald-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-emerald-500 transition-all outline-none text-sm"
+                                    placeholder={ls('other_fertilizer_placeholder')}
+                                    className="input-field border-dashed border-farm-green-300"
                                 />
                             </div>
                         </div>
@@ -1643,7 +1874,7 @@ const FarmSimulation = ({ user }) => {
                                     }
                                 ].map(field => (
                                     <div key={field.id} className="space-y-2">
-                                        <label className="text-[10px] font-black uppercase text-slate-400 ml-1 tracking-widest">
+                                        <label className="block text-lg font-semibold text-gray-700 mb-2">
                                             {ls(field.label)}
                                         </label>
                                         <div className="space-y-2">
@@ -1651,7 +1882,7 @@ const FarmSimulation = ({ user }) => {
                                                 name={field.id}
                                                 value={inputForm[field.id]}
                                                 onChange={handleInputChange}
-                                                className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-5 py-4 font-bold focus:border-blue-500 transition-all outline-none appearance-none cursor-pointer"
+                                                className="input-field"
                                             >
                                                 <option value="">{ls('selectOption') || 'Select Option'}</option>
                                                 {field.options.map(opt => (
@@ -1665,7 +1896,7 @@ const FarmSimulation = ({ user }) => {
                                                     value={inputForm[`${field.id}_other`]}
                                                     onChange={handleInputChange}
                                                     placeholder={ls('specifyOther')}
-                                                    className="w-full bg-slate-50 border-2 border-dashed border-blue-300 rounded-[1.5rem] px-5 py-3 font-bold focus:border-blue-500 transition-all outline-none text-sm"
+                                                    className="input-field border-dashed border-farm-sky-300"
                                                 />
                                             )}
                                         </div>
@@ -1677,7 +1908,7 @@ const FarmSimulation = ({ user }) => {
                     </div>
 
                     <div className="p-10 pt-0">
-                        <button onClick={startSimulation} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-6 rounded-3xl shadow-xl shadow-emerald-200 transition-all transform hover:scale-[1.01] active:scale-95 text-xl uppercase tracking-widest flex items-center justify-center gap-4">
+                        <button onClick={startSimulation} className="btn-primary w-full py-6 text-xl shadow-farm-green-200">
                             {ls('Generate Virtual Farm')} <FaChartLine />
                         </button>
                     </div>
@@ -1722,29 +1953,26 @@ const FarmSimulation = ({ user }) => {
         if (growthPct >= 0.75) stageLabelEn = 'Late / Maturity stage';
         else if (growthPct >= 0.4) stageLabelEn = 'Mid growth';
 
-        const stageLabelTa =
+        const stageLabel = ls(
             growthPct >= 0.75
-                ? 'இறுதி / கோதுமை நிகர வளர்ச்சி நிலை'
+                ? 'Late / Maturity stage'
                 : growthPct >= 0.4
-                    ? 'நடுத்தர வளர்ச்சி நிலை'
-                    : 'ஆரம்ப வளர்ச்சி நிலை';
+                    ? 'Mid growth'
+                    : 'Early growth'
+        );
 
         const leafLabel = activeView?.visual?.leaf_color;
         let leafDotClass = 'bg-slate-400';
-        let leafMeaningEn = '';
-        let leafMeaningTa = '';
+        let leafMeaning = '';
         if (leafLabel === 'Dark Green') {
             leafDotClass = 'bg-emerald-400';
-            leafMeaningEn = 'Healthy, well-nourished crop';
-            leafMeaningTa = 'சத்து சரியாக கிடைக்கும் ஆரோக்கியமான பயிர்';
+            leafMeaning = ls('Healthy, well-nourished crop');
         } else if (leafLabel === 'Yellowish') {
             leafDotClass = 'bg-yellow-300';
-            leafMeaningEn = 'Possible nutrient deficiency or stress';
-            leafMeaningTa = 'சத்து குறைவு அல்லது அழுத்தம் இருப்பதற்கான சாத்தியம்';
+            leafMeaning = ls('Possible nutrient deficiency or stress');
         } else if (leafLabel === 'Brown/Dry') {
             leafDotClass = 'bg-amber-800';
-            leafMeaningEn = 'Severe stress / dryness or damage';
-            leafMeaningTa = 'கடுமையான உலர்ச்சி / சேதம் கொண்ட நிலை';
+            leafMeaning = ls('Severe stress / dryness or damage');
         }
 
         return (
@@ -1758,12 +1986,12 @@ const FarmSimulation = ({ user }) => {
                     <div className="w-full md:w-80 flex flex-col gap-6 overflow-y-auto pr-2 custom-scrollbar">
                         <div className="bg-slate-900/80 backdrop-blur-2xl rounded-[2rem] p-6 border border-white/5 shadow-2xl">
                             <h2 className="text-[10px] font-black uppercase text-amber-300 tracking-[0.2em] mb-4">
-                                {language === 'ta' ? 'வளர்ச்சி நிலை (Growth Stage)' : 'Growth Stage Module'}
+                                {ls('Growth Stage Module')}
                             </h2>
                             <div className="grid grid-cols-2 gap-3 text-xs font-bold">
                                 <div className="bg-slate-800/50 p-3 rounded-xl border border-white/5">
                                     <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
-                                        {language === 'ta' ? 'செடி உயரம்' : 'Plant Height'}
+                                        {ls('Plant Height')}
                                     </div>
                                     <div className="text-white font-black">
                                         {activeView?.visual?.plant_height || '-'}
@@ -1771,7 +1999,7 @@ const FarmSimulation = ({ user }) => {
                                 </div>
                                 <div className="bg-slate-800/50 p-3 rounded-xl border border-white/5">
                                     <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
-                                        {language === 'ta' ? 'இலை நிறம்' : 'Leaf Color'}
+                                        {ls('Leaf Color')}
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <div className="flex items-center gap-2 text-white font-black">
@@ -1780,14 +2008,14 @@ const FarmSimulation = ({ user }) => {
                                         </div>
                                         {leafLabel && (
                                             <div className="text-[9px] text-slate-400 font-semibold leading-tight">
-                                                {language === 'ta' ? leafMeaningTa : leafMeaningEn}
+                                                {leafMeaning}
                                             </div>
                                         )}
                                     </div>
                                 </div>
                                 <div className="bg-slate-800/50 p-3 rounded-xl border border-white/5">
                                     <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
-                                        {language === 'ta' ? 'செடி அடர்த்தி' : 'Plant Density'}
+                                        {ls('Plant Density')}
                                     </div>
                                     <div className="text-white font-black">
                                         {activeView?.visual?.density || '-'}
@@ -1795,28 +2023,26 @@ const FarmSimulation = ({ user }) => {
                                 </div>
                                 <div className="bg-slate-800/50 p-3 rounded-xl border border-white/5">
                                     <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
-                                        {language === 'ta' ? 'புல பிரச்சினைகள்' : 'Field Problems'}
+                                        {ls('Field Problems')}
                                     </div>
                                     <div className="text-white font-black">
-                                        {(activeView?.visual?.weeds_present ? (language === 'ta' ? 'களைகள்' : 'Weeds') : (language === 'ta' ? 'இல்லை' : 'None'))}
-                                        {activeView?.visual?.pest_damage ? ` • ${language === 'ta' ? 'பூச்சி' : 'Pests'}` : ''}
+                                        {(activeView?.visual?.weeds_present ? ls('WEEDS') : ls('No'))}
+                                        {activeView?.visual?.pest_damage ? ` • ${ls('Pests')}` : ''}
                                     </div>
                                 </div>
                             </div>
                             <div className="mt-4 bg-slate-800/40 p-4 rounded-2xl border border-white/5">
                                 <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500">
-                                    <span>{language === 'ta' ? 'எதிர்பார்க்கப்படும் மகசூல்' : 'Expected Yield'}</span>
+                                    <span>{ls('Expected Yield')}</span>
                                     <span className="text-emerald-300">
-                                        {simData?.[isImproved ? 'after' : 'before']?.yield_per_acre_tons ?? '-'} {language === 'ta' ? 'டன்/ஏக்கர்' : 't/acre'}
+                                        {simData?.[isImproved ? 'after' : 'before']?.yield_per_acre_tons ?? '-'} {ls('ton/acre')}
                                     </span>
                                 </div>
                                 <div className="mt-2 text-white font-black text-lg">
-                                    {simData?.[isImproved ? 'after' : 'before']?.yield_total_tons ?? '-'} {language === 'ta' ? 'டன் (மொத்தம்)' : 'tons (total)'}
+                                    {simData?.[isImproved ? 'after' : 'before']?.yield_total_tons ?? '-'} {ls('tons (total)')}
                                 </div>
                                 <div className="mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                                    {language === 'ta'
-                                        ? `வளர்ச்சி நிலை: ${stageLabelTa}`
-                                        : `Growth stage: ${stageLabelEn}`}
+                                    {ls('Growth stage')}: {stageLabel}
                                 </div>
                                 <div className="mt-3 grid grid-cols-2 gap-2">
                                     <div className="bg-slate-800/60 p-2 rounded-xl border border-white/5">
@@ -1856,7 +2082,7 @@ const FarmSimulation = ({ user }) => {
                                 <div>
                                     <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase mb-2">
                                         <span>{ls('Predicted Yield')}</span>
-                                        <span className="text-emerald-400">{currentData.yield_total_tons} {language === 'ta' ? 'டன்' : 'Tons'}</span>
+                                        <span className="text-emerald-400">{currentData.yield_total_tons} {ls('tons (total)')}</span>
                                     </div>
                                     <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                                         <div className="h-full bg-emerald-500 rounded-full" style={{ width: `${sandbox.growth * 100}%` }}></div>
@@ -1911,7 +2137,7 @@ const FarmSimulation = ({ user }) => {
 
                         <div className="bg-slate-900/80 backdrop-blur-2xl rounded-[2rem] p-6 border border-white/5 shadow-2xl">
                             <h2 className="text-[10px] font-black uppercase text-amber-400 tracking-[0.2em] mb-4">
-                                {language === 'ta' ? 'காலநிலை ஆய்வு' : 'Climate Analysis'}
+                                {ls('Climate Analysis')}
                             </h2>
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-2xl">
@@ -1919,22 +2145,22 @@ const FarmSimulation = ({ user }) => {
                                 </div>
                                 <div className="flex-1">
                                     <div className="text-sm font-black text-white capitalize">
-                                        {ls(inputForm.season)} {language === 'ta' ? 'பருவம்' : 'Season'}
+                                        {ls(inputForm.season)} {ls('Season')}
                                     </div>
-                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{inputForm.district}</div>
+                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{tDistrict(inputForm.district)}</div>
                                 </div>
                             </div>
                             <div className="bg-slate-800/40 p-4 rounded-2xl border border-white/5 space-y-3">
                                 <p className="text-xs font-bold text-slate-300 leading-relaxed italic">
-                                    "{activeView?.climate?.insight || 'Analyzing regional patterns...'}"
+                                    "{activeView?.climate?.insight || ls('analyzing_regional')}"
                                 </p>
                                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/5">
                                     <div className="space-y-1">
-                                        <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{language === 'ta' ? 'வெப்பநிலை' : 'Temperature'}</div>
+                                        <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ls('Temperature')}</div>
                                         <div className="text-xs font-black text-amber-300">{activeView?.climate?.avg_temp || '-'}</div>
                                     </div>
                                     <div className="space-y-1">
-                                        <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{language === 'ta' ? 'மழைப்பொழிவு' : 'Rainfall'}</div>
+                                        <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ls('Rainfall')}</div>
                                         <div className="text-xs font-black text-blue-300">{activeView?.climate?.rainfall || '-'}</div>
                                     </div>
                                 </div>
@@ -1942,7 +2168,7 @@ const FarmSimulation = ({ user }) => {
                             <div className="mt-4 flex items-center justify-between">
                                 <div className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{ls('Risk Level')}</div>
                                 <div className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${activeView?.climate?.risk_level === 'High' ? 'bg-red-500/20 text-red-400 border-red-500/30' : activeView?.climate?.risk_level === 'Medium' ? 'bg-amber-500/20 text-amber-400 border-amber-500/30' : 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'}`}>
-                                    {activeView?.climate?.risk_level || 'Normal'}
+                                    {ls(activeView?.climate?.risk_level || 'Normal')}
                                 </div>
                             </div>
                         </div>
@@ -2045,10 +2271,10 @@ const FarmSimulation = ({ user }) => {
                                         <span className="text-base">🐛</span>
                                         <div>
                                             <div className="text-white font-black text-[10px] uppercase tracking-widest">
-                                                {language === 'ta' ? 'பூச்சி தாக்கம்!' : 'PEST ATTACK DETECTED'}
+                                                {ls('PEST ATTACK DETECTED')}
                                             </div>
                                             <div className="text-red-200 text-[8px] font-bold">
-                                                {language === 'ta' ? 'புழுக்கள் & கம்பளிப்புழுக்கள் காட்டப்படுகின்றன' : 'Worms & caterpillars shown on leaves'}
+                                                {ls('worms_visible')}
                                             </div>
                                         </div>
                                     </div>
@@ -2063,16 +2289,14 @@ const FarmSimulation = ({ user }) => {
                                         <span className="text-base">🌿</span>
                                         <div>
                                             <div className="text-white font-black text-[10px] uppercase tracking-widest">
-                                                {language === 'ta'
-                                                    ? `களைகள்: ${sandbox.weedsLevel === 'High' ? 'அதிகம்' : sandbox.weedsLevel === 'Medium' ? 'மிதமான' : 'குறைவு'}`
-                                                    : `WEEDS: ${sandbox.weedsLevel}`}
+                                                {ls('WEEDS')}: {ls(sandbox.weedsLevel)}
                                             </div>
                                             <div className="text-yellow-100 text-[8px] font-bold">
                                                 {sandbox.weedsLevel === 'High'
-                                                    ? (language === 'ta' ? 'அடர்த்தியான களை படர்ச்சி' : 'Dense weed infestation shown')
+                                                    ? ls('dense_weeds')
                                                     : sandbox.weedsLevel === 'Medium'
-                                                        ? (language === 'ta' ? 'நடுத்தர களை வளர்ச்சி' : 'Moderate weed growth shown')
-                                                        : (language === 'ta' ? 'சிறிய களை பரவல்' : 'Few scattered weeds shown')}
+                                                        ? ls('moderate_weeds')
+                                                        : ls('scattered_weeds')}
                                             </div>
                                         </div>
                                     </div>
@@ -2082,10 +2306,10 @@ const FarmSimulation = ({ user }) => {
                                         <span className="text-base">✅</span>
                                         <div>
                                             <div className="text-white font-black text-[10px] uppercase tracking-widest">
-                                                {language === 'ta' ? 'பண்ணை மேம்படுத்தப்பட்டது!' : 'FARM IMPROVED!'}
+                                                {ls('FARM IMPROVED!')}
                                             </div>
                                             <div className="text-emerald-100 text-[8px] font-bold">
-                                                {language === 'ta' ? 'பூச்சிகள் & களைகள் அகற்றப்பட்டன' : 'Pests & weeds eliminated'}
+                                                {ls('pests_eliminated')}
                                             </div>
                                         </div>
                                     </div>
@@ -2109,17 +2333,17 @@ const FarmSimulation = ({ user }) => {
                             </h2>
                             <div className="grid grid-cols-2 gap-4 mb-6">
                                 <div className="bg-slate-800/50 p-4 rounded-2xl text-center border border-white/5">
-                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">🌡️ Temp</div>
+                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">🌡️ {ls('Temperature')}</div>
                                     <div className="text-sm font-black text-amber-300 leading-tight">{simData?.before?.climate?.avg_temp || '--'}</div>
                                 </div>
                                 <div className="bg-slate-800/50 p-4 rounded-2xl text-center border border-white/5">
-                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">🌧️ Rain</div>
-                                    <div className="text-sm font-black text-blue-300 leading-tight">{simData?.before?.climate?.rainfall || '--'}</div>
+                                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">🌧️ {ls('Rainfall')}</div>
+                                    <div className="text-sm font-black text-blue-300 leading-tight">{simData?.[isImproved ? 'after' : 'before']?.climate?.rainfall || '--'}</div>
                                 </div>
                             </div>
                             <div className="bg-slate-800/40 p-3 rounded-xl border border-white/5 mb-4">
                                 <p className="text-[10px] font-bold text-slate-400 leading-relaxed italic">
-                                    {simData?.before?.climate?.insight || 'Analyzing regional patterns...'}
+                                    {simData?.before?.climate?.insight || ls('Analyzing soil and climate data...')}
                                 </p>
                             </div>
                             <div className="bg-slate-800/50 p-4 rounded-2xl border border-white/5 flex items-center justify-between">
@@ -2162,7 +2386,7 @@ const FarmSimulation = ({ user }) => {
                     {/* Farmer Input Summary */}
                     <div className="bg-white rounded-[3rem] p-8 shadow-2xl border border-slate-100">
                         <h2 className="text-xl font-black text-slate-800 uppercase tracking-widest mb-4">
-                            {language === 'ta' ? 'பண்ணை விவரங்கள் (Input Summary)' : 'Farm Input Details'}
+                            {ls('Farm Input Details')}
                         </h2>
                         <div className="grid md:grid-cols-2 gap-4 text-sm font-semibold text-slate-700">
                             <div>
@@ -2175,45 +2399,45 @@ const FarmSimulation = ({ user }) => {
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
                                     {ls('Crop Type')}
                                 </div>
-                                <div>{inputForm.crop_type === 'Other' ? inputForm.crop_type_other : inputForm.crop_type}</div>
+                                <div>{inputForm.crop_type === 'Other' ? inputForm.crop_type_other : ls(inputForm.crop_type)}</div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'நில அளவு' : 'Land Size'}
+                                    {ls('Land Size')}
                                 </div>
                                 <div>
-                                    {inputForm.land_size} {language === 'ta' ? 'ஏக்கர்' : 'acres'}
+                                    {inputForm.land_size} {ls('Acres')}
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'வளர்ச்சி நாட்கள்' : 'Days After Planting'}
+                                    {ls('Days After Planting')}
                                 </div>
                                 <div>
                                     {inputForm.planting_mode === 'date'
-                                        ? inputForm.planting_date || (language === 'ta' ? 'தேதி குறிப்பிடப்படவில்லை' : 'Not set')
-                                        : `${inputForm.days_after_planting || 0} ${language === 'ta' ? 'நாட்கள்' : 'days'}`}
+                                        ? inputForm.planting_date || ls('not_set')
+                                        : `${inputForm.days_after_planting || 0} ${ls('Days')}`}
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'விதை வகை' : 'Seed Variety'}
+                                    {ls('Seed Variety')}
                                 </div>
                                 <div>
-                                    {inputForm.seed_variety === 'Other' ? inputForm.seed_variety_other : inputForm.seed_variety}
+                                    {inputForm.seed_variety === 'Other' ? inputForm.seed_variety_other : ls(inputForm.seed_variety)}
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'செடிகளுக்கிடை இடைவெளி' : 'Plant Spacing'}
+                                    {ls('Plant Spacing')}
                                 </div>
                                 <div>
-                                    {inputForm.plant_spacing === 'Other' ? inputForm.plant_spacing_other : inputForm.plant_spacing}
+                                    {inputForm.plant_spacing === 'Other' ? inputForm.plant_spacing_other : ls(inputForm.plant_spacing)}
                                 </div>
                             </div>
                             <div className="md:col-span-2">
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'உரம் பயன்பாடு' : 'Fertilizers Used'}
+                                    {ls('Fertilizers Used')}
                                 </div>
                                 <div className="flex flex-wrap gap-2 mt-1">
                                     {(inputForm.fertilizer_usage || []).length > 0 ? (
@@ -2227,7 +2451,7 @@ const FarmSimulation = ({ user }) => {
                                         ))
                                     ) : (
                                         <span className="text-slate-500 text-sm">
-                                            {language === 'ta' ? 'உரம் தகவல் இல்லை' : 'No fertilizer information'}
+                                            {ls('No fertilizer information')}
                                         </span>
                                     )}
                                     {inputForm.fertilizer_other && (
@@ -2239,26 +2463,26 @@ const FarmSimulation = ({ user }) => {
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'களைகள் அளவு' : 'Weed Level'}
+                                    {ls('Weed Level')}
                                 </div>
                                 <div>
-                                    {inputForm.weed_level === 'Other' ? inputForm.weed_level_other : inputForm.weed_level}
+                                    {inputForm.weed_level === 'Other' ? inputForm.weed_level_other : ls(inputForm.weed_level)}
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'பூச்சி தாக்கம்' : 'Pest Presence'}
+                                    {ls('Pest Presence')}
                                 </div>
                                 <div>
-                                    {inputForm.pest_presence === 'Other' ? inputForm.pest_presence_other : inputForm.pest_presence}
+                                    {inputForm.pest_presence === 'Other' ? inputForm.pest_presence_other : ls(inputForm.pest_presence)}
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                                    {language === 'ta' ? 'பயிர் ஆரோக்கியம்' : 'Crop Health Observation'}
+                                    {ls('Crop Health Observation')}
                                 </div>
                                 <div>
-                                    {inputForm.crop_health_observation === 'Other' ? inputForm.crop_health_other : inputForm.crop_health_observation}
+                                    {inputForm.crop_health_observation === 'Other' ? inputForm.crop_health_other : ls(inputForm.crop_health_observation)}
                                 </div>
                             </div>
                         </div>
@@ -2276,7 +2500,7 @@ const FarmSimulation = ({ user }) => {
                                     <div className="flex justify-between items-center bg-slate-50 p-4 rounded-2xl border border-slate-100">
                                         <span className="text-slate-500 font-bold text-xs uppercase tracking-widest">{ls('Predicted Yield')}</span>
                                         <span className="text-slate-900 font-black text-xl">
-                                            {simData?.before?.yield_total_tons} {language === 'ta' ? 'டன் (மொத்தம்)' : 'Tons total'}
+                                            {simData?.before?.yield_total_tons} {ls('tons (total)')}
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center bg-slate-50 p-4 rounded-2xl border border-slate-100">
@@ -2304,7 +2528,7 @@ const FarmSimulation = ({ user }) => {
                                         <span className="text-emerald-300 font-bold text-xs uppercase tracking-widest">{ls('Predicted Yield')}</span>
                                         <div className="text-right">
                                             <span className="text-white font-black text-xl">
-                                                {simData?.after?.yield_total_tons} {language === 'ta' ? 'டன் (மொத்தம்)' : 'Tons total'}
+                                                {simData?.after?.yield_total_tons} {ls('tons (total)')}
                                             </span>
                                             <div className="text-emerald-400 text-[10px] font-black">+{simData?.after?.yield_increase_pct}% {ls('INCREASE')}</div>
                                         </div>
@@ -2338,10 +2562,10 @@ const FarmSimulation = ({ user }) => {
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                     <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-indigo-300 flex items-center gap-3">
                                         <FaStar className="text-indigo-400" />
-                                        {ta ? 'மகசூலை அதிகரிக்க மேம்பாடுகள்' : 'Improvements Applied to Increase Yield'}
+                                        {ls('Improvements Applied to Increase Yield')}
                                     </h2>
                                     <div className="px-4 py-1.5 bg-indigo-500/20 rounded-full border border-indigo-500/30 text-[10px] font-black uppercase tracking-widest text-indigo-200">
-                                        {ta ? 'பரிந்துரைக்கப்பட்ட மேலாண்மை' : 'Recommended Management Practices'}
+                                        {ls('Recommended Management Practices')}
                                     </div>
                                 </div>
 
@@ -2350,17 +2574,17 @@ const FarmSimulation = ({ user }) => {
                                     <div className="bg-white/5 rounded-3xl p-6 border border-white/10 hover:border-amber-500/30 transition-colors group">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-xl">🌱</div>
-                                            <h3 className="font-black uppercase tracking-widest text-amber-300 text-xs">{ta ? 'உரம் மேலாண்மை' : 'Fertilizer Management'}</h3>
+                                            <h3 className="font-black uppercase tracking-widest text-amber-300 text-xs">{ls('Fertilizer Management')}</h3>
                                         </div>
                                         <div className="space-y-4">
                                             <div>
-                                                <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest mb-1">{ta ? 'அடி உரம்' : 'Basal Dose'}</div>
+                                                <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest mb-1">{ls('Basal Dose')}</div>
                                                 <div className="text-xs font-bold text-white/90">
                                                     {Array.isArray(imps.fertilizer.basal[language]) ? imps.fertilizer.basal[language].join(', ') : (imps.fertilizer.basal[language] || imps.fertilizer.basal.en.join(', '))}
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest mb-1">{ta ? 'மேலுரம்' : 'Top Dressing'}</div>
+                                                <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest mb-1">{ls('Top Dressing')}</div>
                                                 <div className="text-xs font-bold text-white/90">
                                                     {Array.isArray(imps.fertilizer.top_dress[language]) ? imps.fertilizer.top_dress[language].join(' | ') : (imps.fertilizer.top_dress[language] || imps.fertilizer.top_dress.en.join(' | '))}
                                                 </div>
@@ -2377,7 +2601,7 @@ const FarmSimulation = ({ user }) => {
                                     <div className="bg-white/5 rounded-3xl p-6 border border-white/10 hover:border-red-500/30 transition-colors group">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center text-xl">🐛</div>
-                                            <h3 className="font-black uppercase tracking-widest text-red-300 text-xs">{ta ? 'பூச்சி கட்டுப்பாடு' : 'Precise Pest Control'}</h3>
+                                            <h3 className="font-black uppercase tracking-widest text-red-300 text-xs">{ls('Precise Pest Control')}</h3>
                                         </div>
                                         <div className="space-y-3">
                                             {imps.pest_control.threats.map((t, idx) => (
@@ -2398,20 +2622,20 @@ const FarmSimulation = ({ user }) => {
                                     <div className="bg-white/5 rounded-3xl p-6 border border-white/10 hover:border-blue-500/30 transition-colors group">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-xl">☁️</div>
-                                            <h3 className="font-black uppercase tracking-widest text-blue-300 text-xs">{ta ? 'தட்பவெப்பநிலை & களை' : 'Climate & Weed Control'}</h3>
+                                            <h3 className="font-black uppercase tracking-widest text-blue-300 text-xs">{ls('Climate & Weed Control')}</h3>
                                         </div>
                                         <div className="space-y-4">
                                             <div className="bg-emerald-500/10 p-3 rounded-xl border border-emerald-500/20">
-                                                <div className="text-[9px] font-black uppercase text-emerald-400 tracking-widest mb-1">{ta ? 'தட்பவெப்பநிலை தழுவல்' : 'Climate Adaptation'}</div>
+                                                <div className="text-[9px] font-black uppercase text-emerald-400 tracking-widest mb-1">{ls('Climate Adaptation')}</div>
                                                 <div className="text-[11px] font-bold text-white leading-relaxed">{imps.climate_adaptation.action[language] || imps.climate_adaptation.action.en}</div>
                                             </div>
                                             <div className="space-y-2 px-1">
                                                 <div>
-                                                    <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ta ? 'களைக் கொல்லி' : 'Herbicide'}</div>
+                                                    <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ls('Herbicide')}</div>
                                                     <div className="text-[11px] font-bold text-white/80">{imps.weed_control.pre_emergent[language] || imps.weed_control.pre_emergent.en}</div>
                                                 </div>
                                                 <div>
-                                                    <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ta ? 'கைமுறை களை' : 'Manual Control'}</div>
+                                                    <div className="text-[9px] font-black uppercase text-slate-500 tracking-widest">{ls('Manual Control')}</div>
                                                     <div className="text-[11px] font-bold text-white/80">{imps.weed_control.manual[language] || imps.weed_control.manual.en}</div>
                                                 </div>
                                             </div>
@@ -2422,7 +2646,7 @@ const FarmSimulation = ({ user }) => {
                                     <div className="bg-white/5 rounded-3xl p-6 border border-white/10 hover:border-cyan-500/30 transition-colors group">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-10 h-10 bg-cyan-500/20 rounded-xl flex items-center justify-center text-xl">💧</div>
-                                            <h3 className="font-black uppercase tracking-widest text-cyan-300 text-xs">{ta ? 'பாசன மேம்பாடு' : 'Irrigation Upgrade'}</h3>
+                                            <h3 className="font-black uppercase tracking-widest text-cyan-300 text-xs">{ls('Irrigation Upgrade')}</h3>
                                         </div>
                                         <div className="space-y-3">
                                             <div className="flex items-center justify-between bg-black/30 p-3 rounded-2xl border border-white/5">
@@ -2443,7 +2667,7 @@ const FarmSimulation = ({ user }) => {
                                     <div className="lg:col-span-2 bg-white/5 rounded-3xl p-6 border border-white/10 hover:border-emerald-500/30 transition-colors group">
                                         <div className="flex items-center gap-3 mb-6">
                                             <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center text-xl">📅</div>
-                                            <h3 className="font-black uppercase tracking-widest text-emerald-300 text-xs">{ta ? 'செயல்பாட்டு கால அட்டவணை' : 'Application & Care Schedule'}</h3>
+                                            <h3 className="font-black uppercase tracking-widest text-emerald-300 text-xs">{ls('Application & Care Schedule')}</h3>
                                         </div>
                                         <div className="grid md:grid-cols-2 gap-4">
                                             {imps.schedule.map((step, idx) => (
@@ -2470,9 +2694,7 @@ const FarmSimulation = ({ user }) => {
                         <div className="flex-1 space-y-4">
                             <h4 className="text-2xl font-black text-slate-800 uppercase tracking-tighter">{ls('Why Adopt These Changes?')}</h4>
                             <p className="text-slate-600 font-bold leading-relaxed text-sm">
-                                {language === 'ta'
-                                    ? 'இந்த உருவகம், நீங்கள் அளித்த தகவல்களின் அடிப்படையில், தற்போதைய வயலில் இருக்கும் களைகள், பூச்சி தாக்கம், உரம் குறைவு போன்ற காரணங்கள் எப்படி மகசூலைக் குறைக்கின்றன என்று காட்டுகிறது. பரிந்துரைக்கப்பட்ட மேம்பாடுகள் (சமநிலை உரம், களைகள் அகற்றல், பூச்சி கட்டுப்பாடு, சரியான இடைவெளி) பயன்படுத்தப்படும் போது செடி வளர்ச்சி மற்றும் மண் ஆரோக்கியம் மேம்படுகிறது. கீழே உள்ள விரிவான கணக்கீடு மற்றும் கால அட்டவணை மூலம் உங்கள் மகசூல் எவ்வாறு அதிகரிக்கிறது என்பதை தெளிவாகக் காணலாம்.'
-                                    : 'This simulation shows how factors like weeds, pests, and low fertilizer reduce your current yield. When the recommended improvements (balanced fertilizer, weed removal, pest control, proper spacing) are applied, plant growth and soil health improve. You can see how your yield increases in the detailed calculation and harvest timeline below.'}
+                                {ls('sim_why_adopt_text')}
                             </p>
                         </div>
                         <div className="flex gap-4">

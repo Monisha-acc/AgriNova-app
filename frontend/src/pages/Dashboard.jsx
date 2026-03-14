@@ -5,7 +5,7 @@ import { farmerAPI, resultsAPI, simulationAPI } from '../utils/api';
 import Chatbot from './Chatbot';
 import {
     FaTractor, FaDownload, FaLightbulb, FaUniversity, FaSignOutAlt,
-    FaChartLine, FaStar, FaLeaf, FaMobileAlt, FaFemale, FaRupeeSign, FaSeedling
+    FaChartLine, FaStar, FaLeaf, FaMobileAlt, FaFemale, FaRupeeSign, FaSeedling, FaShieldAlt
 } from 'react-icons/fa';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from 'chart.js';
 import { Doughnut, Bar } from 'react-chartjs-2';
@@ -13,7 +13,7 @@ import { Doughnut, Bar } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 
 const Dashboard = ({ user, onLogout }) => {
-    const { t, tDistrict, language } = useLanguage();
+    const { t, tDistrict, tValue, tName, language } = useLanguage();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [downloading, setDownloading] = useState(false);
@@ -113,7 +113,9 @@ const Dashboard = ({ user, onLogout }) => {
     if (loading) {
         return (
             <div className="min-h-screen flex items-center justify-center">
-                <div className="text-2xl text-farm-green-600">Loading Dashboard...</div>
+                <div className="text-2xl text-farm-green-600 font-bold">
+                    {language === 'ta' ? 'முகப்பை ஏற்றுகிறது...' : 'Loading Dashboard...'}
+                </div>
             </div>
         );
     }
@@ -137,7 +139,7 @@ const Dashboard = ({ user, onLogout }) => {
 
     // Chart data for adoption score
     const doughnutData = {
-        labels: ['Adoption Score', 'Remaining'],
+        labels: [language === 'ta' ? 'ஏற்பு மதிப்பெண்' : 'Adoption Score', language === 'ta' ? 'மீதமுள்ளது' : 'Remaining'],
         datasets: [{
             data: [adoptionScore, 100 - adoptionScore],
             backgroundColor: [
@@ -158,7 +160,7 @@ const Dashboard = ({ user, onLogout }) => {
 
     // Technology usage chart
     const techData = {
-        labels: ['Technologies Used', 'Schemes Aware'],
+        labels: [language === 'ta' ? 'பயன்படுத்தப்பட்ட தொழில்நுட்பங்கள்' : 'Technologies Used', language === 'ta' ? 'அறிந்த திட்டங்கள்' : 'Schemes Aware'],
         datasets: [{
             label: 'Count',
             data: [
@@ -181,7 +183,7 @@ const Dashboard = ({ user, onLogout }) => {
 
     const getBadgeClass = (category) => {
         if (category === 'High') return 'badge-high';
-        if (category === 'Moderate') return 'badge-moderate';
+        if (category === 'Moderate' || category === 'Medium') return 'badge-moderate';
         return 'badge-low';
     };
 
@@ -252,13 +254,13 @@ const Dashboard = ({ user, onLogout }) => {
                         {t('farmerProfile')}
                     </p>
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8 tracking-tight">
-                        {user.name}
+                        {tName(user.name)}
                     </h1>
 
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
                         {user.district && (
                             <div>
-                                <p className="text-farm-green-200 text-xs font-bold tracking-wider uppercase mb-1">{language === 'en' ? 'DISTRICT' : 'மாவட்டம்'}</p>
+                                <p className="text-farm-green-200 text-xs font-bold tracking-wider uppercase mb-1">{language === 'en' ? 'DISTRICT' : t('district')}</p>
                                 <p className="text-white font-semibold text-lg">{tDistrict(user.district)}</p>
                             </div>
                         )}
@@ -271,31 +273,31 @@ const Dashboard = ({ user, onLogout }) => {
                         {farmerData?.crop_type && farmerData.crop_type.length > 0 && (
                             <div>
                                 <p className="text-farm-green-200 text-xs font-bold tracking-wider uppercase mb-1">{language === 'en' ? 'CROPS' : t('crops')}</p>
-                                <p className="text-white font-semibold text-lg max-w-full truncate" title={Array.isArray(farmerData.crop_type) ? farmerData.crop_type.join(', ') : farmerData.crop_type}>
-                                    {Array.isArray(farmerData.crop_type) ? farmerData.crop_type.join(', ') : farmerData.crop_type}
+                                <p className="text-white font-semibold text-lg max-w-full truncate" title={Array.isArray(farmerData.crop_type) ? farmerData.crop_type.map(c => tValue('crop', c)).join(', ') : tValue('crop', farmerData.crop_type)}>
+                                    {Array.isArray(farmerData.crop_type) ? farmerData.crop_type.map(c => tValue('crop', c)).join(', ') : tValue('crop', farmerData.crop_type)}
                                 </p>
                             </div>
                         )}
                         {farmerData?.irrigation_source && (
                             <div>
                                 <p className="text-farm-green-200 text-xs font-bold tracking-wider uppercase mb-1">{language === 'en' ? 'IRRIGATION' : t('irrigation')}</p>
-                                <p className="text-white font-semibold text-lg">{farmerData.irrigation_source}</p>
+                                <p className="text-white font-semibold text-lg">{tValue('irrigation', farmerData.irrigation_source)}</p>
                             </div>
                         )}
                         {farmerData?.soil_type && (
                             <div>
                                 <p className="text-farm-green-200 text-xs font-bold tracking-wider uppercase mb-1">{language === 'en' ? 'SOIL' : t('soil')}</p>
-                                <p className="text-white font-semibold text-lg">{farmerData.soil_type}</p>
+                                <p className="text-white font-semibold text-lg">{tValue('soil', farmerData.soil_type)}</p>
                             </div>
                         )}
                     </div>
 
                     <div className="flex flex-wrap gap-3 mt-4">
                         <div className="border border-farm-green-500 bg-farm-green-700 px-4 py-2 rounded-lg text-sm font-medium text-farm-green-50 flex items-center shadow-sm">
-                            {t('assessment')}: {new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
+                            {t('assessment')}: {language === 'ta' ? `${new Date().getDate()} ${t(new Date().toLocaleDateString('en-GB', { month: 'short' }).toLowerCase())} ${new Date().getFullYear()}` : new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
                         </div>
                         <div className="border border-farm-green-500 bg-farm-green-700 px-4 py-2 rounded-lg text-sm font-medium text-farm-green-50 flex items-center shadow-sm">
-                            {adoptionCategory !== 'N/A' ? (language === 'ta' ? `${t(adoptionCategory.toLowerCase())} விவசாயி` : `${adoptionCategory} Farmer`) : 'Farmer'}
+                            {adoptionCategory !== 'N/A' ? (language === 'ta' ? `${tValue('category', adoptionCategory)} விவசாயி` : `${adoptionCategory} Farmer`) : 'Farmer'}
                         </div>
                         {user.district && (
                             <div className="border border-farm-green-500 bg-farm-green-700 px-4 py-2 rounded-lg text-sm font-medium text-farm-green-50 flex items-center shadow-sm">
@@ -319,7 +321,7 @@ const Dashboard = ({ user, onLogout }) => {
                             </div>
                         </div>
                         <div className={`badge ${getBadgeClass(adoptionCategory)} text-lg`}>
-                            {adoptionCategory !== 'N/A' ? t(adoptionCategory.toLowerCase()) : adoptionCategory}
+                            {tValue('category', adoptionCategory)}
                         </div>
                     </div>
 
@@ -330,7 +332,7 @@ const Dashboard = ({ user, onLogout }) => {
                         </h3>
 
                         <div className="inline-flex items-center px-4 py-2 rounded-full mb-6 max-w-max" style={{ backgroundColor: '#F8EBD9', color: '#5A4A42' }}>
-                            <span className="font-semibold text-sm mr-2">{adoptionCategory !== 'N/A' ? t(adoptionCategory.toLowerCase()) : adoptionCategory}</span>
+                            <span className="font-semibold text-sm mr-2">{tValue('category', adoptionCategory)}</span>
                             <FaLeaf className="opacity-80" />
                         </div>
 
@@ -387,13 +389,61 @@ const Dashboard = ({ user, onLogout }) => {
                     </div>
                 </div>
 
+                {/* Insurance Recommendations Section */}
+                <div className="mb-6">
+                    <h2 className="text-3xl font-bold text-farm-green-800 mb-6 flex items-center">
+                        <FaShieldAlt className="mr-3" /> {language === 'ta' ? 'காப்பீட்டு பரிந்துரைகள்' : 'Insurance Recommendations'}
+                    </h2>
+                    <div className="card shadow-sm border border-gray-100 p-6 bg-blue-50">
+                        <div className="grid md:grid-cols-2 gap-4 mb-4 border-b pb-4">
+                            <div>
+                                <p className="text-sm text-gray-500 font-bold uppercase">{language === 'ta' ? 'பதிவு நிலை' : 'Enrollment Status'}</p>
+                                <p className="text-lg font-semibold">{farmerData?.insuranceEnrolled || (language === 'ta' ? 'காப்பீடு இல்லை' : 'Not Enrolled')}</p>
+                            </div>
+                            <div>
+                                <p className="text-sm text-gray-500 font-bold uppercase">{language === 'ta' ? 'திட்டம்' : 'Scheme'}</p>
+                                <p className="text-lg font-semibold">{farmerData?.insuranceScheme || 'N/A'}</p>
+                            </div>
+                            <div>
+                                <p className="text-sm text-gray-500 font-bold uppercase">{language === 'ta' ? 'மிகப்பெரிய ஆபத்து' : 'Biggest Risk'}</p>
+                                <p className="text-lg font-semibold">{farmerData?.farmingRisk || 'N/A'}</p>
+                            </div>
+                            <div>
+                                <p className="text-sm text-gray-500 font-bold uppercase">{language === 'ta' ? 'காப்பீடு நிலம்' : 'Insured Land %'}</p>
+                                <p className="text-lg font-semibold">{farmerData?.insuredLandPercent || '0%'}</p>
+                            </div>
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
+                            <FaLightbulb className="mr-2" /> {language === 'ta' ? 'பரிந்துரைக்கப்பட்ட திட்டங்கள்' : 'Suggested Schemes'}
+                        </h3>
+                        <ul className="list-disc pl-5 space-y-2 text-lg text-gray-800">
+                            {(!farmerData?.insuranceEnrolled || farmerData?.insuranceEnrolled.includes('No')) && (
+                                <li>{language === 'ta' ? 'நீங்கள் இன்னும் பயிர் காப்பீட்டில் சேரவில்லை. PMFBY (பிரதான் மந்திரி பயிர் காப்பீட்டு திட்டம்) திட்டத்தில் சேர பரிந்துரைக்கப்படுகிறீர்கள்.' : 'You are not fully insured. We highly recommend enrolling in PMFBY (Pradhan Mantri Fasal Bima Yojana).'}</li>
+                            )}
+                            {farmerData?.farmingRisk?.includes('Flood') && (
+                                <li>{language === 'ta' ? 'வெள்ள அபாயம் இருப்பதால், கூடுதல் பேரிடர் காப்பீட்டைக் கவனிக்கவும்.' : 'Given your flood risk, consider exploring supplemental disaster insurance.'}</li>
+                            )}
+                            {farmerData?.farmingRisk?.includes('Drought') && (
+                                <li>{language === 'ta' ? 'வறட்சி அபாயத்தை ஈடுசெய்ய மாநில அரசால் வழங்கப்படும் வறட்சி நிவாரண காப்பீடு மூலம் பயனடையலாம்.' : 'With high drought risk, ensure your PMFBY covers unseasonal dry spells and localized calamities.'}</li>
+                            )}
+                            {farmerData?.insuredLandPercent && !farmerData?.insuredLandPercent.includes('100') && (
+                                <li>{language === 'ta' ? 'உங்கள் முழு விவசாய நிலத்தையும் காப்பீடு செய்யுமாறு அறிவுறுத்தப்படுகிறீர்கள்.' : 'Consider expanding your coverage to insure 100% of your farmland.'}</li>
+                            )}
+                            {farmerData?.insuranceEnrolled?.includes('Yes') && farmerData?.insuredLandPercent?.includes('100') && (
+                                <li>{language === 'ta' ? 'சிறப்பு! நீங்கள் முழுமையாக காப்பீடு செய்யப்பட்டுள்ளீர்கள். தவணையை உரிய நேரத்தில் செலுத்தவும்.' : 'Excellent! You are fully insured. Make sure to renew your policy on time.'}</li>
+                            )}
+                        </ul>
+                    </div>
+                </div>
+
                 {/* Recommendations Section */}
                 <div id="recommendations" className="mb-6">
                     <h2 className="text-3xl font-bold text-farm-green-800 mb-2 flex items-center">
                         <FaLightbulb className="mr-3" /> {t('recommendations')}
                     </h2>
                     <p className="text-gray-600 mb-6 font-medium">
-                        {t('adoptionMsgStart')} <span className={`font-bold ${getBadgeClass(adoptionCategory)}`}>{t(adoptionCategory.toLowerCase())}</span> {t('adoptionMsgEnd')}
+                        {t('adoptionMsgStart')} <span className={`font-bold ${getBadgeClass(adoptionCategory)}`}>{tValue('category', adoptionCategory)}</span> {t('adoptionMsgEnd')}
                     </p>
 
                     {/* Technology Recommendations */}
@@ -449,12 +499,14 @@ const Dashboard = ({ user, onLogout }) => {
                         >
                             <FaSeedling className="inline mr-1" /> {t('tnState')}
                         </button>
-                        <button
-                            className={`px-4 py-2 rounded-full font-semibold transition-colors ${activeTab === 'Women' ? 'bg-farm-green-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-                            onClick={() => setActiveTab('Women')}
-                        >
-                            <FaFemale className="inline mr-1" /> {t('women')}
-                        </button>
+                        {farmerData?.gender === 'Female' && (
+                            <button
+                                className={`px-4 py-2 rounded-full font-semibold transition-colors ${activeTab === 'Women' ? 'bg-farm-green-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                                onClick={() => setActiveTab('Women')}
+                            >
+                                <FaFemale className="inline mr-1" /> {t('women')}
+                            </button>
+                        )}
                         <button
                             className={`px-4 py-2 rounded-full font-semibold transition-colors ${activeTab === 'Digital' ? 'bg-farm-green-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                             onClick={() => setActiveTab('Digital')}

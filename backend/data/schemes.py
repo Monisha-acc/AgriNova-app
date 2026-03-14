@@ -147,6 +147,20 @@ TAMIL_NADU_SCHEMES = [
         "adoption_level": ["Low", "Moderate", "High"]
     },
     {
+        "id": "tn_crop_insurance",
+        "name": "State Crop Insurance Scheme",
+        "name_ta": "மாநில பயிர் காப்பீட்டு திட்டம்",
+        "description": "State-level crop insurance for natural disasters",
+        "description_ta": "இயற்கை பேரிடர்களுக்கான மாநில அளவிலான பயிர் காப்பீடு",
+        "benefits": "Compensation for crop damage",
+        "benefits_ta": "பயிர் சேதத்திற்கான இழப்பீடு",
+        "eligibility": ["All Farmers"],
+        "type": "Insurance",
+        "type_ta": "காப்பீடு",
+        "link": "https://tnagrisnet.tn.gov.in/",
+        "adoption_level": ["Low", "Moderate", "High"]
+    },
+    {
         "id": "tn_farm_mechanization",
         "name": "Agricultural Mechanization Programme",
         "name_ta": "வேளாண் இயந்திரமயமாக்கல் திட்டம்",
@@ -369,6 +383,8 @@ DIGITAL_PLATFORMS = [
 def get_all_schemes():
     return CENTRAL_SCHEMES + TAMIL_NADU_SCHEMES + WOMEN_SCHEMES + DIGITAL_PLATFORMS
 
+WOMEN_SCHEME_IDS = ["women_shg", "nabard_women", "namo_drone_didi", "women_subsidy"]
+
 def filter_schemes_by_eligibility(farmer_data):
     all_schemes = get_all_schemes()
     eligible_schemes = []
@@ -387,7 +403,7 @@ def filter_schemes_by_eligibility(farmer_data):
         if 'adoption_level' in scheme and adoption_category not in scheme['adoption_level']:
             is_relevant = False
             
-        if scheme.get('type') == 'Women Empowerment' and gender != 'Female':
+        if (scheme.get('type') == 'Women Empowerment' or scheme.get('id') in WOMEN_SCHEME_IDS) and gender.lower() != 'female':
             is_relevant = False
 
         if is_relevant:

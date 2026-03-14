@@ -13,6 +13,7 @@ export const useLanguage = () => {
 export const translations = {
     // Common
     welcome: { en: 'Welcome', ta: 'வணக்கம்' },
+    kumar: { en: 'Kumar', ta: 'குமார்' },
     submit: { en: 'Submit', ta: 'சமர்ப்பிக்கவும்' },
     next: { en: 'Next', ta: 'அடுத்து' },
     previous: { en: 'Previous', ta: 'முந்தைய' },
@@ -21,17 +22,42 @@ export const translations = {
     download: { en: 'Download', ta: 'பதிவிறக்கம்' },
     yes: { en: 'Yes', ta: 'ஆம்' },
     no: { en: 'No', ta: 'இல்லை' },
+    high: { en: 'High', ta: 'அதிகம்' },
+    medium: { en: 'Medium', ta: 'நடுத்தர' },
+    moderate: { en: 'Moderate', ta: 'மிதமான' },
+    low: { en: 'Low', ta: 'குறைவு' },
     selectOption: { en: 'Select', ta: 'தேர்வு செய்யவும்' },
+    years: { en: 'Years', ta: 'ஆண்டுகள்' },
+    
+    // Months
+    jan: { en: 'Jan', ta: 'ஜனவரி' },
+    feb: { en: 'Feb', ta: 'பிப்ரவரி' },
+    mar: { en: 'Mar', ta: 'மார்ச்' },
+    apr: { en: 'Apr', ta: 'ஏப்ரல்' },
+    may: { en: 'May', ta: 'மே' },
+    jun: { en: 'Jun', ta: 'ஜூன்' },
+    jul: { en: 'Jul', ta: 'ஜூலை' },
+    aug: { en: 'Aug', ta: 'ஆகஸ்ட்' },
+    sep: { en: 'Sep', ta: 'செப்டம்பர்' },
+    oct: { en: 'Oct', ta: 'அக்டோபர்' },
+    nov: { en: 'Nov', ta: 'நவம்பர்' },
+    dec: { en: 'Dec', ta: 'டிசம்பர்' },
 
     // Auth
-    login: { en: 'Login', ta: 'உள்நுழைய' },
-    register: { en: 'Register', ta: 'பதிவு செய்ய' },
+    login: { en: 'Login', ta: 'உள்நுழை' },
+    register: { en: 'Register', ta: 'பதிவு செய்யவும்' },
     logout: { en: 'Logout', ta: 'வெளியேறு' },
     name: { en: 'Name', ta: 'பெயர்' },
     email: { en: 'Email', ta: 'மின்னஞ்சல்' },
     phone: { en: 'Phone', ta: 'தொலைபேசி' },
+    mobileNumber: { en: 'Mobile Number', ta: 'மொபைல் எண்' },
     password: { en: 'Password', ta: 'கடவுச்சொல்' },
     district: { en: 'District', ta: 'மாவட்டம்' },
+    sendOtp: { en: 'Send OTP', ta: 'OTP அனுப்பு' },
+    enterOtp: { en: 'Enter OTP', ta: 'OTP உள்ளிடவும்' },
+    verifyOtp: { en: 'Verify OTP', ta: 'OTP சரிபார்' },
+    setPassword: { en: 'Set Password', ta: 'கடவுச்சொல் அமைக்கவும்' },
+    confirmPassword: { en: 'Confirm Password', ta: 'கடவுச்சொல் உறுதிப்படுத்தவும்' },
 
     // Dashboard
     dashboard: { en: 'Dashboard', ta: 'முகப்பு' },
@@ -39,6 +65,9 @@ export const translations = {
     recommendations: { en: 'Recommendations', ta: 'பரிந்துரைகள்' },
     schemes: { en: 'Government Schemes', ta: 'அரசு திட்டங்கள்' },
     report: { en: 'Download Report', ta: 'அறிக்கை பதிவிறக்கம்' },
+    farmerProfile: { en: 'Farmer Profile', ta: 'விவசாயி விவரம்' },
+    crops: { en: 'Crops', ta: 'பயிர்கள்' },
+    irrigation: { en: 'Irrigation', ta: 'பாசனம்' },
 
     // Form Steps
     step1: { en: 'Basic Profile', ta: 'அடிப்படை விவரம்' },
@@ -219,12 +248,12 @@ export const translations = {
 
     // TN Schemes
     uzhavanApp: { en: 'Uzhavan App', ta: 'உழவன் செயலி' },
-    ammaTwoWheeler: { en: 'Amma Two Wheeler Scheme', ta: 'அம்மா இருசக்கர வாகனத் திட்டம்' },
-    microIrrigation: { en: 'TN Micro Irrigation Subsidy', ta: 'நுண்ணீர் பாசன மானியம்' },
-    freeElectricity: { en: 'TN Free Electricity', ta: 'விவசாய இலவச மின்சாரம்' },
-    kalaignarScheme: { en: 'Kalaignar Integrated Agri Scheme', ta: 'கலைஞரின் ஒருங்கிணைந்த வேளாண் வளர்ச்சித் திட்டம்' },
-    soilHealth: { en: 'TN Soil Health Management', ta: 'மண் வள மேலாண்மை' },
-    farmMech: { en: 'TN Farm Mechanization', ta: 'வேளாண் இயந்திரமயமாக்கல்' },
+    uzhavarSandhai: { en: 'Uzhavar Sandhai (Farmer Direct Market)', ta: 'உழவர் சந்தை' },
+    microIrrigation: { en: 'TN Micro Irrigation Subsidy', ta: 'நுண்ணீர்ப்பாசன மானியம் (Micro Irrigation)' },
+    freeElectricity: { en: 'Free Electricity for Agriculture Pumps', ta: 'விவசாய மின்சாரம் இலவசம்' },
+    soilHealth: { en: 'Soil Health Management Scheme', ta: 'மண் ஆரோக்கிய மேலாண்மை திட்டம்' },
+    farmMech: { en: 'Farm Mechanization Subsidy Scheme', ta: 'வேளாண் இயந்திர மானியம்' },
+    integratedFarming: { en: 'Integrated Farming System Scheme', ta: 'ஒருங்கிணைந்த விவசாய முறை திட்டம்' },
     techDrip: { en: 'Drip irrigation', ta: 'சொட்டு நீர் பாசனம்' },
     techSprinkler: { en: 'Sprinkler irrigation', ta: 'தெளிப்பு நீர் பாசனம்' },
     techMulching: { en: 'Mulching sheets', ta: 'மூடாக்கு தாள்கள்' },
@@ -306,11 +335,19 @@ export const translations = {
     checkMarketPrice: { en: 'Do you check market price before selling crops?', ta: 'விற்கும் முன் சந்தை விலையை பார்க்கிறீர்களா?' },
 
     // Risk & Decision Behaviour
-    riskTryNewMethods: { en: 'I am willing to try new farming methods.', ta: 'நான் புதிய விவசாய முறைகளை முயற்சிக்க விரும்புகிறேன்.' },
-    riskAfraidLoss: { en: 'I am afraid of financial loss if I try new technology.', ta: 'புதிய தொழில்நுட்பத்தை முயற்சித்தால் நிதி இழப்பு ஏற்படும் என்று நான் பயப்படுகிறேன்.' },
-    riskFollowNeighbors: { en: 'I follow what neighboring farmers do.', ta: 'பக்கத்து விவசாயிகள் செய்வதை நான் பின்பற்றுகிறேன்.' },
-    scaleStronglyDisagree: { en: 'Strongly Disagree', ta: 'மிகவும் உடன்படவில்லை' },
-    scaleStronglyAgree: { en: 'Strongly Agree', ta: 'மிகவும் உடன்படுகிறேன்' },
+    attitudeRisk: { en: 'Attitude & Risk', ta: 'மனப்பாங்கும் ஆபத்தும்' },
+    riskTryNewMethods: { en: 'I am willing to try new farming methods', ta: 'நான் புதிய வேளாண்மை முறைகளை முயற்சிக்க தயாராக இருக்கிறேன்' },
+    riskAfraidLoss: { en: 'I am afraid of financial loss if I try new technology', ta: 'புதிய தொழில்நுட்பத்தை முயற்சித்தால் நிதி இழப்பு ஏற்படும் என நான் பயப்படுகிறேன்' },
+    riskFollowNeighbors: { en: 'I follow what neighboring farmers do', ta: 'அருகிலுள்ள விவசாயிகள் செய்வதை நான் பின்பற்றுகிறேன்' },
+    opennessToNewTech: { en: 'Openness to New Tech', ta: 'புதிய தொழில்நுட்பத்தை ஏற்கும் மனப்பாங்கு' },
+    trustInTech: { en: 'Trust in Technology', ta: 'தொழில்நுட்பத்தின் மீது நம்பிக்கை' },
+    scaleStronglyDisagree: { en: 'Strongly Disagree', ta: 'முற்றிலும் ஒப்புக்கொள்ளவில்லை' },
+    scaleStronglyAgree: { en: 'Strongly Agree', ta: 'முற்றிலும் ஒப்புக்கொள்கிறேன்' },
+    tooltipWillingness: { en: 'Determines your readiness to experiment with modern tools.', ta: 'நவீன கருவிகளைப் பயன்படுத்துவதற்கான உங்கள் தயார்நிலையைத் தீர்மானிக்கிறது.' },
+    tooltipFear: { en: 'A measure of financial caution regarding new tech.', ta: 'புதிய தொழில்நுட்பம் குறித்த நிதி எச்சரிக்கையின் அளவீடு.' },
+    tooltipNeighbors: { en: 'Indicates how much you rely on communal experience.', ta: 'சமூக அனுபவத்தை நீங்கள் எவ்வளவு சார்ந்து இருக்கிறீர்கள் என்பதைக் குறிக்கிறது.' },
+    previous: { en: 'Previous', ta: 'முந்தையது' },
+    next: { en: 'Next', ta: 'அடுத்து' },
 
     // Messages
     others: { en: 'Others', ta: 'பிற' },
@@ -318,6 +355,7 @@ export const translations = {
     loginSuccess: { en: 'Login successful!', ta: 'உள்நுழைவு வெற்றி!' },
     registerSuccess: { en: 'Registration successful!', ta: 'பதிவு வெற்றி!' },
     dataSubmitted: { en: 'Data submitted successfully!', ta: 'தரவு வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!' },
+    otpSentSuccessfully: { en: 'OTP sent successfully!', ta: 'OTP வெற்றிகரமாக அனுப்பப்பட்டது!' },
     technologyUsage: { en: 'Select technologies and practices you use', ta: 'நீங்கள் பயன்படுத்தும் தொழில்நுட்பங்கள் மற்றும் முறைகளை தேர்வு செய்யவும்' },
 
     // Branding
@@ -575,13 +613,33 @@ export const LanguageProvider = ({ children }) => {
 
         return districtName;
     };
+    
+    const tValue = (category, value) => {
+        if (!value) return value;
+        if (language === 'en') return value;
+        
+        let key = '';
+        if (category === 'soil') key = `soil${value}`;
+        else if (category === 'irrigation') key = `irri${value}`;
+        else if (category === 'crop') key = `crop${value}`;
+        else if (category === 'category') key = value.toLowerCase();
+        
+        return translations[key]?.[language] || value;
+    };
+
+    const tName = (name) => {
+        if (!name) return name;
+        if (language === 'en') return name;
+        const lowered = name.toLowerCase();
+        return translations[lowered]?.ta || name;
+    };
 
     const toggleLanguage = () => {
         setLanguage(prev => prev === 'en' ? 'ta' : 'en');
     };
 
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, t, tDistrict, toggleLanguage }}>
+        <LanguageContext.Provider value={{ language, setLanguage, t, tDistrict, tValue, tName, toggleLanguage }}>
             {children}
         </LanguageContext.Provider>
     );

@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { authAPI } from '../utils/api';
 import { storage } from '../utils/storage';
 
 const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState('');
+    const [phone_number, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = async () => {
-        if (!email || !password) {
-            Alert.alert('Error', 'Please enter email and password');
+        if (!phone_number || !password) {
+            Alert.alert('Error', 'Please enter mobile number and password');
             return;
         }
 
         setLoading(true);
         try {
-            const response = await authAPI.login({ email, password });
+            const response = await authAPI.login({ phone_number, password });
             await storage.setItem('user', response.data);
             navigation.replace('Dashboard');
         } catch (error) {
@@ -33,26 +35,30 @@ const LoginScreen = ({ navigation }) => {
                 <Text style={styles.subtitle}>Farmer Technology Adoption System</Text>
 
                 <View style={styles.inputContainer}>
-                    <Text style={styles.label}>Email / மின்னஞ்சல்</Text>
+                    <Text style={styles.label}>Mobile Number / மொபைல் எண்</Text>
                     <TextInput
                         style={styles.input}
-                        value={email}
-                        onChangeText={setEmail}
-                        placeholder="farmer@example.com"
-                        keyboardType="email-address"
-                        autoCapitalize="none"
+                        value={phone_number}
+                        onChangeText={setPhoneNumber}
+                        placeholder="9876543210"
+                        keyboardType="phone-pad"
                     />
                 </View>
 
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Password / கடவுச்சொல்</Text>
-                    <TextInput
-                        style={styles.input}
-                        value={password}
-                        onChangeText={setPassword}
-                        placeholder="••••••••"
-                        secureTextEntry
-                    />
+                    <View style={styles.passwordContainer}>
+                        <TextInput
+                            style={styles.passwordInput}
+                            value={password}
+                            onChangeText={setPassword}
+                            placeholder="••••••••"
+                            secureTextEntry={!showPassword}
+                        />
+                        <TouchableOpacity style={styles.eyeIcon} onPress={() => setShowPassword(!showPassword)}>
+                            <Ionicons name={showPassword ? "eye-off" : "eye"} size={24} color="gray" />
+                        </TouchableOpacity>
+                    </View>
                 </View>
 
                 <TouchableOpacity
@@ -61,7 +67,7 @@ const LoginScreen = ({ navigation }) => {
                     disabled={loading}
                 >
                     <Text style={styles.buttonText}>
-                        {loading ? 'Loading...' : 'Login / உள்நுழைய'}
+                        {loading ? 'Loading...' : 'Login / உள்நுழை'}
                     </Text>
                 </TouchableOpacity>
 
@@ -121,6 +127,22 @@ const styles = StyleSheet.create({
         padding: 16,
         fontSize: 16,
         backgroundColor: '#fff',
+    },
+    passwordContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 2,
+        borderColor: '#d1d5db',
+        borderRadius: 12,
+        backgroundColor: '#fff',
+    },
+    passwordInput: {
+        flex: 1,
+        padding: 16,
+        fontSize: 16,
+    },
+    eyeIcon: {
+        padding: 10,
     },
     button: {
         backgroundColor: '#16a34a',
