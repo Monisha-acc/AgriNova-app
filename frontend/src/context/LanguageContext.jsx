@@ -83,6 +83,9 @@ export const translations = {
     age: { en: 'Age (Years)', ta: 'வயது (ஆண்டுகள்)' },
     agePlaceholder: { en: 'Enter age (e.g., 35)', ta: 'வயது உள்ளிடவும் (உதா: 35)' },
     gender: { en: 'Gender', ta: 'பாலினம்' },
+    male: { en: 'Male', ta: 'ஆண்' },
+    female: { en: 'Female', ta: 'பெண்' },
+    otherGender: { en: 'Other', ta: 'பிற' },
     education: { en: 'Education Level', ta: 'கல்வி நிலை' },
     season: { en: 'Season', ta: 'பருவம்' },
     kharif: { en: 'Kharif / Sornavari / Kar / Kuruvai (June–Sept)', ta: 'காரிஃப் / சொர்ணவாரி / கார் / குறுவை (ஜூன்–செப்)' },
@@ -137,8 +140,9 @@ export const translations = {
     soilMarshy: { en: 'Marshy / Wetland Soil', ta: 'சதுப்பு நில மண்' },
     soilPeaty: { en: 'Peaty / Organic rich soil', ta: 'கரிம மண் / தென்னை வாழை நிலங்கள்' },
     soilMixed: { en: 'Mixed Soil (Dont know exact type)', ta: 'கலப்பு மண் (சரியான வகை தெரியவில்லை)' },
-    landArea: { en: 'Land Area (Acres)', ta: 'நில பரப்பளவு (ஏக்கர்)' },
+    landArea: { en: 'Land Area (Acres)', ta: 'நிலத்தின் அளவு (ஏக்கர்)' },
     landAreaPlaceholder: { en: 'Enter land area (e.g., 2.5 acres)', ta: 'நில அளவு உள்ளிடவும் (உதா: 2.5 ஏக்கர்)' },
+    landSliderHelper: { en: 'Slide to select your land size (0.5 – 20 acres)', ta: 'உங்கள் நிலத்தின் அளவை தேர்வு செய்ய ஸ்லைடு செய்யவும் (0.5 – 20 ஏக்கர்)' },
     marketLinkage: { en: 'Market Linkage', ta: 'சந்தை இணைப்பு' },
     marketLocal: { en: 'Local Market', ta: 'உள்ளூர் சந்தை' },
     marketWholesale: { en: 'Wholesale Market', ta: 'மொத்த சந்தை' },
@@ -218,6 +222,8 @@ export const translations = {
     cropMillets: { en: 'Millets', ta: 'சிறுதானியங்கள்' },
     cropVegetables: { en: 'Vegetables', ta: 'காய்கறிகள்' },
     cropFlowers: { en: 'Flowers', ta: 'பூக்கள்' },
+    cropPattern: { en: 'Crop Pattern', ta: 'பயிர் முறை' },
+    cropPatternInstruction: { en: 'Select all that apply', ta: 'பொருந்தும் அனைத்தையும் தேர்ந்தெடுக்கவும்' },
     yieldHistory: { en: 'Yield History', ta: 'மகசூல் வரலாறு' },
     yieldIncreasing: { en: 'Increasing every year', ta: 'ஆண்டுதோறும் அதிகரித்து வருகிறது' },
     yieldStable: { en: 'Stable / same as previous years', ta: 'நிலையானது / முந்தைய ஆண்டுகளைப் போன்றது' },
@@ -272,7 +278,7 @@ export const translations = {
     techNone: { en: 'None of the above', ta: 'மேலே உள்ள எதுவும் இல்லை' },
 
     // Market & Training
-    uzhavarSandhai: { en: 'Selling at Uzhavar Sandhai?', ta: 'உழவர் சந்தையில் விற்பனை செய்கிறீர்களா?' },
+    sellingUzhavarSandhai: { en: 'Selling at Uzhavar Sandhai?', ta: 'உழவர் சந்தையில் விற்பனை செய்கிறீர்களா?' },
     usingEnam: { en: 'Using eNAM?', ta: 'eNAM பயன்படுத்துகிறீர்களா?' },
     marketDirectLocal: { en: 'Direct Market', ta: 'நேரடி சந்தை' },
     marketMiddleman: { en: 'Middleman', ta: 'இடைத்தரகர்' },
@@ -294,10 +300,6 @@ export const translations = {
     mediumLarge: { en: 'Medium / Large', ta: 'நடுத்தர / பெரிய விவசாயி' },
     smartCard: { en: 'Farmer Smart Card available?', ta: 'விவசாயி ஸ்மார்ட் கார்டு உள்ளதா?' },
 
-    // Categories
-    high: { en: 'High', ta: 'அதிகம்' },
-    moderate: { en: 'Moderate', ta: 'மிதமான' },
-    low: { en: 'Low', ta: 'குறைவு' },
 
     // Savings Habit
     saveRegularly: { en: 'Regularly', ta: 'தொடர்ந்து சேமிக்கிறேன்' },
@@ -333,7 +335,27 @@ export const translations = {
     investedEquipment: { en: 'Have you invested in any farm equipment in last 3 years?', ta: 'கடந்த 3 ஆண்டுகளில் வேளாண் உபகரணம் வாங்கியுள்ளீர்களா?' },
     digitalPaymentUsage: { en: 'Do you use digital payment (UPI/ATM)?', ta: 'டிஜிட்டல் பணப்பரிவர்த்தனை பயன்படுத்துகிறீர்களா?' },
     checkMarketPrice: { en: 'Do you check market price before selling crops?', ta: 'விற்கும் முன் சந்தை விலையை பார்க்கிறீர்களா?' },
-
+    insuranceDetails: { en: 'Insurance Details', ta: 'காப்பீட்டு விவரங்கள்' },
+    enrolledAnyScheme: { en: 'Are you enrolled in any crop insurance scheme?', ta: 'நீங்கள் எந்த பயிர் காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்களா?' },
+    whichScheme: { en: 'Which insurance scheme are you enrolled in?', ta: 'நீங்கள் எந்த காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்கள்?' },
+    haveClaimed: { en: 'Have you ever claimed crop insurance?', ta: 'நீங்கள் முன்பு பயிர் காப்பீட்டு தொகை கோரியுள்ளீர்களா?' },
+    howMuchInsured: { en: 'How much of your farmland is insured?', ta: 'உங்கள் நிலத்தின் எத்தனை பகுதி காப்பீட்டில் உள்ளது?' },
+    biggestRisk: { en: 'What is your biggest farming risk?', ta: 'விவசாயத்தில் உங்களுக்கு அதிகமாக கவலை தரும் ஆபத்து எது?' },
+    
+    // Insurance Options
+    claimReceived: { en: 'Claim Received', ta: 'ஆம், தொகை கிடைத்தது' },
+    claimRejected: { en: 'Claim Rejected', ta: 'ஆம், மறுக்கப்பட்டது' },
+    noClaim: { en: 'No Claim', ta: 'இல்லை' },
+    pmfbyFull: { en: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)', ta: 'பிரதான் மந்திரி பாசல் பீமா யோஜனா (PMFBY)' },
+    tnStateScheme: { en: 'Tamil Nadu State Crop Insurance Scheme', ta: 'தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்' },
+    privateInsurance: { en: 'Private Insurance', ta: 'தனியார் காப்பீடு' },
+    none: { en: 'None', ta: 'எதுவும் இல்லை' },
+    drought: { en: 'Drought', ta: 'வறட்சி' },
+    flood: { en: 'Flood', ta: 'வெள்ளம்' },
+    pestDisease: { en: 'Pest & Disease', ta: 'பூச்சி மற்றும் நோய்' },
+    marketPriceDrop: { en: 'Market Price Drop', ta: 'சந்தை விலை குறைவு' },
+    notSure: { en: 'Not Sure', ta: 'தெரியவில்லை' },
+    
     // Risk & Decision Behaviour
     attitudeRisk: { en: 'Attitude & Risk', ta: 'மனப்பாங்கும் ஆபத்தும்' },
     riskTryNewMethods: { en: 'I am willing to try new farming methods', ta: 'நான் புதிய வேளாண்மை முறைகளை முயற்சிக்க தயாராக இருக்கிறேன்' },
@@ -343,11 +365,13 @@ export const translations = {
     trustInTech: { en: 'Trust in Technology', ta: 'தொழில்நுட்பத்தின் மீது நம்பிக்கை' },
     scaleStronglyDisagree: { en: 'Strongly Disagree', ta: 'முற்றிலும் ஒப்புக்கொள்ளவில்லை' },
     scaleStronglyAgree: { en: 'Strongly Agree', ta: 'முற்றிலும் ஒப்புக்கொள்கிறேன்' },
+    scaleRange: { en: '(1) to (5)', ta: '(1) முதல் (5) வரை' },
+    readiness: { en: 'Readiness', ta: 'தயார்நிலை' },
+    confidence: { en: 'Confidence', ta: 'நம்பிக்கை' },
+    inferredMetrics: { en: 'Inferred Behaviour Metrics', ta: 'கணிப்பு நடத்தை அளவீடுகள்' },
     tooltipWillingness: { en: 'Determines your readiness to experiment with modern tools.', ta: 'நவீன கருவிகளைப் பயன்படுத்துவதற்கான உங்கள் தயார்நிலையைத் தீர்மானிக்கிறது.' },
     tooltipFear: { en: 'A measure of financial caution regarding new tech.', ta: 'புதிய தொழில்நுட்பம் குறித்த நிதி எச்சரிக்கையின் அளவீடு.' },
     tooltipNeighbors: { en: 'Indicates how much you rely on communal experience.', ta: 'சமூக அனுபவத்தை நீங்கள் எவ்வளவு சார்ந்து இருக்கிறீர்கள் என்பதைக் குறிக்கிறது.' },
-    previous: { en: 'Previous', ta: 'முந்தையது' },
-    next: { en: 'Next', ta: 'அடுத்து' },
 
     // Messages
     others: { en: 'Others', ta: 'பிற' },

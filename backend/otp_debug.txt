@@ -58,3 +58,8 @@ Message: Your AgriNova verification code is 159952. Valid for 5 minutes.
 To: 9445661842
 Message: Your AgriNova verification code is 505006. Valid for 5 minutes.
 ====================
+
+=== SMS SENT ===
+To: 9941166450
+Message: Your AgriNova verification code is 675173. Valid for 5 minutes.
+====================

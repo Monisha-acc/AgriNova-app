@@ -118,8 +118,6 @@ const FarmerForm = ({ user }) => {
         risk_try_new_methods: 3,
         risk_afraid_loss: 3,
         risk_follow_neighbors: 3,
-        openness: 3,
-        trust: 3,
 
         // Insurance Details
         insuranceEnrolled: '',
@@ -214,7 +212,7 @@ const FarmerForm = ({ user }) => {
             <div className="mb-8">
                 <div className="flex justify-between mb-2">
                     <span className="text-sm font-semibold text-gray-700">
-                        Step {currentStep} of {totalSteps}
+                        {language === 'ta' ? 'நிலை' : 'Step'} {currentStep} {language === 'ta' ? 'இல்' : 'of'} {totalSteps}
                     </span>
                     <span className="text-sm font-semibold text-farm-green-600">
                         {Math.round(progress)}%
@@ -250,9 +248,9 @@ const FarmerForm = ({ user }) => {
                     <label className="block text-lg font-semibold text-gray-700 mb-2">{t('gender')}</label>
                     <select name="gender" value={formData.gender} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Male">Male / ஆண்</option>
-                        <option value="Female">Female / பெண்</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Male">{t('male')}</option>
+                        <option value="Female">{t('female')}</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
 
@@ -340,9 +338,35 @@ const FarmerForm = ({ user }) => {
 
             <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('landArea')}</label>
-                    <input type="number" step="0.1" name="land_area" value={formData.land_area} onChange={handleChange}
-                        className="input-field" required placeholder={t('landAreaPlaceholder')} />
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">
+                        {t('landArea')}
+                    </label>
+                    <p className="text-sm text-gray-500 mb-3">
+                        {t('landSliderHelper')}
+                    </p>
+                    <div className="flex items-center gap-4">
+                        <input
+                            type="range"
+                            name="land_area"
+                            min="0.5"
+                            max="20"
+                            step="0.5"
+                            value={formData.land_area === '' ? 0.5 : formData.land_area}
+                            onChange={handleChange}
+                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-green-600 focus:outline-none focus:ring-2 focus:ring-farm-green-500"
+                            required
+                        />
+                        <span className="font-bold text-lg text-farm-green-700 min-w-[100px] text-right whitespace-nowrap">
+                            {Number(formData.land_area === '' ? 0.5 : formData.land_area).toFixed(1)} {t('acres')}
+                        </span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-500 mt-2 px-1 font-medium">
+                        <span>0.5</span>
+                        <span>5</span>
+                        <span>10</span>
+                        <span>15</span>
+                        <span>20</span>
+                    </div>
                 </div>
 
                 <div>
@@ -357,7 +381,7 @@ const FarmerForm = ({ user }) => {
                         <option value="Govt">{t('landGovt')}</option>
                         <option value="Temple">{t('landTemple')}</option>
                         <option value="Informal">{t('landInformal')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
 
@@ -370,7 +394,7 @@ const FarmerForm = ({ user }) => {
                 )}
 
                 <div className="md:col-span-2">
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('cropPattern')} (Select all that apply / பொருந்தும் அனைத்தையும் தேர்ந்தெடுக்கவும்)</label>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('cropPattern')} ({t('cropPatternInstruction')})</label>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3 bg-white p-4 border-2 border-gray-200 rounded-lg">
                         {[
                             { id: 'Paddy', label: 'cropPaddy' },
@@ -421,7 +445,7 @@ const FarmerForm = ({ user }) => {
                         <option value="Marshy">{t('soilMarshy')}</option>
                         <option value="Peaty">{t('soilPeaty')}</option>
                         <option value="Mixed">{t('soilMixed')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
 
@@ -449,7 +473,7 @@ const FarmerForm = ({ user }) => {
                         <option value="First Year">{t('yieldFirstYear')}</option>
                         <option value="Varies">{t('yieldVaries')}</option>
                         <option value="Not Sure">{t('yieldNotSure')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
 
@@ -555,7 +579,7 @@ const FarmerForm = ({ user }) => {
         ];
 
         const tnSchemes = [
-            { id: 'selling_uzhavar_sandhai', label: 'uzhavarSandhai' },
+            { id: 'selling_uzhavar_sandhai', label: 'sellingUzhavarSandhai' },
             { id: 'tn_micro_irrigation_aware', label: 'microIrrigation' },
             { id: 'tn_free_electricity_aware', label: 'freeElectricity' },
             { id: 'tn_farm_mechanization_aware', label: 'farmMech' },
@@ -593,7 +617,7 @@ const FarmerForm = ({ user }) => {
                                     checked={formData.schemes_aware.includes('Others')}
                                     onChange={() => handleCheckboxArray('schemes_aware', 'Others')}
                                 />
-                                <span className="text-lg">Others / பிற</span>
+                                <span className="text-lg">{t('others')}</span>
                             </label>
                         </div>
                     </div>
@@ -799,7 +823,7 @@ const FarmerForm = ({ user }) => {
                         <FaHeart />
                     </div>
                     <h2 className="text-2xl font-bold text-farm-green-800">{t('attitudeRisk')}</h2>
-                    <p className="text-gray-500 mt-2">{t('scaleStronglyDisagree')} (1) to {t('scaleStronglyAgree')} (5)</p>
+                    <p className="text-gray-500 mt-2">{t('scaleStronglyDisagree')} {t('scaleRange')} {t('scaleStronglyAgree')}</p>
                 </div>
 
                 <div className="grid gap-6">
@@ -924,7 +948,7 @@ const FarmerForm = ({ user }) => {
                 {/* Legacy Calculated Metrics */}
                 <div className="bg-farm-green-50 p-6 rounded-2xl border-2 border-farm-green-100 shadow-inner mt-10">
                     <div className="text-center mb-6">
-                        <span className="text-xs font-bold text-farm-green-600 uppercase tracking-widest bg-farm-green-100 px-3 py-1 rounded-full">Inferred Behaviour Metrics</span>
+                        <span className="text-xs font-bold text-farm-green-600 uppercase tracking-widest bg-farm-green-100 px-3 py-1 rounded-full">{t('inferredMetrics')}</span>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
@@ -944,7 +968,7 @@ const FarmerForm = ({ user }) => {
                                 ></div>
                             </div>
                             <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
-                                <span>{getMetricLabel(formData.openness)} Readiness</span>
+                                <span>{getMetricLabel(formData.openness)} {t('readiness')}</span>
                             </div>
                         </div>
 
@@ -964,7 +988,7 @@ const FarmerForm = ({ user }) => {
                                 ></div>
                             </div>
                             <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
-                                <span>{getMetricLabel(formData.trust)} Confidence</span>
+                                <span>{getMetricLabel(formData.trust)} {t('confidence')}</span>
                             </div>
                         </div>
                     </div>
@@ -999,7 +1023,7 @@ const FarmerForm = ({ user }) => {
                         <option value="Dry">{t('zoneDry')}</option>
                         <option value="Hilly">{t('zoneHilly')}</option>
                         <option value="Coastal">{t('zoneCoastal')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
                 {formData.agro_climatic_zone === 'Other' && (
@@ -1015,7 +1039,7 @@ const FarmerForm = ({ user }) => {
                         <option value="">{t('selectOption')}</option>
                         <option value="Small / Marginal">{t('smallMarginal')}</option>
                         <option value="Medium / Large">{t('mediumLarge')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
                 {formData.farmer_category === 'Other' && (
@@ -1040,51 +1064,51 @@ const FarmerForm = ({ user }) => {
                     <FaShieldAlt />
                 </div>
                 <h2 className="text-2xl font-bold text-farm-green-800">
-                    {language === 'ta' ? 'காப்பீட்டு விவரங்கள்' : 'Insurance Details'}
+                    {t('insuranceDetails')}
                 </h2>
             </div>
 
             <div className="space-y-6">
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">
-                        {language === 'ta' ? 'நீங்கள் எந்த பயிர் காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்களா?' : 'Are you enrolled in any crop insurance scheme?'}
+                        {t('enrolledAnyScheme')}
                     </label>
                     <select name="insuranceEnrolled" value={formData.insuranceEnrolled} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Yes - ஆம்">{language === 'ta' ? 'ஆம்' : 'Yes'}</option>
-                        <option value="No - இல்லை">{language === 'ta' ? 'இல்லை' : 'No'}</option>
-                        <option value="Not Sure - தெரியவில்லை">{language === 'ta' ? 'தெரியவில்லை' : 'Not Sure'}</option>
+                        <option value="Yes - ஆம்">{t('yes')}</option>
+                        <option value="No - இல்லை">{t('no')}</option>
+                        <option value="Not Sure - தெரியவில்லை">{t('notSure')}</option>
                     </select>
                 </div>
 
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">
-                        {language === 'ta' ? 'நீங்கள் எந்த காப்பீட்டு திட்டத்தில் சேர்ந்துள்ளீர்கள்?' : 'Which insurance scheme are you enrolled in?'}
+                        {t('whichScheme')}
                     </label>
                     <select name="insuranceScheme" value={formData.insuranceScheme} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Pradhan Mantri Fasal Bima Yojana (PMFBY) - பிரதான் மந்திரி பாசல் பீமா யோஜனா">{language === 'ta' ? 'பிரதான் மந்திரி பாசல் பீமா யோஜனா (PMFBY)' : 'Pradhan Mantri Fasal Bima Yojana (PMFBY)'}</option>
-                        <option value="Tamil Nadu State Crop Insurance Scheme - தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்">{language === 'ta' ? 'தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்' : 'Tamil Nadu State Crop Insurance Scheme'}</option>
-                        <option value="Private Insurance - தனியார் காப்பீடு">{language === 'ta' ? 'தனியார் காப்பீடு' : 'Private Insurance'}</option>
-                        <option value="None - எதுவும் இல்லை">{language === 'ta' ? 'எதுவும் இல்லை' : 'None'}</option>
+                        <option value="Pradhan Mantri Fasal Bima Yojana (PMFBY) - பிரதான் மந்திரி பாசல் பீமா யோஜனா">{t('pmfbyFull')}</option>
+                        <option value="Tamil Nadu State Crop Insurance Scheme - தமிழ்நாடு மாநில பயிர் காப்பீட்டு திட்டம்">{t('tnStateScheme')}</option>
+                        <option value="Private Insurance - தனியார் காப்பீடு">{t('privateInsurance')}</option>
+                        <option value="None - எதுவும் இல்லை">{t('none')}</option>
                     </select>
                 </div>
 
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">
-                        {language === 'ta' ? 'நீங்கள் முன்பு பயிர் காப்பீட்டு தொகை கோரியுள்ளீர்களா?' : 'Have you ever claimed crop insurance?'}
+                        {t('haveClaimed')}
                     </label>
                     <select name="insuranceClaim" value={formData.insuranceClaim} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Claim Received - ஆம், தொகை கிடைத்தது">{language === 'ta' ? 'ஆம், தொகை கிடைத்தது' : 'Claim Received'}</option>
-                        <option value="Claim Rejected - ஆம், மறுக்கப்பட்டது">{language === 'ta' ? 'ஆம், மறுக்கப்பட்டது' : 'Claim Rejected'}</option>
-                        <option value="No Claim - இல்லை">{language === 'ta' ? 'இல்லை' : 'No Claim'}</option>
+                        <option value="Claim Received - ஆம், தொகை கிடைத்தது">{t('claimReceived')}</option>
+                        <option value="Claim Rejected - ஆம், மறுக்கப்பட்டது">{t('claimRejected')}</option>
+                        <option value="No Claim - இல்லை">{t('noClaim')}</option>
                     </select>
                 </div>
 
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">
-                        {language === 'ta' ? 'உங்கள் நிலத்தின் எத்தனை பகுதி காப்பீட்டில் உள்ளது?' : 'How much of your farmland is insured?'}
+                        {t('howMuchInsured')}
                     </label>
                     <select name="insuredLandPercent" value={formData.insuredLandPercent} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
@@ -1097,14 +1121,14 @@ const FarmerForm = ({ user }) => {
 
                 <div>
                     <label className="block text-lg font-semibold text-gray-700 mb-2">
-                        {language === 'ta' ? 'விவசாயத்தில் உங்களுக்கு அதிகமாக கவலை தரும் ஆபத்து எது?' : 'What is your biggest farming risk?'}
+                        {t('biggestRisk')}
                     </label>
                     <select name="farmingRisk" value={formData.farmingRisk} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Drought - வறட்சி">{language === 'ta' ? 'வறட்சி' : 'Drought'}</option>
-                        <option value="Flood - வெள்ளம்">{language === 'ta' ? 'வெள்ளம்' : 'Flood'}</option>
-                        <option value="Pest & Disease - பூச்சி மற்றும் நோய்">{language === 'ta' ? 'பூச்சி மற்றும் நோய்' : 'Pest & Disease'}</option>
-                        <option value="Market Price Drop - சந்தை விலை குறைவு">{language === 'ta' ? 'சந்தை விலை குறைவு' : 'Market Price Drop'}</option>
+                        <option value="Drought - வறட்சி">{t('drought')}</option>
+                        <option value="Flood - வெள்ளம்">{t('flood')}</option>
+                        <option value="Pest & Disease - பூச்சி மற்றும் நோய்">{t('pestDisease')}</option>
+                        <option value="Market Price Drop - சந்தை விலை குறைவு">{t('marketPriceDrop')}</option>
                     </select>
                 </div>
             </div>
@@ -1201,7 +1225,7 @@ const FarmerForm = ({ user }) => {
                         <option value="">{t('selectOption')}</option>
                         <option value="Direct">{t('marketDirect')}</option>
                         <option value="Middleman">{t('marketMiddleman')}</option>
-                        <option value="Other">Other / பிற</option>
+                        <option value="Other">{t('others')}</option>
                     </select>
                 </div>
                 {formData.market_type === 'Other' && (
@@ -1282,7 +1306,7 @@ const FarmerForm = ({ user }) => {
                             </button>
                         ) : (
                             <button onClick={handleSubmit} disabled={loading} className="btn-primary ml-auto">
-                                {loading ? 'Submitting...' : <><FaCheck /> {t('submit')}</>}
+                                {loading ? (language === 'ta' ? 'சமர்ப்பிக்கப்படுகிறது...' : 'Submitting...') : <><FaCheck /> {t('submit')}</>}
                             </button>
                         )}
                     </div>
