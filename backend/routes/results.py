@@ -22,21 +22,21 @@ def require_login(f):
 def get_adoption_result(user_id):
     """Get adoption prediction results"""
     try:
-        # Check authorization
         if session['user_id'] != user_id:
             return jsonify({'error': 'Unauthorized'}), 403
         
         farmer_data = FarmerData.get_by_user_id(user_id)
-        
         if not farmer_data:
             return jsonify({'error': 'Farmer data not found'}), 404
         
+        level, score = recommendation_engine.get_adoption_level(farmer_data)
+        
         return jsonify({
-            'adoption_score': farmer_data.get('adoption_score'),
-            'adoption_category': farmer_data.get('adoption_category'),
-            'segmentation_cluster': farmer_data.get('segmentation_cluster')
+            'adoption_score': score,
+            'adoption_category': level,
+            'adoption_level': level,
+            'segmentation_cluster': farmer_data.get('segmentation_cluster', 'Standard')
         }), 200
-    
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -98,9 +98,11 @@ def download_report(user_id):
             return jsonify({'error': 'Data not found'}), 404
         
         # Get adoption result
+        level, score = recommendation_engine.get_adoption_level(farmer_data)
         adoption_result = {
-            'adoption_score': farmer_data.get('adoption_score'),
-            'adoption_category': farmer_data.get('adoption_category')
+            'adoption_score': score,
+            'adoption_category': level,
+            'adoption_level': level
         }
         
         # Get recommendations

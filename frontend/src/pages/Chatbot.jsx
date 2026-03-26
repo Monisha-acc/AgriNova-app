@@ -24,6 +24,8 @@ const Chatbot = ({ user }) => {
             placeholder: 'Ask about crops, schemes, irrigation...',
             send: 'Send',
             typing: 'Typing',
+            micOn: 'Microphone is on',
+            micOff: 'Microphone is off',
         },
         ta: {
             title: 'AgriNova உதவியாளர்',
@@ -31,6 +33,8 @@ const Chatbot = ({ user }) => {
             placeholder: 'பயிர்கள், திட்டங்கள், நீர்ப்பாசனம் பற்றி கேளுங்கள்...',
             send: 'அனுப்பு',
             typing: 'தட்டச்சு',
+            micOn: 'மைக்ரோஃபோன் இயக்கத்தில் உள்ளது',
+            micOff: 'மைக்ரோஃபோன் அணைக்கப்பட்டுள்ளது',
         },
     };
 

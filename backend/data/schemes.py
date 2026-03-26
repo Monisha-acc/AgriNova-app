@@ -127,6 +127,34 @@ CENTRAL_SCHEMES = [
         "type_ta": "ஆளுமை",
         "link": "https://svamitva.nic.in/",
         "adoption_level": ["Low", "Moderate"]
+    },
+    {
+        "id": "pkvy",
+        "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+        "name_ta": "பரம்பராகத் கிரிஷி விகாஸ் யோஜனா",
+        "description": "Promotion of organic farming through clusters",
+        "description_ta": "குழுக்கள் மூலம் இயற்கை விவசாயத்தை மேம்படுத்துதல்",
+        "benefits": "Financial assistance for organic inputs and certification",
+        "benefits_ta": "இயற்கை உரங்கள் மற்றும் சான்றிதழ் பெற நிதி உதவி",
+        "eligibility": ["Groups of farmers / Clusters"],
+        "type": "Organic Farming",
+        "type_ta": "இயற்கை விவசாயம்",
+        "link": "https://pgsindia-ncof.dac.net.in/pkvy/index.aspx",
+        "adoption_level": ["Moderate", "High"]
+    },
+    {
+        "id": "pm_pranam",
+        "name": "PM-PRANAM",
+        "name_ta": "பிஎம்-பிரணம் திட்டம்",
+        "description": "Reduction of chemical fertilizer usage",
+        "description_ta": "ரசாயன உரங்களின் பயன்பாட்டைக் குறைத்தல்",
+        "benefits": "State incentives for adopting alternative fertilizers",
+        "benefits_ta": "மாற்று உரங்களை ஏற்றுக்கொள்வதற்கான மாநில ஊக்கத்தொகை",
+        "eligibility": ["All farmers"],
+        "type": "Sustainable Agri",
+        "type_ta": "நிலையான வேளாண்மை",
+        "link": "https://fert.nic.in/pm-pranam",
+        "adoption_level": ["Low", "Moderate", "High"]
     }
 ]
 
@@ -202,20 +230,6 @@ TAMIL_NADU_SCHEMES = [
         "link": "https://www.tangedco.gov.in/linkpdf/Agri%20Tariff.pdf",
         "adoption_level": ["Low", "Moderate", "High"]
     },
-     {
-        "id": "uzhavan_app",
-        "name": "Uzhavan App",
-        "name_ta": "உழவன் செயலி",
-        "description": "One-stop mobile app for all TN agri services",
-        "description_ta": "அனைத்து தமிழக வேளாண் சேவைகளுக்கும் ஒரே செயலி",
-        "benefits": "Access to 9+ departments services",
-        "benefits_ta": "9க்கும் மேற்பட்ட துறை சேவைகளுக்கான அணுகல்",
-        "eligibility": ["All Farmers"],
-        "type": "Digital Service",
-        "type_ta": "டிஜிட்டல் சேவை",
-        "link": "https://tnagrisnet.tn.gov.in/",
-        "adoption_level": ["Low", "Moderate", "High"]
-    },
     {
         "id": "tn_soil_health",
         "name": "TN Soil Health Management",
@@ -257,6 +271,34 @@ TAMIL_NADU_SCHEMES = [
         "type_ta": "பயிற்சி",
         "link": "https://www.tnau.ac.in/",
         "adoption_level": ["Low", "Moderate"]
+    },
+    {
+        "id": "tn_collective_farming",
+        "name": "Collective Farming Scheme",
+        "name_ta": "கூட்டுப் பண்ணையத் திட்டம்",
+        "description": "Formation of Farmer Producer Organizations (FPOs)",
+        "description_ta": "விவசாய உற்பத்தியாளர் அமைப்புகளை உருவாக்குதல்",
+        "benefits": "Corpus fund of ₹5 lakh for farm machinery and inputs",
+        "benefits_ta": "இயந்திரங்கள் வாங்க ₹5 லட்சம் தொகுப்பு நிதி",
+        "eligibility": ["Small and Marginal Farmers in groups"],
+        "type": "FPO Support",
+        "type_ta": "FPO ஆதரவு",
+        "link": "https://tnagrisnet.tn.gov.in/",
+        "adoption_level": ["Moderate", "High"]
+    },
+    {
+        "id": "tn_crop_diversification",
+        "name": "Crop Diversification Programme",
+        "name_ta": "பயிர் வகைப்படுத்தல் திட்டம்",
+        "description": "Shift from paddy to pulses and oilseeds",
+        "description_ta": "நெல் சாகுபடியிலிருந்து பருப்பு மற்றும் எண்ணெய் வித்துக்களுக்கு மாறுதல்",
+        "benefits": "Incentives for high-value alternative crops",
+        "benefits_ta": "மாற்றுப் பயிர்களுக்கு ஊக்கத்தொகை",
+        "eligibility": ["Paddy growing farmers"],
+        "type": "Diversification",
+        "type_ta": "பயிர் மாற்றம்",
+        "link": "https://tnagrisnet.tn.gov.in/",
+        "adoption_level": ["Low", "Moderate", "High"]
     }
 ]
 
@@ -377,6 +419,20 @@ DIGITAL_PLATFORMS = [
         "type_ta": "தகவல்",
         "link": "https://www.tn.gov.in/tnchatbot/",
         "adoption_level": ["Low", "Moderate", "High"]
+    },
+    {
+        "id": "uzhavan_app",
+        "name": "Uzhavan App",
+        "name_ta": "உழவன் செயலி",
+        "description": "One-stop mobile app for all TN agri services",
+        "description_ta": "அனைத்து தமிழக வேளாண் சேவைகளுக்கும் ஒரே செயலி",
+        "benefits": "Access to 9+ departments services",
+        "benefits_ta": "9க்கும் மேற்பட்ட துறை சேவைகளுக்கான அணுகல்",
+        "eligibility": ["All Farmers"],
+        "type": "Digital Service",
+        "type_ta": "டிஜிட்டல் சேவை",
+        "link": "https://tnagrisnet.tn.gov.in/",
+        "adoption_level": ["Low", "Moderate", "High"]
     }
 ]
 
@@ -386,27 +442,164 @@ def get_all_schemes():
 WOMEN_SCHEME_IDS = ["women_shg", "nabard_women", "namo_drone_didi", "women_subsidy"]
 
 def filter_schemes_by_eligibility(farmer_data):
+    """
+    Enhanced Government Scheme Recommendation Engine.
+    Filters by eligibility, ranks by scoring, and returns top 5-8 results with reasons.
+    """
     all_schemes = get_all_schemes()
-    eligible_schemes = []
+    scored_schemes = []
 
-    adoption_category = farmer_data.get('adoption_category', 'Moderate')
-    
-    if 'High' in adoption_category: adoption_category = 'High'
-    elif 'Moderate' in adoption_category: adoption_category = 'Moderate'
-    else: adoption_category = 'Low'
+    # 1. Inputs Extraction
+    adoption_level = str(farmer_data.get('adoption_category', 'Moderate'))
+    if 'High' in adoption_level: adoption_level = 'High'
+    elif 'Moderate' in adoption_level: adoption_level = 'Moderate'
+    else: adoption_level = 'Low'
         
     gender = farmer_data.get('gender', 'Male')
+    land_area = float(farmer_data.get('land_area', 0))
+    irrigation_source = farmer_data.get('irrigation_source', 'Rainfed')
+    
+    # Tech usage count
+    tech_list = farmer_data.get('technologies_used', [])
+    tech_usage_count = len(tech_list) if isinstance(tech_list, list) else 0
+    
+    # Scheme awareness count (from profiles context if available)
+    scheme_list = farmer_data.get('schemes_aware', [])
+    scheme_awareness = len(scheme_list) if isinstance(scheme_list, list) else 0
 
+    # Define metadata mapping for categories and types
+    digital_ids = ["uzhavar_santhai", "grains_portal", "agristack", "namma_arasu", "uzhavan_app", "enam"]
+    
     for scheme in all_schemes:
-        is_relevant = True
+        # Step 1: Eligibility Filtering (Keep Existing Logic where applicable)
+        is_eligible = True
         
-        if 'adoption_level' in scheme and adoption_category not in scheme['adoption_level']:
-            is_relevant = False
-            
-        if (scheme.get('type') == 'Women Empowerment' or scheme.get('id') in WOMEN_SCHEME_IDS) and gender.lower() != 'female':
-            is_relevant = False
+        # Category Identification
+        scheme_id = scheme.get('id', '')
+        is_women_scheme = (scheme.get('type') == 'Women Empowerment' or 
+                          scheme.get('id') in WOMEN_SCHEME_IDS)
+        
+        if is_women_scheme: category = "Women"
+        elif scheme_id in digital_ids: category = "Digital"
+        elif scheme_id.startswith('tn_') or scheme_id in ['kalaignar_scheme', 'uzhavan_app']: category = "TN"  # type: ignore
+        else: category = "Central"
 
-        if is_relevant:
-            eligible_schemes.append(scheme)
+        # A. Gender Filter
+        if category == "Women" and gender.lower() != "female":
+            continue
+
+        # B. Adoption Level Match (Pre-filter)
+        # Low -> basic, Moderate -> moderate, High -> advanced
+        # If scheme lists adoption levels and farmer doesn't match, we skip
+        if 'adoption_level' in scheme and adoption_level not in scheme['adoption_level']: # type: ignore
+            # For "Low" adopters, don't show "High" adoption schemes (advanced tech)
+            if adoption_level == "Low" and "High" in scheme['adoption_level'] and "Low" not in scheme['adoption_level']: # type: ignore
+                continue
+
+        # C. Infrastructure Check
+        is_irrigation_scheme = any(kw in str(scheme['name']).lower() or kw in str(scheme['description']).lower() # type: ignore
+                                  for kw in ['irrigation', 'pump', 'water', 'borewell', 'sinchayee', 'micro-irrigation'])
+        
+        # Some schemes require a water source
+        if scheme_id in ['pmksy', 'tn_micro_irrigation', 'tn_free_electricity', 'pm_kusum']:
+            if irrigation_source == 'Rainfed':
+                is_eligible = False
+
+        if not is_eligible:
+            continue
+
+        # Step 2: Scoring System (NEW)
+        score = 0
+        reasons = []
+        reasons_ta = []
+
+        # ✔ Adoption Level Match (+2)
+        if 'adoption_level' in scheme and adoption_level in scheme['adoption_level']: # type: ignore
+            score += 2
+
+        # ✔ Irrigation Type Match (+2)
+        if is_irrigation_scheme:
+            if irrigation_source in ['Borewell', 'Well', 'Canal']:
+                score += 2
+                reasons.append("Suitable for your irrigation type")
+                reasons_ta.append("உங்கள் நீர்ப்பாசன வகைக்கு ஏற்றது")
+            elif irrigation_source == 'Rainfed' and 'Conservation' in str(scheme.get('type', '')):
+                score += 2
+                reasons.append("Supports water conservation for rainfed farms")
+                reasons_ta.append("வானாவாரி பண்ணைகளுக்கு நீர் சேமிக்க உதவுகிறது")
+        
+        # Special case: Free electricity for pumps
+        if scheme_id == 'tn_free_electricity' and irrigation_source in ['Borewell', 'Well']:
+            score += 2
+
+        # ✔ Land Area fits (+1)
+        # Small farmers (<= 5 acres)
+        is_small_farmer = land_area <= 5
+        eligibility_str = str(scheme.get('eligibility', '')).lower()
+        if is_small_farmer and ("small" in eligibility_str or "marginal" in eligibility_str or "all" in eligibility_str):
+            score += 1
+            if not reasons:
+                reasons.append("Recommended for small scale farmers")
+                reasons_ta.append("சிறு விவசாயிகளுக்கு பரிந்துரைக்கப்படுகிறது")
+
+        # ✔ Gender matches (+3 for priority)
+        if category == "Women" and gender.lower() == "female":
+            score += 3
+            reasons.append("Exclusive support for female farmers")
+            reasons_ta.append("பெண் விவசாயிகளுக்கான பிரத்யேக ஆதரவு")
+
+        # ✔ Tech usage count supports digital (+1)
+        if category == "Digital" and tech_usage_count >= 1:
+            score += 1
+            reasons.append("Matches your interest in digital solutions")
+            reasons_ta.append("டிஜிட்டல் தீர்வுகளில் உங்கள் ஆர்வத்திற்கு பொருந்துகிறது")
+
+        # Fallback Reason
+        if not reasons:
+            reasons.append("Based on your farmer profile")
+            reasons_ta.append("உங்கள் விவசாயி சுயவிவரத்தின் அடிப்படையில்")
+
+        # Step 5: Add Reason and Category (Final API Fields)
+        scheme_copy = scheme.copy()
+        scheme_copy['score'] = score # type: ignore
+        scheme_copy['category'] = category
+        scheme_copy['tag'] = scheme.get('type', 'General') # Tag name requested
+        scheme_copy['reason'] = reasons[0]
+        scheme_copy['reason_ta'] = reasons_ta[0]
+        
+        scored_schemes.append(scheme_copy)
+
+    # Step 3: Sort Schemes by score
+    scored_schemes.sort(key=lambda x: x['score'], reverse=True) # type: ignore
+
+    # Step 4: Diversity Selection (NEW)
+    # Ensure min 2 Central and 2 TN schemes as requested
+    central = [s for s in scored_schemes if s['category'] == "Central"] # type: ignore
+    tn = [s for s in scored_schemes if s['category'] == "TN"] # type: ignore
+    women = [s for s in scored_schemes if s['category'] == "Women"] # type: ignore
+    digital = [s for s in scored_schemes if s['category'] == "Digital"] # type: ignore
+    
+    top_schemes = []
+    
+    # 1. Mandatory 2 Central
+    top_schemes.extend(central[:2]) # type: ignore
+    
+    # 2. Mandatory 2 TN
+    top_schemes.extend(tn[:2]) # type: ignore
+    
+    # 3. Add Women/Digital/More if available
+    # For female users, ensure at least one women scheme if possible
+    if gender.lower() == "female" and women:
+        if women[0] not in top_schemes: # type: ignore
+            top_schemes.append(women[0]) # type: ignore
             
-    return eligible_schemes
+    # Add one Digital if possible
+    if digital and digital[0] not in top_schemes: # type: ignore
+        top_schemes.append(digital[0]) # type: ignore
+        
+    # 4. Fill to 8 total based on highest score from remaining
+    remaining = [s for s in scored_schemes if s not in top_schemes]
+    top_schemes.extend(remaining)
+
+    # Final Limit (5-8 range, using 8 for diversity)
+    return top_schemes[:8] # type: ignore

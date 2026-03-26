@@ -11,7 +11,7 @@ import Dashboard from './pages/Dashboard';
 import FarmSimulation from './pages/FarmSimulation';
 
 // Icons
-import { FaLanguage, FaSignOutAlt } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 function App() {
     const { language, toggleLanguage, t } = useLanguage();

@@ -1,3 +1,12 @@
+import os
+import logging
+from datetime import datetime
+
+# Enable complex script shaping (MUST be done before importing other reportlab modules)
+from reportlab import rl_config
+rl_config.allow_shaping = True
+rl_config.shaper = 'harfbuzz'
+
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.units import inch
@@ -7,13 +16,6 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab import rl_config
-from datetime import datetime
-import os
-import logging
-
-# Enable complex script shaping (requires uharfbuzz)
-rl_config.allow_shaping = True
 
 logger = logging.getLogger(__name__)
 

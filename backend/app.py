@@ -8,7 +8,7 @@ from routes.auth import auth_bp
 from routes.farmer import farmer_bp
 from routes.results import results_bp
 from routes.chatbot import chatbot_bp
-from routes.predict_bp import predict_bp
+# from routes.predict_bp import predict_bp
 from routes.simulation import simulation_bp
 
 # Import models
@@ -32,7 +32,7 @@ app.register_blueprint(auth_bp, url_prefix='/api')
 app.register_blueprint(farmer_bp, url_prefix='/api')
 app.register_blueprint(results_bp, url_prefix='/api')
 app.register_blueprint(chatbot_bp, url_prefix='/api')
-app.register_blueprint(predict_bp, url_prefix='/api')
+# app.register_blueprint(predict_bp, url_prefix='/api')
 app.register_blueprint(simulation_bp, url_prefix='/api')
 
 @app.route('/')

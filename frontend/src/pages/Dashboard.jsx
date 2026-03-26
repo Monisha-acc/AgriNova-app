@@ -143,7 +143,7 @@ const Dashboard = ({ user, onLogout }) => {
         datasets: [{
             data: [adoptionScore, 100 - adoptionScore],
             backgroundColor: [
-                adoptionScore >= 70 ? '#16a34a' : adoptionScore >= 40 ? '#eab308' : '#dc2626',
+                adoptionScore > 70 ? '#16a34a' : adoptionScore > 40 ? '#eab308' : '#dc2626',
                 '#e5e7eb'
             ],
             borderWidth: 0,
@@ -218,7 +218,7 @@ const Dashboard = ({ user, onLogout }) => {
 
     // Filter schemes by category
     const womenSchemeIds = ['women_shg', 'nabard_women', 'namo_drone_didi', 'women_subsidy'];
-    const digitalSchemeIds = ['uzhavar_santhai', 'grains_portal', 'agristack', 'namma_arasu'];
+    const digitalSchemeIds = ['uzhavar_santhai', 'grains_portal', 'agristack', 'namma_arasu', 'uzhavan_app'];
 
     // Check if ID exists before filtering to avoid errors if ID is undefined
     const womenSchemes = schemes.filter(s => s.id && womenSchemeIds.includes(s.id));
@@ -536,6 +536,11 @@ const Dashboard = ({ user, onLogout }) => {
                                         <p className="text-sm font-semibold text-green-600">
                                             {t('benefits')}: {language === 'ta' ? scheme.benefits_ta : scheme.benefits}
                                         </p>
+                                        {scheme.reason && (
+                                            <p className="text-sm font-medium text-farm-green-600 mt-1 flex items-center">
+                                                <span className="mr-1">✔</span> {language === 'ta' ? (scheme.reason_ta || scheme.reason) : scheme.reason}
+                                            </p>
+                                        )}
                                         {scheme.link && (
                                             <a
                                                 href={scheme.link}
@@ -559,18 +564,42 @@ const Dashboard = ({ user, onLogout }) => {
 
                 {/* Crop Recommendations Section - After Schemes */}
                 {recommendations?.crops && recommendations.crops.length > 0 && (
-                    <div className="mb-12">
-                        <h2 className="text-3xl font-bold text-farm-green-800 mb-6 flex items-center">
-                            <FaSeedling className="mr-3" /> {t('alternativeCrops')}
+                    <div className="mb-12 animate-fade-in" id="recommendations">
+                        <h2 className="text-3xl font-bold text-farm-green-800 mb-2 flex items-center">
+                            {language === 'en' ? 'Top Crop Recommendations' : 'முக்கிய பயிர் பரிந்துரைகள்'}
                         </h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                            {recommendations.crops.map((crop, index) => (
-                                <div key={index} className="card-hover">
-                                    <h4 className="text-xl font-bold text-farm-green-700 text-center">
-                                        {language === 'ta' ? crop.crop_ta : crop.crop_en}
-                                    </h4>
-                                </div>
-                            ))}
+                        <p className="text-gray-500 mb-6 font-medium">
+                            {language === 'en' ? 'Our AI model suggests these top 3 crops for your specific conditions.' : 'செயற்கை நுண்ணறிவு மூலம் உங்கள் நிலத்திற்கு ஏற்ற முதல் 3 பயிர் பரிந்துரைகள்.'}
+                        </p>
+                        
+                        <div className="grid md:grid-cols-3 gap-6">
+                            {recommendations.crops.slice(0, 3).map((crop, index) => {
+                                const cropIcons = {
+                                    'Paddy': '🌾',
+                                    'Sugarcane': '🌱',
+                                    'Groundnut': '🌰',
+                                    'Millets': '🌾',
+                                    'Pulses': '🍲',
+                                    'Cotton': '☁️'
+                                };
+                                const icon = cropIcons[crop.crop_en] || '🌾';
+                                
+                                return (
+                                    <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border-2 border-farm-green-100 hover:border-farm-green-400 transition-all transform hover:-translate-y-1">
+                                        <div className="flex flex-col items-center text-center">
+                                            <div className="text-farm-green-600 font-bold mb-1">
+                                                {language === 'en' ? `Rank #${index + 1}` : `வரிசை எண்: ${index + 1}`}
+                                            </div>
+                                            <h4 className="text-2xl font-bold text-farm-green-800">
+                                                {language === 'ta' ? crop.crop_ta : crop.crop_en}
+                                            </h4>
+                                            <p className="text-sm text-gray-500 mt-2">
+                                                {language === 'en' ? 'Highly Suitable' : 'மிக பொருத்தமானது'}
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 )}
