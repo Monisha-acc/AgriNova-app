@@ -142,7 +142,7 @@ export const translations = {
     soilMixed: { en: 'Mixed Soil (Dont know exact type)', ta: 'கலப்பு மண் (சரியான வகை தெரியவில்லை)' },
     landArea: { en: 'Land Area (Acres)', ta: 'நிலத்தின் அளவு (ஏக்கர்)' },
     landAreaPlaceholder: { en: 'Enter land area (e.g., 2.5 acres)', ta: 'நில அளவு உள்ளிடவும் (உதா: 2.5 ஏக்கர்)' },
-    landSliderHelper: { en: 'Slide to select your land size (0.5 – 20 acres)', ta: 'உங்கள் நிலத்தின் அளவை தேர்வு செய்ய ஸ்லைடு செய்யவும் (0.5 – 20 ஏக்கர்)' },
+    landSliderHelper: { en: 'Slide to select your land size easily (0.5 – 20 acres)', ta: 'உங்கள் நிலத்தின் அளவை எளிதாக தேர்வு செய்ய ஸ்லைடு செய்யவும் (0.5 – 20 ஏக்கர்)' },
     marketLinkage: { en: 'Market Linkage', ta: 'சந்தை இணைப்பு' },
     marketLocal: { en: 'Local Market', ta: 'உள்ளூர் சந்தை' },
     marketWholesale: { en: 'Wholesale Market', ta: 'மொத்த சந்தை' },
@@ -423,6 +423,11 @@ export const translations = {
     soil: { en: 'SOIL', ta: 'மண்' },
     assessment: { en: 'Assessment', ta: 'மதிப்பீடு' },
     acres: { en: 'Acres', ta: 'ஏக்கர்' },
+    cents: { en: 'Cents', ta: 'சென்ட்' },
+    marginalFarmer: { en: 'Marginal Farmer', ta: 'குறைந்த நிலம்' },
+    smallFarmer: { en: 'Small Farmer', ta: 'சிறு விவசாயி' },
+    mediumFarmer: { en: 'Medium Farmer', ta: 'நடுத்தர விவசாயி' },
+    largeFarmer: { en: 'Large Farmer', ta: 'பெரிய விவசாயி' },
 
     // Virtual Farm Simulation
     simulation: { en: 'Farm Simulation', ta: 'பண்ணை உருவகப்படுத்துதல்' },

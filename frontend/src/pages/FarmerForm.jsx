@@ -344,28 +344,51 @@ const FarmerForm = ({ user }) => {
                     <p className="text-sm text-gray-500 mb-3">
                         {t('landSliderHelper')}
                     </p>
-                    <div className="flex items-center gap-4">
-                        <input
-                            type="range"
-                            name="land_area"
-                            min="0.5"
-                            max="20"
-                            step="0.5"
-                            value={formData.land_area === '' ? 0.5 : formData.land_area}
-                            onChange={handleChange}
-                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-green-600 focus:outline-none focus:ring-2 focus:ring-farm-green-500"
-                            required
-                        />
-                        <span className="font-bold text-lg text-farm-green-700 min-w-[100px] text-right whitespace-nowrap">
-                            {Number(formData.land_area === '' ? 0.5 : formData.land_area).toFixed(1)} {t('acres')}
-                        </span>
-                    </div>
-                    <div className="flex justify-between text-sm text-gray-500 mt-2 px-1 font-medium">
-                        <span>0.5</span>
-                        <span>5</span>
-                        <span>10</span>
-                        <span>15</span>
-                        <span>20</span>
+                    <div className="space-y-4">
+                        <div className="relative pt-2">
+                            <input
+                                type="range"
+                                name="land_area"
+                                min="0.5"
+                                max="20"
+                                step="0.5"
+                                value={formData.land_area === '' ? 0.5 : formData.land_area}
+                                onChange={handleChange}
+                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-farm-green-600 focus:outline-none focus:ring-2 focus:ring-farm-green-500"
+                                required
+                            />
+                            <div className="relative flex justify-between text-[10px] md:text-sm text-gray-500 mt-2 px-1 font-medium h-6">
+                                <span className="absolute left-0 transform origin-left">0.5</span>
+                                <span className="absolute left-[23.08%] transform -translate-x-1/2">5</span>
+                                <span className="absolute left-[48.72%] transform -translate-x-1/2">10</span>
+                                <span className="absolute left-[74.36%] transform -translate-x-1/2">15</span>
+                                <span className="absolute right-0 transform origin-right">20</span>
+                            </div>
+                        </div>
+
+                        {/* Display Area and Category */}
+                        <div className="bg-farm-green-50 border border-farm-green-100 rounded-xl p-4 shadow-sm transition-all duration-300">
+                            <div className="flex flex-col space-y-3">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-gray-600 text-sm md:text-base font-medium">{language === 'ta' ? 'தேர்ந்தெடுக்கப்பட்ட நிலம்:' : 'Selected Land Area:'}</span>
+                                    <span className="text-lg md:text-xl font-bold text-farm-green-700">
+                                        {Number(formData.land_area === '' ? 0.5 : formData.land_area).toFixed(1)} {t('acres')} ({Math.round(Number(formData.land_area === '' ? 0.5 : formData.land_area) * 100)} {t('cents')})
+                                    </span>
+                                </div>
+                                <div className="flex justify-between items-center pt-3 border-t border-farm-green-200">
+                                    <span className="text-gray-600 text-sm md:text-base font-medium">{language === 'ta' ? 'விவசாயி வகை:' : 'Farmer Category:'}</span>
+                                    <span className="bg-farm-green-600 text-white px-3 py-1 rounded-lg text-xs md:text-sm font-bold shadow-md transform transition-transform hover:scale-105">
+                                        {(() => {
+                                            const area = Number(formData.land_area === '' ? 0.5 : formData.land_area);
+                                            if (area < 2) return t('marginalFarmer');
+                                            if (area < 5) return t('smallFarmer');
+                                            if (area < 10) return t('mediumFarmer');
+                                            return t('largeFarmer');
+                                        })()}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
