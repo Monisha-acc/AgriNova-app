@@ -9,13 +9,17 @@ class AdoptionPredictor:
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
         self.behavior_model_path = os.path.join(self.current_dir, 'farmer_model.pkl')
         self.crop_model_path = os.path.join(self.current_dir, 'crop_model.pkl')
-        self.encoders_path = os.path.join(self.current_dir, 'encoders.pkl')
+        self.behavior_encoders_path = os.path.join(self.current_dir, 'encoders.pkl')
+        self.crop_encoders_path = os.path.join(self.current_dir, 'crop_encoders.pkl')
+        self.crop_target_encoder_path = os.path.join(self.current_dir, 'crop_target_encoder.pkl')
         
         # Load models
         try:
             self.behavior_model = joblib.load(self.behavior_model_path)
             self.crop_model = joblib.load(self.crop_model_path)
-            self.encoders = joblib.load(self.encoders_path)
+            self.behavior_encoders = joblib.load(self.behavior_encoders_path)
+            self.crop_encoders = joblib.load(self.crop_encoders_path)
+            self.crop_target_encoder = joblib.load(self.crop_target_encoder_path)
             self.is_trained = True
             print("ML Models loaded successfully in prediction.py")
         except Exception as e:
@@ -27,12 +31,12 @@ class AdoptionPredictor:
                     'smartphone_usage', 'attended_training', 'insurance', 'access_to_credit', 
                     'subsidy_usage', 'market_access']
 
-        self.crop_features = ['soil_type', 'water_availability', 'irrigation_method', 'season', 'land_area', 'crop_type']
+        self.crop_features = ['soil_type', 'water_availability', 'irrigation_type', 'land_area', 'season']
 
-    def _safe_encode(self, col, val):
-        if col not in self.encoders:
+    def _safe_encode(self, col, val, encoders_dict):
+        if col not in encoders_dict:
             return val
-        le = self.encoders[col]
+        le = encoders_dict[col]
         str_val = str(val) if val is not None and str(val).strip() != "" else le.classes_[0]
         if str_val not in le.classes_:
             str_val = le.classes_[0]
@@ -101,25 +105,33 @@ class AdoptionPredictor:
         
         # Encode features
         encoded_data = {}
+        # Preprocessing for Behavior Model
         for col in self.behavior_features:
-            if col in self.encoders:
-                encoded_data[col] = self._safe_encode(col, data.get(col))
+            if col in self.behavior_encoders:
+                encoded_data[col] = self._safe_encode(col, data.get(col), self.behavior_encoders)
             else:
                 encoded_data[col] = data.get(col)
                 
-        return pd.DataFrame([encoded_data])
+        # Preprocessing for Crop Model
+        crop_encoded_data = {}
+        for col in self.crop_features:
+            if col in self.crop_encoders:
+                crop_encoded_data[col] = self._safe_encode(col, data.get(col), self.crop_encoders)
+            else:
+                crop_encoded_data[col] = data.get(col)
+
+        return pd.DataFrame([encoded_data]), pd.DataFrame([crop_encoded_data])
 
     def predict(self, farmer_data):
         if not self.is_trained:
             # Fallback
             return self._fallback_predict(farmer_data)
         
-        input_df = self.preprocess_input(farmer_data)
+        b_input, _ = self.preprocess_input(farmer_data)
         
         # Predict Behavior
-        b_input = input_df[self.behavior_features]
         b_pred_enc = self.behavior_model.predict(b_input)[0]
-        behavior_label = self.encoders['behavior_label'].inverse_transform([b_pred_enc])[0]
+        behavior_label = self.behavior_encoders['behavior_label'].inverse_transform([b_pred_enc])[0]
         
         # Map to Adoption Category
         if 'High' in behavior_label: category = 'High'
@@ -139,11 +151,10 @@ class AdoptionPredictor:
         if not self.is_trained:
             return None
         
-        input_df = self.preprocess_input(farmer_data)
-        c_input = input_df[self.crop_features]
+        _, c_input = self.preprocess_input(farmer_data)
         
         c_pred_enc = self.crop_model.predict(c_input)[0]
-        crop_name = self.encoders['crop_recommendation'].inverse_transform([c_pred_enc])[0]
+        crop_name = self.crop_target_encoder.inverse_transform([c_pred_enc])[0]
         return crop_name
 
     def _fallback_predict(self, farmer_data):
@@ -155,4 +166,3 @@ class AdoptionPredictor:
 
 # Global predictor instance
 predictor = AdoptionPredictor()
-

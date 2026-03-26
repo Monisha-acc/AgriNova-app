@@ -8,309 +8,267 @@ class RecommendationEngine:
         # Paths
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
         self.crop_model_path = os.path.join(self.current_dir, 'crop_model.pkl')
-        self.encoders_path = os.path.join(self.current_dir, 'encoders.pkl')
+        self.crop_encoders_path = os.path.join(self.current_dir, 'crop_encoders.pkl')
+        self.crop_target_encoder_path = os.path.join(self.current_dir, 'crop_target_encoder.pkl')
         
-        # Load ML model and encoders
+        self.adopt_model_path = os.path.join(self.current_dir, 'adoption_model.pkl')
+        self.adopt_encoder_path = os.path.join(self.current_dir, 'adoption_encoder.pkl')
+        
+        # Load Crop Model
         try:
-            self.model = joblib.load(self.crop_model_path)
-            self.encoders = joblib.load(self.encoders_path)
-            self.has_ml = True
-            print("ML Crop Recommendation model loaded successfully in recommendation.py")
-        except:
-            self.has_ml = False
-            print("ML Crop model not found, falling back to rule-based")
+            self.crop_model = joblib.load(self.crop_model_path)
+            self.crop_encoders = joblib.load(self.crop_encoders_path)
+            self.crop_target_encoder = joblib.load(self.crop_target_encoder_path)
+            self.has_crop_ml = True
+            print("🌾 Crop Recommendation model loaded.")
+        except Exception as e:
+            self.has_crop_ml = False
+            print(f"❌ Crop model failed: {e}")
             
-        # Specified crop ml features
-        self.crop_features = ['soil_type', 'water_availability', 'irrigation_method', 'season', 'land_area', 'crop_type']
+        # Load Adoption Model
+        try:
+            self.adopt_model = joblib.load(self.adopt_model_path)
+            adopt_data = joblib.load(self.adopt_encoder_path)
+            self.adopt_feature_encoders = adopt_data['feature_encoders']
+            self.adopt_target_encoder = adopt_data['target_encoder']
+            self.has_adopt_ml = True
+            print("🤖 Adoption Prediction model loaded.")
+        except Exception as e:
+            self.has_adopt_ml = False
+            print(f"❌ Adoption model failed: {e}")
+            
+    def get_top_3_crops(self, farmer_data):
+        if not self.has_crop_ml:
+            return ["Paddy", "Millets", "Groundnut"]
+            
+        try:
+            # Map inputs strictly (only these 5)
+            # soil_type, water_availability, irrigation_type, land_area, season
+            
+            # Map backend database field names to ML requirement names
+            soil_type = farmer_data.get('soil_type', 'Red')
+            water_availability = farmer_data.get('water_availability', 'Medium')
+            # Handle mapping 'irrigation_source' or 'irrig_method' to 'irrigation_type'
+            irrigation_type = farmer_data.get('irrigation_type') or farmer_data.get('irrigation_source') or 'Canal'
+            # The dropdown for irrigation_type in FarmerForm has 'Rainfed', 'Borewell', 'Canal', 'Drip', 'Sprinkler'
+            # Normalizing it to match generate_dataset categories
+            if irrigation_type not in ['Canal', 'Borewell', 'Rainfed', 'Drip', 'Sprinkler']:
+                irrigation_type = 'Canal' # Fallback to common type
+                
+            land_area = float(farmer_data.get('land_area', 2.0) or 2.0)
+            season = farmer_data.get('season', 'Kharif')
+            
+            # Prepare input data
+            input_dict = {
+                'soil_type': soil_type,
+                'water_availability': water_availability,
+                'irrigation_type': irrigation_type,
+                'land_area': land_area,
+                'season': season
+            }
+            
+            X_input = pd.DataFrame([input_dict])
+            
+            # Encode categorical features
+            for col, le in self.crop_encoders.items():
+                if input_dict[col] not in le.classes_:
+                    input_dict[col] = le.classes_[0]
+                X_input[col] = le.transform([input_dict[col]])
+                
+            # Predict Probabilities
+            probs = self.crop_model.predict_proba(X_input)[0]
+            
+            # Get Top 3
+            top_indices = np.argsort(probs)[-3:][::-1]
+            top_crops = self.crop_target_encoder.inverse_transform(top_indices)
+            
+            return list(top_crops)
+            
+        except Exception as e:
+            print(f"Crop prediction error: {e}")
+            return ["Paddy", "Millets", "Groundnut"]
 
-        # Technology Details Database
-        self.tech_details = {
-            'Agricultural Drone': {
-                'name_en': 'Agricultural Drone', 'name_ta': 'விவசாய ட்ரோன்',
-                'description_en': 'For efficient pesticide spraying and monitoring.',
-                'description_ta': 'பூச்சிக்கொல்லி தெளித்தல் மற்றும் கண்காணிப்புக்கு.',
-                'cost_en': '₹1,50,000+', 'cost_ta': '₹1,50,000+',
-                'scheme_en': 'Namo Drone Didi / SMAM', 'scheme_ta': 'ட்ரோன் திதி / SMAM'
+    def get_adoption_level(self, farmer_data):
+        if not self.has_adopt_ml:
+            return "Medium", 50
+            
+        try:
+            # age, education, annual_income, land_area, farming_experience, tech_usage_count, scheme_awareness, risk_tolerance
+            input_dict = {
+                'age': int(farmer_data.get('age', 40)),
+                'education': farmer_data.get('education', 'Secondary'),
+                'annual_income': float(farmer_data.get('annual_income', 300000)),
+                'land_area': float(farmer_data.get('land_area', 2.0)),
+                'farming_experience': int(farmer_data.get('experience', 10)),
+                'tech_usage_count': int(len(farmer_data.get('technologies_used', []))),
+                'scheme_awareness': 1 if len(farmer_data.get('schemes_aware', [])) > 0 else 0,
+                'risk_tolerance': farmer_data.get('risk_tolerance', 'Medium')
+            }
+            
+            X_input = pd.DataFrame([input_dict])
+            for col, le in self.adopt_feature_encoders.items():
+                if input_dict[col] not in le.classes_:
+                    input_dict[col] = le.classes_[0]
+                X_input[col] = le.transform([input_dict[col]])
+                
+            probs = self.adopt_model.predict_proba(X_input)[0]
+            score = int(max(probs) * 100)
+            
+            # Map Level based on Score as requested by user
+            if score > 70:
+                level = 'High'
+            elif score > 40:
+                level = 'Medium'
+            else:
+                level = 'Low'
+            
+            return level, score
+        except Exception as e:
+            print(f"Adoption prediction error: {e}")
+            return "Medium", 50
+
+    def get_technologies(self, farmer_data, adoption_level):
+        """
+        New Technology Recommendation Engine based on Adoption Level and Filtering
+        """
+        # 1. Master Technology List with Metadata
+        TECH_MASTER = {
+            "Soil Testing Kit": {
+                "tech_en": "Soil Testing Kit", "tech_ta": "மண் பரிசோதனை கிட்",
+                "description_en": "Helps analyze nutrient levels to optimize fertilizer use.",
+                "description_ta": "உரப் பயன்பாட்டை மேம்படுத்த ஊட்டச்சத்து அளவை பகுப்பாய்வு செய்ய உதவுகிறது.",
+                "cost_en": "Low", "cost_ta": "குறைவு",
+                "scheme_en": "Soil Health Card Scheme", "scheme_ta": "மண் சுகாதார அட்டை திட்டம்"
             },
-            'IoT Soil Sensors': {
-                'name_en': 'IoT Soil Sensors', 'name_ta': 'IoT மண் சென்சார்கள்',
-                'description_en': 'Real-time soil moisture and nutrient monitoring.',
-                'description_ta': 'உண்நேர மண் ஈரப்பதம் மற்றும் ஊட்டச்சத்து கண்காணிப்பு.',
-                'cost_en': '₹5,000 - ₹20,000', 'cost_ta': '₹5,000 - ₹20,000',
-                'scheme_en': 'Digital Agriculture Mission', 'scheme_ta': 'டிஜிட்டல் வேளாண்மை திட்டம்'
+            "Weather Forecast Mobile App": {
+                "tech_en": "Weather Forecast Mobile App", "tech_ta": "வானிலை முன்னறிவிப்பு செயலி",
+                "description_en": "Receive real-time weather alerts and rain predictions.",
+                "description_ta": "உண்மையான நேரத்தில் வானிலை எச்சரிக்கைகள் மற்றும் மழை கணிப்புகளைப் பெறுங்கள்.",
+                "cost_en": "Low", "cost_ta": "இலவசம்/குறைவு",
+                "scheme_en": "Digital Agriculture Mission", "scheme_ta": "டிஜிட்டல் வேளாண்மை இயக்கம்"
             },
-            'Precision Agriculture Tools': {
-                'name_en': 'Precision Agriculture Tools', 'name_ta': 'துல்லியமான வேளாண்மை கருவிகள்',
-                'description_en': 'GPS guided optimization of field variability.',
-                'description_ta': 'ஜிபிஎஸ் மூலம் புல மாறுபாட்டை மேம்படுத்துதல்.',
-                'cost_en': '₹50,000+', 'cost_ta': '₹50,000+',
-                'scheme_en': 'RKVY-RAFTAAR', 'scheme_ta': 'RKVY-RAFTAAR'
+            "Uzhavan Mobile App": {
+                "tech_en": "Uzhavan Mobile App", "tech_ta": "உழவன் மொபைல் செயலி",
+                "description_en": "Official TN Govt app for market prices and subsidies.",
+                "description_ta": "சந்தை விலைகள் மற்றும் மானியங்களுக்கான அதிகாரப்பூர்வ தமிழக அரசு செயலி.",
+                "cost_en": "Low", "cost_ta": "இலவசம்",
+                "scheme_en": "TNAU Digital Extension", "scheme_ta": "TNAU டிஜிட்டல் விரிவாக்கம்"
             },
-            'Smart Greenhouse System': {
-                'name_en': 'Smart Greenhouse System', 'name_ta': 'ஸ்மார்ட் பசுமை இல்லம்',
-                'description_en': 'Automated climate control for high-value crops.',
-                'description_ta': 'அதிக மதிப்புள்ள பயிர்களுக்கு தானியங்கி காலநிலை கட்டுப்பாடு.',
-                'cost_en': '₹2,00,000+', 'cost_ta': '₹2,00,000+',
-                'scheme_en': 'National Horticulture Board', 'scheme_ta': 'தேசிய தோட்டக்கலை வாரியம்'
+            "Mulching Sheets": {
+                "tech_en": "Mulching Sheets", "tech_ta": "மல்சிங் தாள்கள்",
+                "description_en": "Conserves soil moisture and prevents weed growth.",
+                "description_ta": "மண் ஈரப்பதத்தைப் பாதுகாக்கிறது மற்றும் களை வளர்ச்சியைத் தடுக்கிறது.",
+                "cost_en": "Medium", "cost_ta": "நடுத்தரம்",
+                "scheme_en": "Horticulture Development Scheme", "scheme_ta": "தோட்டக்கலை மேம்பாட்டுத் திட்டம்"
             },
-            'AI Crop Monitoring': {
-                'name_en': 'AI Crop Monitoring', 'name_ta': 'AI பயிர் கண்காணிப்பு',
-                'description_en': 'AI powered disease and health monitoring.',
-                'description_ta': 'AI மூலம் நோய்கள் மற்றும் சுகாதார கண்காணிப்பு.',
-                'cost_en': 'Subscription Based', 'cost_ta': 'சந்தா அடிப்படையில்',
-                'scheme_en': 'AgriStack Mission', 'scheme_ta': 'AgriStack திட்டம்'
+            "Drip Irrigation": {
+                "tech_en": "Drip Irrigation", "tech_ta": "சொட்டு நீர் பாசனம்",
+                "description_en": "Precision water delivery to plant roots.",
+                "description_ta": "செடியின் வேர்களுக்குத் துல்லியமாகத் தண்ணீர் வழங்குகிறது.",
+                "cost_en": "High", "cost_ta": "அதிகம்",
+                "scheme_en": "PMKSY (Micro-Irrigation)", "scheme_ta": "மைக்ரோ பாசனத் திட்டம் (PMKSY)"
             },
-            'Drip Irrigation': {
-                'name_en': 'Drip Irrigation', 'name_ta': 'சொட்டு நீர் பாசனம்',
-                'description_en': 'Saves 40-60% water, increases yield.',
-                'description_ta': '40-60% தண்ணீரைச் சேமிக்கிறது, மகசூலை அதிகரிக்கிறது.',
-                'cost_en': '₹40,000 - ₹80,000 per acre', 'cost_ta': 'ஏக்கருக்கு ₹40,000 - ₹80,000',
-                'scheme_en': 'PMKSY / TN Micro Irrigation', 'scheme_ta': 'PMKSY / நுண்ணீர் பாசன மானியம்'
+            "Sprinkler Irrigation": {
+                "tech_en": "Sprinkler Irrigation", "tech_ta": "தெளிப்பு நீர் பாசனம்",
+                "description_en": "Provides rain-like irrigation for field crops.",
+                "description_ta": "வயல் பயிர்களுக்கு மலை போன்ற பாசனத்தை வழங்குகிறது.",
+                "cost_en": "Medium", "cost_ta": "நடுத்தரம்",
+                "scheme_en": "National Mission on Sustainable Agriculture", "scheme_ta": "நிலையான வேளாண்மைக்கான தேசிய இயக்கம்"
             },
-            'Soil Testing Kit': {
-                'name_en': 'Soil Testing Kit', 'name_ta': 'மண் பரிசோதனை கருவி',
-                'description_en': 'Check soil NPK and pH levels instantly.',
-                'description_ta': 'மண் NPK மற்றும் pH அளவுகளை உடனடியாகச் சரிபார்க்கவும்.',
-                'cost_en': '₹1,500 - ₹3,000', 'cost_ta': '₹1,500 - ₹3,000',
-                'scheme_en': 'Soil Health Card Scheme', 'scheme_ta': 'மண் ஆரோக்கிய அட்டை திட்டம்'
+            "Farm Mechanization Tools": {
+                "tech_en": "Farm Mechanization Tools", "tech_ta": "விவசாய கருவிகள்",
+                "description_en": "Modern machinery like power tillers for efficient labor.",
+                "description_ta": "திறமையான உழைப்பிற்காக பவர் டில்லர் போன்ற நவீன இயந்திரங்கள்.",
+                "cost_en": "High", "cost_ta": "அதிகம்",
+                "scheme_en": "Agricultural Mechanization Mission", "scheme_ta": "விவசாய இயந்திரமயமாக்கல் இயக்கம்"
             },
-            'Mobile Agri Apps': {
-                'name_en': 'Mobile Agri Apps', 'name_ta': 'மொபைல் வேளாண் செயலிகள்',
-                'description_en': 'Advisory, weather, and market price tracking.',
-                'description_ta': 'ஆலோசனை, வானிலை, மற்றும் சந்தை விலை தரவு பயன்பாடுகள்.',
-                'cost_en': 'Free / Low Cost', 'cost_ta': 'இலவசம்',
-                'scheme_en': 'Digital India Agriculture', 'scheme_ta': 'டிஜிட்டல் இந்தியா வேளாண்மை'
+            "Soil Moisture Sensor": {
+                "tech_en": "Soil Moisture Sensor", "tech_ta": "மண் ஈரப்பதம் சென்சார்",
+                "description_en": "Monitors soil water levels via smartphone.",
+                "description_ta": "ஸ்மார்ட்போன் மூலம் மண் நீர்மட்டத்தைக் கண்காணிக்கிறது.",
+                "cost_en": "Medium", "cost_ta": "நடுத்தரம்",
+                "scheme_en": "Precision Farming Scheme", "scheme_ta": "துல்லியப் பண்ணையத் திட்டம்"
             },
-            'Crop Advisory Systems': {
-                'name_en': 'Crop Advisory Systems', 'name_ta': 'பயிர் ஆலோசனை அமைப்புகள்',
-                'description_en': 'Expert guidelines tailored to your farm.',
-                'description_ta': 'உங்கள் பண்ணைக்கான நிபுணர்களின் வழிகாட்டுதல்கள்.',
-                'cost_en': 'Free', 'cost_ta': 'இலவசம்',
-                'scheme_en': 'Kisan Suvidha', 'scheme_ta': 'கிசான் சுவிதா'
+            "Greenhouse / Polyhouse": {
+                "tech_en": "Greenhouse / Polyhouse", "tech_ta": "பசுமை இல்லம்",
+                "description_en": "Controlled environment for high-value crops.",
+                "description_ta": "உயர்மதிப்புப் பயிர்களுக்கான கட்டுப்படுத்தப்பட்ட சூழல்.",
+                "cost_en": "High", "cost_ta": "அதிகம்",
+                "scheme_en": "National Horticulture Board", "scheme_ta": "தேசிய தோட்டக்கலை வாரியம்"
             },
-            'Sprinkler Irrigation': {
-                'name_en': 'Sprinkler Irrigation', 'name_ta': 'தெளிப்பு நீர் பாசனம்',
-                'description_en': 'Suitable for close growing crops like pulses.',
-                'description_ta': 'பயறு வகைகள் போன்ற நெருக்கமாக வளரும் பயிர்களுக்கு ஏற்றது.',
-                'cost_en': '₹20,000 - ₹50,000 per acre', 'cost_ta': 'ஏக்கருக்கு ₹20,000 - ₹50,000',
-                'scheme_en': 'PMKSY / PM-Krishi Sinchai', 'scheme_ta': 'பிஎம் கிரிஷி சின்சாயி'
-            },
-            'Basic Irrigation Improvements': {
-                'name_en': 'Basic Irrigation Improvements', 'name_ta': 'அடிப்படை நீர்ப்பாசன மேம்பாடுகள்',
-                'description_en': 'Low cost improvements for better water use.',
-                'description_ta': 'சிறந்த நீர் பயன்பாட்டிற்கான குறைந்த செலவிலான மேம்பாடுகள்.',
-                'cost_en': '₹5,000 - ₹10,000', 'cost_ta': '₹5,000 - ₹10,000',
-                'scheme_en': 'Kalaignar Scheme', 'scheme_ta': 'கலைஞர் திட்டம்'
-            },
-            'Government Training Programs': {
-                'name_en': 'Government Training Programs', 'name_ta': 'அரசு பயிற்சி திட்டங்கள்',
-                'description_en': 'Extensive training provided by agriculture departments.',
-                'description_ta': 'வேளாண்மை துறைகள் மூலம் வழங்கப்படும் விரிவான பயிற்சி.',
-                'cost_en': 'Free', 'cost_ta': 'இலவசம்',
-                'scheme_en': 'NMAET / ATMA', 'scheme_ta': 'NMAET / ATMA'
-            },
-            'Subsidized Equipment': {
-                'name_en': 'Subsidized Equipment', 'name_ta': 'மானிய உபகரணங்கள்',
-                'description_en': 'Essential low cost tools for farming.',
-                'description_ta': 'பண்ணைக்கான அன்றாட பயன்பாட்டு குறைந்த செலவு உபகரணங்கள்.',
-                'cost_en': '50% Subsidy', 'cost_ta': '50% மானியம்',
-                'scheme_en': 'Farm Mechanization', 'scheme_ta': 'வேளாண் இயந்திரமயமாக்கல்'
-            },
-            'Farmer Extension Services': {
-                'name_en': 'Farmer Extension Services', 'name_ta': 'விவசாய நீட்டிப்பு சேவைகள்',
-                'description_en': 'Support and assistance through local centers.',
-                'description_ta': 'உள்ளூர் மையங்கள் மூலம் ஆதரவு மற்றும் உதவி.',
-                'cost_en': 'Free', 'cost_ta': 'இலவசம்',
-                'scheme_en': 'State Extension Services', 'scheme_ta': 'மாநில விரிவாக்க சேவைகள்'
+            "Drone Spraying": {
+                "tech_en": "Drone Spraying", "tech_ta": "ட்ரோன் தெளித்தல்",
+                "description_en": "Automated pesticide spraying using drones.",
+                "description_ta": "ட்ரோன்களைப் பயன்படுத்தித் தானியங்கி பூச்சிக்கொல்லி தெளித்தல்.",
+                "cost_en": "High", "cost_ta": "அதிகம்",
+                "scheme_en": "SMAM (Sub-Mission on Agri Mechanization)", "scheme_ta": "SMAM (வேளாண் இயந்திரமயமாக்கல் துணைத் திட்டம்)"
             }
         }
 
-        # 1. Technology Hierarchies
-        self.technology_recommendations = {
-            'High': ['Agricultural Drone', 'IoT Soil Sensors', 'Precision Agriculture Tools', 'AI Crop Monitoring', 'Smart Greenhouse System'],
-            'Medium': ['Drip Irrigation', 'Soil Testing Kit', 'Mobile Agri Apps', 'Crop Advisory Systems', 'Sprinkler Irrigation'],
-            'Low': ['Basic Irrigation Improvements', 'Government Training Programs', 'Subsidized Equipment', 'Farmer Extension Services']
+        # 2. Logic: Baseline Assignment
+        baseline_map = {
+            "Low": ["Soil Testing Kit", "Weather Forecast Mobile App", "Uzhavan Mobile App", "Mulching Sheets"],
+            "Medium": ["Drip Irrigation", "Sprinkler Irrigation", "Farm Mechanization Tools", "Soil Moisture Sensor"],
+            "High": ["Greenhouse / Polyhouse", "Drone Spraying", "Soil Moisture Sensor", "Farm Mechanization Tools"]
         }
         
-        # 2. Crop Database
-        self.crop_database = {
-            'Rice': {'crop_en': 'Rice', 'crop_ta': 'நெல்/அரிசி', 'technologies': ['Transplanter']},
-            'Sugarcane': {'crop_en': 'Sugarcane', 'crop_ta': 'கரும்பு', 'technologies': ['Drip']},
-            'Banana': {'crop_en': 'Banana', 'crop_ta': 'வாழை', 'technologies': ['Propping', 'Drip']},
-            'Cotton': {'crop_en': 'Cotton', 'crop_ta': 'பருத்தி', 'technologies': ['Sprayer']},
-            'Turmeric': {'crop_en': 'Turmeric', 'crop_ta': 'மஞ்சள்', 'technologies': ['Boiler']},
-            'Maize': {'crop_en': 'Maize', 'crop_ta': 'மக்காச்சோளம்', 'technologies': ['Sheller']},
-            'Chillies': {'crop_en': 'Chillies', 'crop_ta': 'மிளகாய்', 'technologies': ['Solar Dryer']},
-            'Coconut': {'crop_en': 'Coconut', 'crop_ta': 'தென்னை/தேங்காய்', 'technologies': ['Tree Climber', 'Drip']},
-            'Groundnut': {'crop_en': 'Groundnut', 'crop_ta': 'வேர்க்கடலை', 'technologies': ['Decorticator']},
-            'Pulses': {'crop_en': 'Pulses', 'crop_ta': 'பயறு வகைகள்', 'technologies': ['Sprinkler']},
-            'Millets': {'crop_en': 'Millets', 'crop_ta': 'சிறு தானியங்கள்', 'technologies': ['Dehuller']},
-            'Tomato': {'crop_en': 'Tomato', 'crop_ta': 'தக்காளி', 'technologies': ['Drip']},
-            'Watermelon': {'crop_en': 'Watermelon', 'crop_ta': 'தர்பூசணி', 'technologies': ['Drip']}
-        }
-
-        # 3. Schemes Database
-        self.schemes_database = [
-            {
-                'id': 'PM-KISAN', 'name_en': 'PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)', 'name_ta': 'பிஎம்-கிசான்',
-                'desc_en': 'Financial support of Rs. 6000 per year for small and marginal farmers.',
-                'desc_ta': 'சிறு மற்றும் குறு விவசாயிகளுக்கு ஆண்டுக்கு ரூ. 6000 நிதியுதவி.',
-                'condition': lambda d: float(d.get('land_area') or 2) <= 5
-            },
-            {
-                'id': 'PMKSY', 'name_en': 'PMKSY (Pradhan Mantri Krishi Sinchayee Yojana)', 'name_ta': 'பிஎம்கேஎஸ்ஒய்',
-                'desc_en': 'Subsidy for Micro Irrigation like Drip and Sprinkler.',
-                'desc_ta': 'சொட்டு நீர் மற்றும் தெளிப்பு நீர் பாசனத்திற்கான மானியம்.',
-                'condition': lambda d: d.get('irrigation_source') in ['Borewell', 'Canal', 'River', 'Farm Pond']
-            },
-            {
-                'id': 'KCC', 'name_en': 'Kisan Credit Card (KCC)', 'name_ta': 'கிசான் கிரெடிட் கார்டு',
-                'desc_en': 'Short-term credit limits for crop needs and expenses.',
-                'desc_ta': 'பயிர் தேவைகள் மற்றும் செலவுகளுக்கான குறுகிய கால கடன் வசதி.',
-                'condition': lambda d: d.get('has_loan') == True or d.get('access_to_credit', 'No') == 'No'
-            },
-            {
-                'id': 'PMFBY', 'name_en': 'PMFBY (Pradhan Mantri Fasal Bima Yojana)', 'name_ta': 'பிஎம்எஃப்பிஒய் (பயிர் காப்பீடு)',
-                'desc_en': 'Crop insurance scheme covering yield losses due to non-preventable risks.',
-                'desc_ta': 'தவிர்க்க முடியாத அபாயங்களால் ஏற்படும் மகசூல் இழப்புகளை உள்ளடக்கக்கூடிய பயிர் காப்பீட்டு திட்டம்.',
-                'condition': lambda d: d.get('has_insurance') == False or str(d.get('insurance')).lower() == 'no'
-            },
-            {
-                'id': 'MahilaKisan', 'name_en': 'Mahila Kisan Sashaktikaran Pariyojana (MKSP)', 'name_ta': 'மகிளா கிசான் திட்டம்',
-                'desc_en': 'Empowering women in agriculture through capacity building.',
-                'desc_ta': 'விவசாயத்தில் பெண்களை அதிகாரபூர்வமாக்கும் திட்டம்.',
-                'condition': lambda d: str(d.get('gender')).lower() == 'female'
-            },
-            {
-                'id': 'NRLM', 'name_en': 'Deendayal Antyodaya Yojana-NRLM', 'name_ta': 'தீன்தயாள் திட்டம்-NRLM',
-                'desc_en': 'Targeted at women-led self-help groups in rural farming sectors.',
-                'desc_ta': 'விவசாயத்தில் உள்ள மகளிர் சுய உதவிக் குழுக்களுக்கான ஆதரவு.',
-                'condition': lambda d: str(d.get('gender')).lower() == 'female'
-            },
-            {
-                'id': 'UzhavarSandhai', 'name_en': 'Uzhavar Sandhai (Tamil Nadu Farmer Market)', 'name_ta': 'உழவர் சந்தை',
-                'desc_en': 'Direct selling platform for Tamil Nadu farmers.',
-                'desc_ta': 'விவசாயிகள் நேரடியாக விற்பனை செய்ய உழவர் சந்தை திட்டம்.',
-                'condition': lambda d: str(d.get('state', '')).lower() == 'tamil nadu' or d.get('sells_in_uzhavar_santhai', False)
-            },
-            {
-                'id': 'AIF', 'name_en': 'Agriculture Infrastructure Fund', 'name_ta': 'வேளாண் உள்கட்டமைப்பு நிதி',
-                'desc_en': 'Funding for post-harvest management infrastructure.',
-                'desc_ta': 'அறுவடைக்கு பிந்தைய மேலாண்மைக்கான நிதி.',
-                'condition': lambda d: float(d.get('land_area') or 2) >= 5
-            },
-            {
-                'id': 'PKVY', 'name_en': 'Paramparagat Krishi Vikas Yojana', 'name_ta': 'பாரம்பரிய வேளாண்மை திட்டம்',
-                'desc_en': 'Promotes organic farming through cluster approach.',
-                'desc_ta': 'குழு முறையில் இயற்கை விவசாயத்தை ஊக்குவிக்கிறது.',
-                'condition': lambda d: True # Universal fallback
-            }
-        ]
-
-    def _safe_encode(self, col, val):
-        if col not in self.encoders:
-            return val
-        le = self.encoders[col]
-        str_val = str(val) if val is not None and str(val).strip() != "" else le.classes_[0]
-        if str_val not in le.classes_:
-            str_val = le.classes_[0]
-        return le.transform([str_val])[0]
+        base_list = baseline_map.get(adoption_level, baseline_map["Low"])
         
-    def _safe_float(self, val, default):
-        try:
-            return float(val) if val is not None and str(val).strip() != "" else default
-        except:
-            return default
-
-    def get_technology_recommendations(self, farmer_data):
-        adoption_category = farmer_data.get('adoption_category', 'Medium')
-        existing_tech = farmer_data.get('technologies_used', [])
+        # 3. Filter Already Selected Tech
+        user_selected = farmer_data.get('technologies_used', [])
+        # Normalizing names for comparison
+        recommended_keys = [tech for tech in base_list if tech not in user_selected]
         
-        if 'High' in adoption_category: target_cat = 'High'
-        elif 'Low' in adoption_category: target_cat = 'Low'
-        else: target_cat = 'Medium'
-        
-        base_tech_names = self.technology_recommendations.get(target_cat, [])
-        
-        recommendations = []
-        for tech_name in base_tech_names:
-            # Skip if farmer is already using this technology
-            if tech_name in existing_tech or tech_name.replace(' ', '') in [t.replace(' ', '') for t in existing_tech]:
-                continue
-                
-            details = self.tech_details.get(tech_name, {})
-            recommendations.append({
-                'tech_en': details.get('name_en', tech_name),
-                'tech_ta': details.get('name_ta', tech_name),
-                'description_en': details.get('description_en', ''),
-                'description_ta': details.get('description_ta', ''),
-                'cost_en': details.get('cost_en', 'N/A'),
-                'cost_ta': details.get('cost_ta', 'N/A'),
-                'scheme_en': details.get('scheme_en', 'N/A'),
-                'scheme_ta': details.get('scheme_ta', 'N/A')
-            })
+        # 4. Minimum 4 Results Ensure
+        if len(recommended_keys) < 4:
+            # Flatten all other categories for fallback
+            all_other_techs = ["Soil Testing Kit", "Weather Forecast Mobile App", "Uzhavan Mobile App", "Mulching Sheets", 
+                                "Drip Irrigation", "Sprinkler Irrigation", "Farm Mechanization Tools", "Soil Moisture Sensor", 
+                                "Greenhouse / Polyhouse", "Drone Spraying"]
             
-        return recommendations[:5]
-    
-    def get_crop_recommendations(self, farmer_data):
-        if self.has_ml:
-            try:
-                # Prepare features - Map from DB schema to ML feature names
-                data = {}
-                data['land_area'] = self._safe_float(farmer_data.get('land_area'), 2.0)
-                data['soil_type'] = farmer_data.get('soil_type', 'Red')
-                data['water_availability'] = farmer_data.get('water_availability', 'Medium')
-                
-                # Derive crop_type from crops list
-                crops_list = farmer_data.get('crops', [])
-                data['crop_type'] = crops_list[0] if crops_list and len(crops_list) > 0 else 'Cash Crop'
-                
-                # Map irrigation_source to irrigation_method if missing
-                data['irrigation_method'] = farmer_data.get('irrig_method') or farmer_data.get('irrigation_source') or 'Rainfed'
-                data['season'] = farmer_data.get('season', 'Kharif')
-
-                encoded_data = {}
-                for col in self.crop_features:
-                    if col in self.encoders:
-                        encoded_data[col] = self._safe_encode(col, data.get(col))
-                    else:
-                        encoded_data[col] = data.get(col)
-
-                X_input = pd.DataFrame([encoded_data])
-                probs = self.model.predict_proba(X_input)[0]
-                
-                crop_le = self.encoders['crop_recommendation']
-                top_indices = np.argsort(probs)[-4:][::-1]
-                
-                recommended_crops = []
-                for idx in top_indices:
-                    crop_name = crop_le.inverse_transform([idx])[0]
-                    details = self.crop_database.get(crop_name)
-                    if details:
-                        recommended_crops.append({
-                            'crop_en': details['crop_en'],
-                            'crop_ta': details['crop_ta'],
-                            'reason_en': "ML predicted based on your unique combination of soil, water, and behavioral features.",
-                            'reason_ta': "உங்கள் மண், நீர் மற்றும் மேலாண்மை விவரங்களைக் கொண்டு செயற்கை நுண்ணறிவு மூலம் கணிக்கப்பட்டது.",
-                            'technologies': details.get('technologies', [])
-                        })
-                
-                if len(recommended_crops) >= 2:
-                    return recommended_crops[:4]
-            except Exception as e:
-                print(f"ML Prediction failed: {e}")
-
-        # Fallback specific logic
-        return [
-            {'crop_en': 'Groundnut', 'crop_ta': 'வேர்க்கடலை', 'reason_en': 'Suitable based on general logic.', 'reason_ta': 'பொதுவான காரணத்தால் ஏற்றது.'},
-            {'crop_en': 'Maize', 'crop_ta': 'மக்காச்சோளம்', 'reason_en': 'Good yield.', 'reason_ta': 'நல்ல மகசூல்.'}
-        ]
+            for tech in all_other_techs:
+                if len(recommended_keys) >= 4:
+                    break
+                if tech not in recommended_keys and tech not in user_selected:
+                    recommended_keys.append(tech)
+        
+        # Final formatting
+        tech_results = [TECH_MASTER[key] for key in recommended_keys[:4]] # type: ignore
+        
+        return tech_results
 
     def get_all_recommendations(self, farmer_data):
+        top_crops = self.get_top_3_crops(farmer_data)
+        level, score = self.get_adoption_level(farmer_data)
+        
+        # Fetch technologies using the new logic
+        technologies = self.get_technologies(farmer_data, level)
+        
         return {
-            'technologies': self.get_technology_recommendations(farmer_data),
-            'crops': self.get_crop_recommendations(farmer_data)
+            "recommended_crops": top_crops,
+            "adoption_level": level,
+            "adoption_score": score,
+            "technologies": technologies,
+            "crops": [
+                {"crop_en": crop, "crop_ta": self._get_tamil_name(crop)} 
+                for crop in top_crops
+            ]
         }
 
-recommendation_engine = RecommendationEngine()
+    def _get_tamil_name(self, crop_en):
+        names = {
+            'Paddy': 'நெல்',
+            'Cotton': 'பருத்தி',
+            'Groundnut': 'நிலக்ககடலை',
+            'Millets': 'சிறு தானியங்கள்',
+            'Sugarcane': 'கரும்பு',
+            'Pulses': 'பயறு வகைகள்',
+            'Maize': 'சோளம்',
+            'Chillies': 'மிளகாய்',
+            'Banana': 'வாழை',
+            'Turmeric': 'மஞ்சள்',
+            'Coconut': 'தேங்காய்'
+        }
+        return names.get(crop_en, crop_en)
 
+recommendation_engine = RecommendationEngine()

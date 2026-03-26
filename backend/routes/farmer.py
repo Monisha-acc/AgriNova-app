@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, session
 from models import FarmerData, User
-from ml.prediction import predictor
+from ml.recommendation import recommendation_engine
 from ml.segmentation import segmentation
 
 farmer_bp = Blueprint('farmer', __name__)
@@ -29,22 +29,22 @@ def submit_farmer_data():
         farmer_data = FarmerData.get_by_user_id(user_id)
         
         # Run ML predictions
-        adoption_result = predictor.predict(farmer_data)
+        level, score = recommendation_engine.get_adoption_level(farmer_data)
         segmentation_result = segmentation.predict(farmer_data)
         
         # Update farmer data with ML results
         FarmerData.update_ml_results(
             farmer_id,
-            adoption_result['adoption_score'],
-            adoption_result['adoption_category'],
+            score,
+            level,
             segmentation_result['segment']
         )
         
         return jsonify({
             'message': 'Farmer data submitted successfully',
             'farmer_id': farmer_id,
-            'adoption_score': adoption_result['adoption_score'],
-            'adoption_category': adoption_result['adoption_category'],
+            'adoption_score': score,
+            'adoption_category': level,
             'segment': segmentation_result['segment']
         }), 201
     
@@ -98,20 +98,22 @@ def update_farmer_data(user_id):
         farmer_data = FarmerData.get_by_user_id(user_id)
         
         # Run ML predictions
-        adoption_result = predictor.predict(farmer_data)
+        level, score = recommendation_engine.get_adoption_level(farmer_data)
         segmentation_result = segmentation.predict(farmer_data)
         
         # Update with ML results
         FarmerData.update_ml_results(
             farmer_id,
-            adoption_result['adoption_score'],
-            adoption_result['adoption_category'],
+            score,
+            level,
             segmentation_result['segment']
         )
         
         return jsonify({
             'message': 'Farmer data updated successfully',
-            'farmer_id': farmer_id
+            'farmer_id': farmer_id,
+            'adoption_score': score,
+            'adoption_category': level
         }), 200
     
     except Exception as e:

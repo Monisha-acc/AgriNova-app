@@ -2,79 +2,147 @@ import pandas as pd
 import numpy as np
 import os
 
-# Define categories
-behavior_categories = ['Traditional', 'Transitional', 'Progressive']
-soil_types = ['Red', 'Black', 'Alluvial', 'Clay', 'Sandy', 'Loamy', 'Laterite', 'Gravelly', 'Mixed']
-irrigation_sources = ['Borewell', 'Canal', 'River', 'Rainfed', 'Farm Pond', 'Other']
-crops = ['Rice', 'Sugarcane', 'Banana', 'Cotton', 'Turmeric', 'Maize', 'Chillies', 'Coconut', 'Groundnut', 'Pulses', 'Millets', 'Tomato', 'Watermelon']
+# --- 1. Master Configurations & Data ---
+# These categories must match the drop-down options in the AgriNova frontend forms
+soil_types = ['Red', 'Black', 'Clay', 'Sandy', 'Alluvial']
+water_availabilities = ['Low', 'Medium', 'High']
+irrigation_types = ['Canal', 'Borewell', 'Rainfed', 'Drip', 'Sprinkler']
+seasons = ['Kharif', 'Rabi']
 
-def generate_data(num_samples=1000):
+# List of all crops supported by the Crop Recommendation model
+crops = [
+    'Paddy', 'Cotton', 'Groundnut', 'Millets', 'Sugarcane', 
+    'Pulses', 'Maize', 'Chillies', 'Banana', 'Turmeric', 'Coconut'
+]
+
+def generate_data(num_samples=5000):
+    """
+    Generates a synthetic dataset of 5,000 farmer profiles to train the AI models.
+    This creates realistic relationships between inputs (soil, water) and outputs (crop, adoption).
+    """
     data = []
+    educations = ['Primary', 'Secondary', 'Graduate']
+    risk_tolerances = ['Low', 'Medium', 'High']
+    
+    # List of modern technologies for the Technology Recommendation engine test
+    all_possible_techs = [
+        "Drip Irrigation", "Sprinkler Irrigation", "Mulching Sheets", "Greenhouse / Polyhouse", 
+        "Soil Testing Kit", "Soil Moisture Sensor", "Weather Forecast Mobile App", 
+        "Uzhavan Mobile App", "Farm Mechanization Tools", "Drone Spraying"
+    ]
+    
+    # Start Generation
     for _ in range(num_samples):
-        # Features
+        # --- A. Generate Random Farmer Profile Features ---
         soil = np.random.choice(soil_types)
-        irr_source = np.random.choice(irrigation_sources)
-        land_area = np.random.uniform(0.5, 20.0)
-        water_availability = np.random.choice(['High', 'Moderate', 'Low'])
+        water = np.random.choice(water_availabilities)
+        irrigation = np.random.choice(irrigation_types)
+        land_area = round(np.random.uniform(0.5, 20.0), 1) # Standard Farm Size: 0.5 to 20 acres
+        season = np.random.choice(seasons)
         
-        # Rule-based behavior for synthetic data
-        if land_area > 10 and water_availability == 'High':
-            behavior = 'Progressive'
-        elif land_area > 3 or water_availability == 'Moderate':
-            behavior = 'Transitional'
+        # --- B. Deterministic Crop Selection Logic (The "Expert" Knowledge) ---
+        # This keeps the model accurate by assigning logical crops to soil/water conditions
+        if soil == 'Clay' and water == 'High': crop = 'Paddy'
+        elif soil == 'Black' and water == 'High': crop = 'Sugarcane'
+        elif soil == 'Black' and water == 'Medium': crop = 'Cotton'
+        elif soil == 'Black' and water == 'Low': crop = 'Millets'
+        elif soil == 'Red' and water == 'High': crop = 'Banana'
+        elif soil == 'Red' and water == 'Medium': crop = 'Groundnut'
+        elif soil == 'Red' and water == 'Low' and irrigation == 'Borewell': crop = 'Turmeric'
+        elif soil == 'Red' and water == 'Low': crop = 'Pulses'
+        elif soil == 'Sandy' and water == 'Low': crop = 'Chillies'
+        elif soil == 'Sandy' and water == 'Medium': crop = 'Millets'
+        elif soil == 'Alluvial' and water == 'High': crop = 'Coconut'
+        elif soil == 'Alluvial' and water == 'Medium': crop = 'Maize'
         else:
-            behavior = 'Traditional'
-            
-        # Target Crop (Logic to make it learnable)
-        target_crop = 'Millets' # Default
-        if soil == 'Clay' and irr_source == 'Canal':
-            target_crop = 'Rice'
-        elif soil == 'Black':
-            target_crop = 'Cotton'
-        elif soil == 'Red' and irr_source == 'Borewell':
-            target_crop = 'Groundnut'
-        elif soil == 'Sandy':
-            target_crop = 'Coconut'
-        elif soil == 'Loamy':
-            target_crop = 'Banana'
-        elif water_availability == 'Low':
-            target_crop = 'Pulses'
-        else:
-            target_crop = np.random.choice(crops)
+            # Deterministic Fallback Logic
+            if water == 'High': crop = 'Paddy'
+            elif water == 'Medium': crop = 'Maize'
+            else: crop = 'Millets'
 
+        # --- C. Adoption Model Features (Personal & Digital Profile) ---
+        age = np.random.randint(18, 75)
+        education = np.random.choice(educations)
+        annual_income = np.random.randint(50000, 1000000)
+        farming_experience = np.random.randint(1, 50)
+        tech_usage_count = np.random.randint(0, 10)
+        scheme_awareness = np.random.choice([0, 1])
+        risk_tolerance = np.random.choice(risk_tolerances)
+        
+        # --- D. Adoption Score logic (Rules for 95%+ Prediction Accuracy) ---
+        # Scoring weight distribution:
+        # Education (35), Income (25), Experience/Usage (30), Risk/Awareness (10)
+        score = 0
+        if education == 'Graduate': score += 35
+        elif education == 'Secondary': score += 15
+        
+        if annual_income > 600000: score += 25
+        elif annual_income > 300000: score += 10
+        
+        if tech_usage_count > 6: score += 30
+        elif tech_usage_count > 3: score += 15
+        
+        if risk_tolerance == 'High': score += 10
+        if scheme_awareness == 1: score += 5
+        
+        # Minimal noise to help model robustness but keep accuracy high
+        score += np.random.randint(-2, 3) 
+        score = max(0, min(100, score))
+        
+        # CATEGORIZATION: Map numerical score to the 3 Adoption Labels
+        if score > 70: adoption_level = 'High'
+        elif score > 40: adoption_level = 'Medium'
+        else: adoption_level = 'Low'
+
+        # --- E. Technologies Selected (Simulation of Current Practice) ---
+        # Pick random technologies based on the usage count
+        actual_tech_count = min(tech_usage_count, len(all_possible_techs))
+        technologies_selected = np.random.choice(all_possible_techs, size=actual_tech_count, replace=False).tolist()
+
+        # Add to Final dataset
         data.append({
-            'behavior_label': behavior,
             'soil_type': soil,
-            'irrigation_source': irr_source,
+            'water_availability': water,
+            'irrigation_type': irrigation,
             'land_area': land_area,
-            'water_availability': water_availability,
-            'crop_recommendation': target_crop,
-            # Add other features to match existing model requirements if needed
-            'crop_type': 'Single',
-            'crop_rotation': 'Yes',
-            'seasonal_crop': 'Yes',
-            'irrigation_method': 'Drip' if behavior == 'Progressive' else 'Flood',
-            'irrigation_frequency': 'Daily',
-            'water_source': irr_source,
-            'water_storage': 'Yes',
-            'access_to_credit': 'Yes',
-            'insurance': 'Yes',
-            'subsidy_usage': 'Yes',
-            'sells_in_uzhavar_santhai': 'Yes',
-            'uses_enam': 'Yes',
-            'drip_irrigation': 'Yes',
-            'sprinkler_irrigation': 'No',
-            'rainwater_harvesting': 'Yes',
-            'soil_moisture_monitoring': 'Yes',
-            'attended_training': 'Yes',
-            'smartphone_usage': 'High',
-            'agri_apps_usage': 'Yes'
+            'season': season,
+            'crop': crop,
+            'age': age,
+            'education': education,
+            'annual_income': annual_income,
+            'farming_experience': farming_experience,
+            'tech_usage_count': tech_usage_count,
+            'scheme_awareness': scheme_awareness,
+            'risk_tolerance': risk_tolerance,
+            'adoption_level': adoption_level,
+            'technologies_used': str(technologies_selected) # Stored as string list for CSV compatibility
         })
     
     return pd.DataFrame(data)
 
+# --- 2. Main Script Execution ---
 if __name__ == "__main__":
-    df = generate_data(1000)
+    print("-" * 50)
+    print("AgriNova: Synthetic Dataset Generation Tool")
+    print("-" * 50)
+    
+    # 1. Generate DataFrame with 5,000 samples
+    df = generate_data(5000)
+    
+    # 2. Get absolute path for saving CSV
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    df.to_csv(os.path.join(current_dir, 'dataset.csv'), index=False)
-    print(f"Dataset generated with 1000 rows at {os.path.join(current_dir, 'dataset.csv')}")
+    file_path = os.path.join(current_dir, 'dataset.csv')
+    
+    # 3. Save CSV
+    df.to_csv(file_path, index=False)
+    
+    # 4. Success Output
+    print(f"Dataset Successfully Created with {len(df)} records.")
+    print(f"Saved to: {file_path}")
+    
+    # 5. Display the defined Thresholds for terminal reference
+    print("\nAdoption Level Rule Reference:")
+    print("  [0-40]   -> Low (Beginner)")
+    print("  [41-70]  -> Medium (Intermediate)")
+    print("  [71-100] -> High (Advanced)")
+    print("-" * 50)

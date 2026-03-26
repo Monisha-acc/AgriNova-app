@@ -21,18 +21,15 @@ const FarmerForm = ({ user }) => {
         education: '',
         experience: '',
         income: '',
-        household_size: '',
-        physically_challenged: false,
 
         // Step 2: Land & Crop
         land_area: '',
-        land_ownership: '',
         crops: [],
         soil_type: '',
-        irrigation_source: '',
         water_availability: '',
+        irrigation_type: '',
+        season: '',
         yield_history: '',
-        market_linkage: '',
 
         // Step 3: Technology Usage
         technologies_used: [],
@@ -41,10 +38,10 @@ const FarmerForm = ({ user }) => {
         // Step 4: Scheme Awareness
         schemes_aware: [],
         other_scheme: '',
-        amma_two_wheeler_aware: false, // Legacy field
+        risk_tolerance: 'Medium',
         tn_micro_irrigation_aware: false,
         tn_free_electricity_aware: false,
-        kalaignar_scheme_aware: false, // Reused for Integrated Farming
+        kalaignar_scheme_aware: false,
         tn_soil_health_aware: false,
         tn_farm_mechanization_aware: false,
 
@@ -101,7 +98,6 @@ const FarmerForm = ({ user }) => {
         other_farmer_category: '',
         other_market_type: '',
         other_gender: '',
-        other_land_ownership: '',
 
         // Extended Financial & Risk Behaviour
         loan_source: '',
@@ -303,26 +299,6 @@ const FarmerForm = ({ user }) => {
                         <option value="Above 500000">{t('incomeAbove500k')}</option>
                     </select>
                 </div>
-
-                <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('householdSize')}</label>
-                    <input type="number" name="household_size" value={formData.household_size} onChange={handleChange}
-                        className="input-field" required />
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 bg-farm-green-50 border-2 border-farm-green-200 rounded-lg">
-                    <input
-                        type="checkbox"
-                        name="physically_challenged"
-                        id="physically_challenged"
-                        checked={formData.physically_challenged}
-                        onChange={handleChange}
-                        className="w-6 h-6 text-farm-green-600 rounded focus:ring-farm-green-500"
-                    />
-                    <label htmlFor="physically_challenged" className="text-lg font-semibold text-farm-green-800">
-                        {t('physicallyChallenged')}
-                    </label>
-                </div>
             </div>
         </div>
     );
@@ -366,7 +342,14 @@ const FarmerForm = ({ user }) => {
                             </div>
                         </div>
 
-                        {/* Display Area and Category */}
+                        <div>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('riskTolerance')}</label>
+                    <select name="risk_tolerance" value={formData.risk_tolerance} onChange={handleChange} className="input-field" required>
+                        <option value="Low">{t('riskLow')}</option>
+                        <option value="Medium">{t('riskMedium')}</option>
+                        <option value="High">{t('riskHigh')}</option>
+                    </select>
+                </div>
                         <div className="bg-farm-green-50 border border-farm-green-100 rounded-xl p-4 shadow-sm transition-all duration-300">
                             <div className="flex flex-col space-y-3">
                                 <div className="flex justify-between items-center">
@@ -391,30 +374,6 @@ const FarmerForm = ({ user }) => {
                         </div>
                     </div>
                 </div>
-
-                <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('landOwnership')}</label>
-                    <select name="land_ownership" value={formData.land_ownership} onChange={handleChange} className="input-field" required>
-                        <option value="">{t('selectOption')}</option>
-                        <option value="Owned">{t('landOwned')}</option>
-                        <option value="Leased">{t('landLeased')}</option>
-                        <option value="Rented">{t('landRented')}</option>
-                        <option value="Sharecropping">{t('landSharecropping')}</option>
-                        <option value="Family">{t('landFamily')}</option>
-                        <option value="Govt">{t('landGovt')}</option>
-                        <option value="Temple">{t('landTemple')}</option>
-                        <option value="Informal">{t('landInformal')}</option>
-                        <option value="Other">{t('others')}</option>
-                    </select>
-                </div>
-
-                {formData.land_ownership === 'Other' && (
-                    <div className="animate-fade-in">
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">{t('specifyOther')}</label>
-                        <input type="text" name="other_land_ownership" value={formData.other_land_ownership} onChange={handleChange}
-                            className="input-field" placeholder="Enter ownership details" />
-                    </div>
-                )}
 
                 <div className="md:col-span-2">
                     <label className="block text-lg font-semibold text-gray-700 mb-2">{t('cropPattern')} ({t('cropPatternInstruction')})</label>
@@ -509,13 +468,12 @@ const FarmerForm = ({ user }) => {
                 )}
 
                 <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('marketLinkage')}</label>
-                    <select name="market_linkage" value={formData.market_linkage} onChange={handleChange} className="input-field" required>
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('season')}</label>
+                    <select name="season" value={formData.season} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Local">{t('marketLocal')}</option>
-                        <option value="Wholesale">{t('marketWholesale')}</option>
-                        <option value="Direct">{t('marketDirect')}</option>
-                        <option value="Online">{t('marketOnline')}</option>
+                        <option value="Kharif">{t('kharif')}</option>
+                        <option value="Rabi">{t('rabi')}</option>
+                        <option value="Summer">{t('summerOption')}</option>
                     </select>
                 </div>
             </div>
@@ -1186,35 +1144,24 @@ const FarmerForm = ({ user }) => {
                 </div>
 
                 <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('primaryIrrigationSource')}</label>
-                    <select name="irrigation_source" value={formData.irrigation_source} onChange={handleChange} className="input-field">
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('irrigationType')}</label>
+                    <select name="irrigation_type" value={formData.irrigation_type} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Borewell">{t('irriBorewell')}</option>
                         <option value="Canal">{t('irriCanal')}</option>
-                        <option value="River">{t('irriRiver')}</option>
+                        <option value="Borewell">{t('irriBorewell')}</option>
                         <option value="Rainfed">{t('irriRainfed')}</option>
-                        <option value="Farm Pond">{t('irriFarmPond')}</option>
-                        <option value="Other">{t('others')}</option>
+                        <option value="Drip">{t('irriDrip')}</option>
+                        <option value="Sprinkler">{t('irriSprinkler')}</option>
                     </select>
                 </div>
 
-                {formData.irrigation_source === 'Other' && (
-                    <div className="animate-fade-in md:col-span-2">
-                        <label className="block text-lg font-semibold text-gray-700 mb-2">{t('specifyOther')}</label>
-                        <input type="text" name="other_irrigation_source" value={formData.other_irrigation_source} onChange={handleChange}
-                            className="input-field" placeholder={t('specifyOther')} />
-                    </div>
-                )}
-
                 <div>
-                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('irrigationMethodUsed')}</label>
-                    <select name="water_availability" value={formData.water_availability} onChange={handleChange} className="input-field">
+                    <label className="block text-lg font-semibold text-gray-700 mb-2">{t('waterAvailability')}</label>
+                    <select name="water_availability" value={formData.water_availability} onChange={handleChange} className="input-field" required>
                         <option value="">{t('selectOption')}</option>
-                        <option value="Flood">{t('methodFlood')}</option>
-                        <option value="Drip">{t('methodDrip')}</option>
-                        <option value="Sprinkler">{t('methodSprinkler')}</option>
-                        <option value="Manual">{t('methodManual')}</option>
-                        <option value="Mixed">{t('methodMixed')}</option>
+                        <option value="Low">{t('availLow')}</option>
+                        <option value="Medium">{t('availMedium')}</option>
+                        <option value="High">{t('availHigh')}</option>
                     </select>
                 </div>
             </div>
