@@ -32,6 +32,7 @@ def migrate():
             soil_type TEXT,
             irrigation_source TEXT,
             water_availability TEXT,
+            season TEXT,
             yield_history TEXT,
             market_linkage TEXT,
             

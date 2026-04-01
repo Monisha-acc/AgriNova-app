@@ -1,23 +1,7 @@
 import os
 import logging
 from datetime import datetime
-
-# Enable complex script shaping (MUST be done before importing other reportlab modules)
-from reportlab import rl_config
-rl_config.allow_shaping = True
-rl_config.shaper = 'harfbuzz'
-
-from reportlab.lib.pagesizes import A4
-from reportlab.lib import colors
-from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak, ListFlowable, ListItem
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.pdfgen import canvas
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-
-logger = logging.getLogger(__name__)
+from fpdf import FPDF
 
 REPORT_TRANSLATIONS = {
     # 1. Header
@@ -75,7 +59,6 @@ REPORT_TRANSLATIONS = {
     "acres": {"en": "Acres", "ta": "ஏக்கர்"}
 }
 
-# Bidirectional district map: Tamil <-> English
 DISTRICT_MAP_EN = [
     'Ariyalur', 'Chengalpattu', 'Chennai', 'Coimbatore', 'Cuddalore', 'Dharmapuri',
     'Dindigul', 'Erode', 'Kallakurichi', 'Kanchipuram', 'Kanyakumari', 'Karur',
@@ -96,7 +79,6 @@ DISTRICT_MAP_TA = [
 ]
 
 VALUE_TRANSLATIONS = {
-    # Educational logic is typically mapping string. Using str default dict matching below
     "Owned": "சொந்தமானது",
     "Leased": "குத்தகை",
     "Progressive": "முற்போக்கானவர்",
@@ -117,148 +99,71 @@ VALUE_TRANSLATIONS = {
     "Banana": "வாழை"
 }
 
+logger = logging.getLogger(__name__)
+
 class PDFReportGenerator:
     def __init__(self):
-        # Resolve font path relative to the script location
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        # The font NotoSansTamil-Regular.ttf is in the backend/ root directory
         self.font_path = os.path.join(current_dir, "..", "NotoSansTamil-Regular.ttf")
-        self.tamil_font_registered = False
-
-        if os.path.exists(self.font_path):
-            try:
-                # Register the font with a name we can use in styles
-                pdfmetrics.registerFont(TTFont("NotoSansTamil", self.font_path))
-                # Register bold/italic fallbacks to the same font file if bold file is missing
-                pdfmetrics.registerFont(TTFont("NotoSansTamil-Bold", self.font_path))
-                pdfmetrics.registerFontFamily("NotoSansTamil", normal="NotoSansTamil", bold="NotoSansTamil-Bold")
-                
-                self.tamil_font_registered = True
-                logger.info(f"Successfully registered Tamil font: {self.font_path}")
-            except Exception as e:
-                logger.error(f"Error registering font {self.font_path}: {e}")
-        else:
-            logger.warning(f"Tamil font not found at {self.font_path}")
+        self.tamil_font_registered = os.path.exists(self.font_path)
         
-        self.styles = getSampleStyleSheet()
-
-    def get_dynamic_style(self, style_name, lang):
-        use_tamil = (lang == 'ta' and self.tamil_font_registered)
-        base_font = "NotoSansTamil" if use_tamil else "Helvetica"
-        
-        style_key = f"{style_name}_{lang}"
-        if style_key in self.styles:
-            return self.styles[style_key]
-            
-        if style_name == 'CustomTitle':
-            style = ParagraphStyle(
-                name=style_key,
-                parent=self.styles['Heading1'],
-                fontName=base_font + "-Bold" if not use_tamil else "NotoSansTamil-Bold",
-                fontSize=18,
-                textColor=colors.HexColor('#2d5016'),
-                spaceAfter=15,
-                alignment=TA_LEFT
-            )
-        elif style_name == 'SectionHeader':
-            style = ParagraphStyle(
-                name=style_key,
-                parent=self.styles['Heading2'],
-                fontName=base_font + "-Bold" if not use_tamil else "NotoSansTamil-Bold",
-                fontSize=14,
-                textColor=colors.HexColor('#4a7c2c'),
-                spaceAfter=10,
-                spaceBefore=15,
-                alignment=TA_LEFT
-            )
-        elif style_name == 'BodyText':
-            style = ParagraphStyle(
-                name=style_key,
-                parent=self.styles['Normal'],
-                fontName=base_font,
-                fontSize=11,
-                leading=16
-            )
-        elif style_name == 'BulletText':
-            style = ParagraphStyle(
-                name=style_key,
-                parent=self.styles['Normal'],
-                fontName=base_font,
-                fontSize=11,
-                leading=16,
-                bulletIndent=15,
-                leftIndent=30
-            )
-        elif style_name == 'FooterText':
-            style = ParagraphStyle(
-                name=style_key,
-                parent=self.styles['Normal'],
-                fontName=base_font + "-Oblique" if not use_tamil else base_font,
-                fontSize=9,
-                textColor=colors.gray,
-                alignment=TA_CENTER
-            )
-        else:
-            style = self.styles['Normal']
-            
-        self.styles.add(style)
-        return style
-
     def t(self, key, lang):
         return REPORT_TRANSLATIONS.get(key, {}).get(lang, key)
     
     def vt(self, value, lang):
         if lang != 'ta' or not value:
             return str(value) if value is not None else ""
-        
         if isinstance(value, list):
             return ", ".join([VALUE_TRANSLATIONS.get(str(v), str(v)) for v in value])
-            
         return VALUE_TRANSLATIONS.get(str(value), str(value))
 
     def resolve_district(self, district_value, lang):
-        """Resolve district to correct language regardless of how it's stored (Tamil or English)."""
         if not district_value:
             return ""
         d = str(district_value).strip()
-        # Check if it's Tamil already
         if d in DISTRICT_MAP_TA:
             idx = DISTRICT_MAP_TA.index(d)
             return DISTRICT_MAP_TA[idx] if lang == 'ta' else DISTRICT_MAP_EN[idx]
-        # Check if it's English already
         if d in DISTRICT_MAP_EN:
             idx = DISTRICT_MAP_EN.index(d)
             return DISTRICT_MAP_TA[idx] if lang == 'ta' else DISTRICT_MAP_EN[idx]
-        # Unknown district - return as-is (might be garbled if font doesn't support it in English PDF)
         return d
 
     def generate_report(self, farmer_data, user_data, adoption_result, recommendations, schemes, language='en'):
         lang = language if language in ['en', 'ta'] else 'en'
         
-        if lang == 'ta':
-            filename = f"AgriNova_உழவர்_அறிக்கை_{user_data['user_id']}.pdf"
+        pdf = FPDF()
+        pdf.set_auto_page_break(auto=True, margin=15)
+        pdf.add_page()
+        pw = pdf.epw # Explicitly use the effective page width to prevent wrap width bugs!
+        
+        # Setup fonts
+        if self.tamil_font_registered:
+            pdf.add_font("NotoSansTamil", style="", fname=self.font_path)
+            # FPDF uses the regular font for bold if we map it to 'B', avoiding missing file errors
+            pdf.add_font("NotoSansTamil", style="B", fname=self.font_path)
+            pdf.add_font("NotoSansTamil", style="I", fname=self.font_path)
+            base_font = "NotoSansTamil"
         else:
-            filename = f"AgriNova_Farmer_Report_{user_data['user_id']}.pdf"
+            base_font = "Helvetica"
             
-        filepath = os.path.join('reports', filename)
-        
-        if not os.path.exists('reports'):
-            os.makedirs('reports')
-        
-        doc = SimpleDocTemplate(filepath, pagesize=A4, rightMargin=50, leftMargin=50, topMargin=50, bottomMargin=50)
-        story = []
-        
-        title_style = self.get_dynamic_style('CustomTitle', lang)
-        header_style = self.get_dynamic_style('SectionHeader', lang)
-        body_style = self.get_dynamic_style('BodyText', lang)
-        bullet_style = self.get_dynamic_style('BulletText', lang)
-        footer_style = self.get_dynamic_style('FooterText', lang)
+        def set_title():
+            pdf.set_font(base_font, 'B', 18)
+            pdf.set_text_color(45, 80, 22)
+            
+        def set_header():
+            pdf.set_font(base_font, 'B', 14)
+            pdf.set_text_color(74, 124, 44)
+            
+        def set_body():
+            pdf.set_font(base_font, '', 11)
+            pdf.set_text_color(0, 0, 0)
+            
+        def set_footer():
+            pdf.set_font(base_font, 'I' if lang=='en' else '', 9)
+            pdf.set_text_color(128, 128, 128)
 
-        def add_bullet(text):
-            story.append(Paragraph(f"• {text}", bullet_style))
-        
         now = datetime.now()
-        # Full Tamil month map
         ta_months = {
             '01': 'ஜனவரி', '02': 'பிப்ரவரி', '03': 'மார்ச்',
             '04': 'ஏப்ரல்', '05': 'மே', '06': 'ஜூன்',
@@ -277,27 +182,37 @@ class PDFReportGenerator:
             date_str = now.strftime('%d %b %Y')
             time_str = now.strftime('%I:%M %p')
 
-        # 1. Header
-        story.append(Paragraph(self.t("title", lang), title_style))
-        story.append(Spacer(1, 0.1*inch))
-        
-        if lang == 'en':
-            story.append(Paragraph(f"{self.t('farmer', lang)}: {user_data.get('name')}", body_style))
-            story.append(Paragraph(f"{self.t('district', lang)}: {self.resolve_district(user_data.get('district'), lang)}", body_style))
-            story.append(Paragraph(f"{self.t('language_label', lang)}: {self.t('en', lang)}", body_style))
-            story.append(Paragraph(f"{self.t('generated_on', lang)}: {now.strftime('%d %b %Y')}", body_style))
-            story.append(Paragraph(f"{self.t('time', lang)}: {time_str}", body_style))
-        else:
-            story.append(Paragraph(f"{self.t('farmer', lang)}: {user_data.get('name')}", body_style))
-            story.append(Paragraph(f"{self.t('district', lang)}: {self.resolve_district(user_data.get('district'), lang)}", body_style))
-            story.append(Paragraph(f"{self.t('language_label', lang)}: {self.t('ta', lang)}", body_style))
-            story.append(Paragraph(f"{self.t('generated_on', lang)}: {date_str}", body_style))
-            story.append(Paragraph(f"{self.t('time', lang)}: {time_str}", body_style))
+        def add_bullet(text):
+            set_body()
+            # Explicitly force newline before every multi_cell to guarantee X is safely at LMARGIN!
+            pdf.set_x(pdf.l_margin)
+            pdf.multi_cell(pw, 8, "  - " + text)
 
-        story.append(Spacer(1, 0.2*inch))
-        
+        # 1. Header
+        set_title()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 10, self.t("title", lang))
+        pdf.ln(5)
+
+        set_body()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, f"{self.t('farmer', lang)}: {user_data.get('name')}")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, f"{self.t('district', lang)}: {self.resolve_district(user_data.get('district'), lang)}")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, f"{self.t('language_label', lang)}: {self.t(lang, lang)}")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, f"{self.t('generated_on', lang)}: {date_str}")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, f"{self.t('time', lang)}: {time_str}")
+        pdf.ln(5)
+
         # 2. Farmer Profile
-        story.append(Paragraph(self.t("farmer_details", lang), header_style))
+        set_header()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 8, self.t("farmer_details", lang))
+        pdf.ln(2)
+        
         farmer_name = user_data.get('name') or (self.t('na', lang))
         add_bullet(f"{self.t('name', lang)}: {farmer_name}")
         age_val = farmer_data.get('age')
@@ -307,35 +222,44 @@ class PDFReportGenerator:
         add_bullet(f"{self.t('education', lang)}: {edu_val}")
         land = farmer_data.get('land_area')
         add_bullet(f"{self.t('land_area', lang)}: {land if land else self.t('na', lang)} {self.t('acres', lang)}")
-        # Clean crops: filter blanks from list
+        
         raw_crops = farmer_data.get('crop_type', farmer_data.get('crops'))
         if isinstance(raw_crops, list):
             raw_crops = [c for c in raw_crops if c and str(c).strip()]
         crop_val = self.vt(raw_crops, lang) if raw_crops else self.t('na', lang)
         add_bullet(f"{self.t('crops', lang)}: {crop_val}")
+        
         irr_raw = farmer_data.get('irrigation_source')
         irr_val = self.vt(irr_raw, lang) if irr_raw else self.t('na', lang)
         add_bullet(f"{self.t('irrigation', lang)}: {irr_val}")
+        
         sm_status_key = 'yes' if farmer_data.get('has_smartphone') else 'no'
         int_status_key = 'yes' if farmer_data.get('has_internet') else 'no'
         add_bullet(f"{self.t('smartphone', lang)}: {self.t(sm_status_key, lang)}")
         add_bullet(f"{self.t('internet', lang)}: {self.t(int_status_key, lang)}")
-
-        story.append(Spacer(1, 0.2*inch))
+        pdf.ln(5)
 
         # 3. Score
-        story.append(Paragraph(self.t("adoption_score_section", lang), header_style))
+        set_header()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 8, self.t("adoption_score_section", lang))
+        pdf.ln(2)
         add_bullet(f"{self.t('score', lang)}: {adoption_result.get('adoption_score', 0)}%")
         add_bullet(f"{self.t('category', lang)}: {self.vt(adoption_result.get('adoption_category', 'N/A'), lang)}")
-        story.append(Spacer(1, 0.1*inch))
+        pdf.ln(2)
         
-        story.append(Paragraph(self.t("explanation_title", lang) if lang == 'ta' else "Explanation:", body_style))
-        story.append(Paragraph(self.t("score_explanation", lang), body_style))
-
-        story.append(Spacer(1, 0.2*inch))
+        set_body()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, self.t("explanation_title", lang) if lang == 'ta' else "Explanation:")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, self.t("score_explanation", lang))
+        pdf.ln(5)
 
         # 4. AI Insights
-        story.append(Paragraph(self.t("ai_insights", lang), header_style))
+        set_header()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 8, self.t("ai_insights", lang))
+        pdf.ln(2)
         if lang == 'en':
             add_bullet("Low technology usage detected" if (len(farmer_data.get('technologies_used', [])) < 2) else "Good technology usage detected")
             add_bullet("Limited awareness of government schemes" if (len(farmer_data.get('schemes_aware', [])) < 2) else "Good awareness of government schemes")
@@ -344,12 +268,14 @@ class PDFReportGenerator:
             add_bullet("தொழில்நுட்ப பயன்பாடு குறைவாக உள்ளது" if (len(farmer_data.get('technologies_used', [])) < 2) else "தொழில்நுட்ப பயன்பாடு நன்றாக உள்ளது")
             add_bullet("அரசு திட்டங்களின் விழிப்புணர்வு குறைவு" if (len(farmer_data.get('schemes_aware', [])) < 2) else "அரசு திட்டங்களின் விழிப்புணர்வு நன்றாக உள்ளது")
             add_bullet("விளைச்சலை அதிகரிக்கும் வாய்ப்பு உள்ளது")
+        pdf.ln(5)
             
-        story.append(Spacer(1, 0.2*inch))
-
-        # 5. Recommended Technologies (Tamil only with name+description; English skipped as per requirements)
+        # 5. Recommended Technologies (Tamil only)
         if lang == 'ta':
-            story.append(Paragraph(self.t("recommendations", lang), header_style))
+            set_header()
+            pdf.set_x(pdf.l_margin)
+            pdf.multi_cell(pw, 8, self.t("recommendations", lang))
+            pdf.ln(2)
             tech_list = recommendations.get('technologies', []) if recommendations else []
             if tech_list:
                 for t_item in tech_list[:4]:
@@ -357,22 +283,28 @@ class PDFReportGenerator:
                     desc = t_item.get('description_ta', '')
                     cost = t_item.get('cost_ta', '')
                     scheme = t_item.get('scheme_ta', '')
-                    line_parts = [name]
-                    if desc: line_parts.append(f"   {desc}")
-                    if cost: line_parts.append(f"   செலவு: {cost}")
-                    if scheme: line_parts.append(f"   திட்டம்: {scheme}")
                     add_bullet(name)
-                    if desc: story.append(Paragraph(f"   {desc}", body_style))
-                    if cost: story.append(Paragraph(f"   செலவு: {cost}", body_style))
-                    if scheme: story.append(Paragraph(f"   திட்டம்: {scheme}", body_style))
-                    story.append(Spacer(1, 0.05*inch))
+                    set_body()
+                    if desc: 
+                        pdf.set_x(pdf.l_margin)
+                        pdf.multi_cell(pw, 6, f"    {desc}")
+                    if cost: 
+                        pdf.set_x(pdf.l_margin)
+                        pdf.multi_cell(pw, 6, f"    செலவு: {cost}")
+                    if scheme: 
+                        pdf.set_x(pdf.l_margin)
+                        pdf.multi_cell(pw, 6, f"    திட்டம்: {scheme}")
+                    pdf.ln(2)
             else:
                 add_bullet(self.t("na", lang))
-            story.append(Spacer(1, 0.2*inch))
+            pdf.ln(5)
 
         # 6. Crop Recommendations (Tamil only)
         if lang == 'ta':
-            story.append(Paragraph(self.t("crop_recommendations", lang), header_style))
+            set_header()
+            pdf.set_x(pdf.l_margin)
+            pdf.multi_cell(pw, 8, self.t("crop_recommendations", lang))
+            pdf.ln(2)
             crop_list = recommendations.get('crops', []) if recommendations else []
             if crop_list:
                 for c_item in crop_list[:4]:
@@ -380,37 +312,48 @@ class PDFReportGenerator:
                     add_bullet(name)
             else:
                 add_bullet(self.t("na", lang))
-            story.append(Spacer(1, 0.2*inch))
+            pdf.ln(5)
 
-        story.append(Spacer(1, 0.2*inch))
-        
         # 7. Schemes
-        story.append(Paragraph(self.t("schemes", lang), header_style))
+        set_header()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 8, self.t("schemes", lang))
+        pdf.ln(2)
         if schemes:
             for s_item in schemes:
                 name = s_item.get('name_ta') if lang == 'ta' else s_item.get('name')
                 add_bullet(name or s_item.get('name', 'N/A'))
         else:
             add_bullet(self.t("na", lang))
-
-        story.append(Spacer(1, 0.2*inch))
+        pdf.ln(5)
 
         # 8. Summary
-        story.append(Paragraph(self.t("summary", lang), header_style))
-        story.append(Paragraph(self.t("summary_text", lang), body_style))
+        set_header()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 8, self.t("summary", lang))
+        pdf.ln(2)
+        set_body()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 6, self.t("summary_text", lang))
+        pdf.ln(10)
 
         # 9. Footer
-        story.append(Spacer(1, 0.5*inch))
-        story.append(Paragraph(self.t("footer_1", lang), footer_style))
-        story.append(Paragraph(self.t("footer_2", lang), footer_style))
+        set_footer()
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 5, self.t("footer_1", lang), align='C')
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pw, 5, self.t("footer_2", lang), align='C')
 
-        # Build PDF
-        try:
-            doc.build(story)
-        except Exception as e:
-            print(f"Error building PDF: {e}")
-            raise e
-        
+        # Output
+        if lang == 'ta':
+            filename = f"AgriNova_உழவர்_அறிக்கை_{user_data.get('user_id', 'unknown')}.pdf"
+        else:
+            filename = f"AgriNova_Farmer_Report_{user_data.get('user_id', 'unknown')}.pdf"
+            
+        filepath = os.path.join('reports', filename)
+        os.makedirs('reports', exist_ok=True)
+            
+        pdf.output(filepath)
         return filepath
 
 # Global PDF generator instance

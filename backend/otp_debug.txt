@@ -38,3 +38,13 @@ Message: Your AgriNova verification code is 406865. Valid for 5 minutes.
 To: 7358580000
 Message: Your AgriNova verification code is 820234. Valid for 5 minutes.
 ====================
+
+=== SMS SENT ===
+To: 7358585800
+Message: Your AgriNova verification code is 342230. Valid for 5 minutes.
+====================
+
+=== SMS SENT ===
+To: 9941166454
+Message: Your AgriNova verification code is 798049. Valid for 5 minutes.
+====================
